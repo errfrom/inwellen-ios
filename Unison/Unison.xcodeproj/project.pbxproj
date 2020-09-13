@@ -1,0 +1,445 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D90666175998757D9388F543 /* Pods_Unison.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589D54D358E797D27B245B8D /* Pods_Unison.framework */; };
+		EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */; };
+		EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE999C75250E8D6B001CFBB7 /* Main.storyboard */; };
+		EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE999C78250E8D6F001CFBB7 /* Assets.xcassets */; };
+		EE999C7C250E8D6F001CFBB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE999C7A250E8D6F001CFBB7 /* LaunchScreen.storyboard */; };
+		EE999C88250E9109001CFBB7 /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE999C87250E9109001CFBB7 /* WaveformView.xib */; };
+		EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8A250E91BC001CFBB7 /* WaveformView.swift */; };
+		EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17B4AD0FFDEE231F5F7255A7 /* Pods-Unison.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unison.debug.xcconfig"; path = "Target Support Files/Pods-Unison/Pods-Unison.debug.xcconfig"; sourceTree = "<group>"; };
+		3F29983BC2E8BA1A12698DAC /* Pods-Unison.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unison.release.xcconfig"; path = "Target Support Files/Pods-Unison/Pods-Unison.release.xcconfig"; sourceTree = "<group>"; };
+		589D54D358E797D27B245B8D /* Pods_Unison.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unison.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE999C6C250E8D6B001CFBB7 /* Unison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unison.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE999C76250E8D6B001CFBB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE999C78250E8D6F001CFBB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE999C7B250E8D6F001CFBB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE999C7D250E8D6F001CFBB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE999C87250E9109001CFBB7 /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
+		EE999C8A250E91BC001CFBB7 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE999C69250E8D6B001CFBB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D90666175998757D9388F543 /* Pods_Unison.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB6BF6821DF3D3B0F8A5EFFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				589D54D358E797D27B245B8D /* Pods_Unison.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE999C63250E8D6B001CFBB7 = {
+			isa = PBXGroup;
+			children = (
+				EE999C84250E9034001CFBB7 /* WaveformView */,
+				EE999C83250E902F001CFBB7 /* Groups */,
+				EE999C6E250E8D6B001CFBB7 /* Unison */,
+				EE999C6D250E8D6B001CFBB7 /* Products */,
+				FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */,
+				AB6BF6821DF3D3B0F8A5EFFF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE999C6D250E8D6B001CFBB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C6C250E8D6B001CFBB7 /* Unison.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE999C6E250E8D6B001CFBB7 /* Unison */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */,
+				EE999C75250E8D6B001CFBB7 /* Main.storyboard */,
+				EE999C7A250E8D6F001CFBB7 /* LaunchScreen.storyboard */,
+				EE999C78250E8D6F001CFBB7 /* Assets.xcassets */,
+				EE999C7D250E8D6F001CFBB7 /* Info.plist */,
+			);
+			path = Unison;
+			sourceTree = "<group>";
+		};
+		EE999C83250E902F001CFBB7 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		EE999C84250E9034001CFBB7 /* WaveformView */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C8C250E91C0001CFBB7 /* Manager */,
+				EE999C89250E91B3001CFBB7 /* View */,
+				EE999C86250E90FF001CFBB7 /* Xib */,
+			);
+			path = WaveformView;
+			sourceTree = "<group>";
+		};
+		EE999C86250E90FF001CFBB7 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C87250E9109001CFBB7 /* WaveformView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EE999C89250E91B3001CFBB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C8A250E91BC001CFBB7 /* WaveformView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE999C8C250E91C0001CFBB7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C8D250E91C3001CFBB7 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EE999C8D250E91C3001CFBB7 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17B4AD0FFDEE231F5F7255A7 /* Pods-Unison.debug.xcconfig */,
+				3F29983BC2E8BA1A12698DAC /* Pods-Unison.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE999C6B250E8D6B001CFBB7 /* Unison */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE999C80250E8D6F001CFBB7 /* Build configuration list for PBXNativeTarget "Unison" */;
+			buildPhases = (
+				6BB26B2E4FD0987F5E2E135D /* [CP] Check Pods Manifest.lock */,
+				EE999C68250E8D6B001CFBB7 /* Sources */,
+				EE999C69250E8D6B001CFBB7 /* Frameworks */,
+				EE999C6A250E8D6B001CFBB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Unison;
+			productName = Unison;
+			productReference = EE999C6C250E8D6B001CFBB7 /* Unison.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE999C64250E8D6B001CFBB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = Unison;
+				TargetAttributes = {
+					EE999C6B250E8D6B001CFBB7 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = EE999C67250E8D6B001CFBB7 /* Build configuration list for PBXProject "Unison" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE999C63250E8D6B001CFBB7;
+			productRefGroup = EE999C6D250E8D6B001CFBB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE999C6B250E8D6B001CFBB7 /* Unison */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE999C6A250E8D6B001CFBB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE999C7C250E8D6F001CFBB7 /* LaunchScreen.storyboard in Resources */,
+				EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */,
+				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
+				EE999C88250E9109001CFBB7 /* WaveformView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BB26B2E4FD0987F5E2E135D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Unison-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE999C68250E8D6B001CFBB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */,
+				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
+				EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE999C75250E8D6B001CFBB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE999C76250E8D6B001CFBB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE999C7A250E8D6F001CFBB7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE999C7B250E8D6F001CFBB7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE999C7E250E8D6F001CFBB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE999C7F250E8D6F001CFBB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE999C81250E8D6F001CFBB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17B4AD0FFDEE231F5F7255A7 /* Pods-Unison.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Unison/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.unison.Unison;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE999C82250E8D6F001CFBB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F29983BC2E8BA1A12698DAC /* Pods-Unison.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Unison/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.unison.Unison;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE999C67250E8D6B001CFBB7 /* Build configuration list for PBXProject "Unison" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE999C7E250E8D6F001CFBB7 /* Debug */,
+				EE999C7F250E8D6F001CFBB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE999C80250E8D6F001CFBB7 /* Build configuration list for PBXNativeTarget "Unison" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE999C81250E8D6F001CFBB7 /* Debug */,
+				EE999C82250E8D6F001CFBB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE999C64250E8D6B001CFBB7 /* Project object */;
+}
