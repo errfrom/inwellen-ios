@@ -9,10 +9,9 @@
 import UIKit
 
 enum AppColor {
-    
     static let ivory     = AppColor.color(fromHex: "F6EFE5")
     static let lightGray = AppColor.color(fromHex: "E9E5DF")
-    
+    static let darkGray  = AppColor.color(fromHex: "2B2F2B")
 }
 
 fileprivate extension AppColor {

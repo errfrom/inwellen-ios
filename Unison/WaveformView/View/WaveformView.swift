@@ -10,6 +10,9 @@ import UIKit
 
 class WaveformView: UIView {
     
+    // - UI
+    @IBOutlet weak var waveformInternalView: WaveformInternalView!
+    
     // - Init
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -21,4 +24,15 @@ class WaveformView: UIView {
         //configure()
     }
 
+}
+
+// MARK: -
+// MARK: - Set
+
+extension WaveformView {
+    
+    func set(audioURL: URL) {
+        waveformInternalView.set(audioURL: audioURL)
+    }
+    
 }
