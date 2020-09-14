@@ -8,10 +8,17 @@
 
 import UIKit
 
-class WaveformView: UIView {
+class WaveformView: UIView, WaveformViewStateDelegate {
     
     // - UI
     @IBOutlet weak var waveformInternalView: WaveformInternalView!
+    @IBOutlet weak var _waveformSelectedInterval: WaveformSelectedIntervalView?
+    
+    // - Manager
+    private var layoutManager: WaveformViewLayoutManager!
+    
+    // - State
+    private var state: WaveformViewState!
     
     // - Init
     required init?(coder: NSCoder) {
@@ -21,9 +28,32 @@ class WaveformView: UIView {
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view)
-        //configure()
+        configure()
     }
+    
+}
 
+// MARK: -
+// MARK: - WaveformViewStateDelegate
+
+extension WaveformView {
+    
+    func didAddInterval(interval: WaveformViewState.WaveformViewInterval) {
+        print("log: interval \(interval) was added")
+    }
+    
+}
+
+// MARK: -
+// MARK: - Gesture Recognizer
+
+fileprivate extension WaveformView {
+    
+    @IBAction private func didRecognizeDoubleTapGesture(_ gesture: UITapGestureRecognizer) {
+        let x = gesture.location(in: waveformInternalView).x
+        self.state = state.addInterval(around: x)
+    }
+    
 }
 
 // MARK: -
@@ -33,6 +63,26 @@ extension WaveformView {
     
     func set(audioURL: URL) {
         waveformInternalView.set(audioURL: audioURL)
+    }
+    
+}
+
+// MARK: -
+// MARK: - Configure
+
+fileprivate extension WaveformView {
+    
+    private func configure() {
+        configureWaveformViewState()
+        configureLayoutManager()
+    }
+    
+    private func configureWaveformViewState() {
+        state = WaveformViewState(delegate: self)
+    }
+    
+    private func configureLayoutManager() {
+        layoutManager = WaveformViewLayoutManager(view: self)
     }
     
 }

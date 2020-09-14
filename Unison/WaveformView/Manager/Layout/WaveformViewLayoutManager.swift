@@ -6,4 +6,15 @@
 //  Copyright © 2020 Unison. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class WaveformViewLayoutManager {
+    
+    private unowned let view: WaveformView
+    
+    // - Init
+    init(view: WaveformView) {
+        self.view = view
+    }
+    
+}

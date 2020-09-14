@@ -23,6 +23,12 @@ class WaveformInternalView: UIView {
     // - Data
     private var samples: Samples? = nil
     
+    // - Init
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        backgroundColor = .clear
+    }
+    
 }
 
 // MARK: -
