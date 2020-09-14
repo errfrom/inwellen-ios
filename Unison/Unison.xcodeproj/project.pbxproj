@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D90666175998757D9388F543 /* Pods_Unison.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589D54D358E797D27B245B8D /* Pods_Unison.framework */; };
+		EE170DEF250F82A2007341BE /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE170DEE250F82A2007341BE /* AppColor.swift */; };
+		EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */; };
 		EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */; };
 		EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE999C75250E8D6B001CFBB7 /* Main.storyboard */; };
 		EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE999C78250E8D6F001CFBB7 /* Assets.xcassets */; };
@@ -15,12 +17,16 @@
 		EE999C88250E9109001CFBB7 /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE999C87250E9109001CFBB7 /* WaveformView.xib */; };
 		EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8A250E91BC001CFBB7 /* WaveformView.swift */; };
 		EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */; };
+		EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */; };
+		EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		17B4AD0FFDEE231F5F7255A7 /* Pods-Unison.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unison.debug.xcconfig"; path = "Target Support Files/Pods-Unison/Pods-Unison.debug.xcconfig"; sourceTree = "<group>"; };
 		3F29983BC2E8BA1A12698DAC /* Pods-Unison.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unison.release.xcconfig"; path = "Target Support Files/Pods-Unison/Pods-Unison.release.xcconfig"; sourceTree = "<group>"; };
 		589D54D358E797D27B245B8D /* Pods_Unison.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unison.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE170DEE250F82A2007341BE /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalView.swift; sourceTree = "<group>"; };
 		EE999C6C250E8D6B001CFBB7 /* Unison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unison.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE999C76250E8D6B001CFBB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +36,8 @@
 		EE999C87250E9109001CFBB7 /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
 		EE999C8A250E91BC001CFBB7 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 		EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManager.swift; sourceTree = "<group>"; };
+		EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardEnum.swift; sourceTree = "<group>"; };
+		EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +60,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EE170DED250F827F007341BE /* AppStyle */ = {
+			isa = PBXGroup;
+			children = (
+				EE170DEE250F82A2007341BE /* AppColor.swift */,
+			);
+			path = AppStyle;
+			sourceTree = "<group>";
+		};
 		EE999C63250E8D6B001CFBB7 = {
 			isa = PBXGroup;
 			children = (
 				EE999C84250E9034001CFBB7 /* WaveformView */,
 				EE999C83250E902F001CFBB7 /* Groups */,
+				EE999C90250EB0E6001CFBB7 /* Core */,
 				EE999C6E250E8D6B001CFBB7 /* Unison */,
 				EE999C6D250E8D6B001CFBB7 /* Products */,
 				FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */,
@@ -112,6 +129,7 @@
 		EE999C89250E91B3001CFBB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */,
 				EE999C8A250E91BC001CFBB7 /* WaveformView.swift */,
 			);
 			path = View;
@@ -131,6 +149,32 @@
 				EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		EE999C90250EB0E6001CFBB7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C94250EB147001CFBB7 /* Extension */,
+				EE999C91250EB0FF001CFBB7 /* Constants */,
+				EE170DED250F827F007341BE /* AppStyle */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EE999C91250EB0FF001CFBB7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EE999C94250EB147001CFBB7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */ = {
@@ -241,8 +285,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */,
+				EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */,
+				EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */,
 				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
+				EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */,
 				EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */,
+				EE170DEF250F82A2007341BE /* AppColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,22 +2,35 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16097.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WaveformView" customModule="Unison" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" interfaceStyle="light" id="Ao8-oh-sFP">
             <rect key="frame" x="0.0" y="0.0" width="310" height="126"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fus-2R-ayH" userLabel="WaveformInternal View" customClass="WaveformInternalView" customModule="Unison" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="16" width="310" height="90"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.93725490199999995" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="Ttz-mR-SL0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96470588239999999" green="0.93725490199999995" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fus-2R-ayH" secondAttribute="trailing" id="Amp-Pe-j7R"/>
+                <constraint firstItem="fus-2R-ayH" firstAttribute="top" secondItem="Ao8-oh-sFP" secondAttribute="top" constant="16" id="KiI-Ul-s8N"/>
+                <constraint firstAttribute="bottom" secondItem="fus-2R-ayH" secondAttribute="bottom" constant="20" id="Qe2-AI-BoF"/>
+                <constraint firstItem="fus-2R-ayH" firstAttribute="leading" secondItem="Ao8-oh-sFP" secondAttribute="leading" id="hZI-uD-nye"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="ihO-hG-U7L"/>
-            <point key="canvasLocation" x="-147.10144927536234" y="-22.767857142857142"/>
+            <point key="canvasLocation" x="-147.82608695652175" y="-22.767857142857142"/>
         </view>
     </objects>
 </document>
