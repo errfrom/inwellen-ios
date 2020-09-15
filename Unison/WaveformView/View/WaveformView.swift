@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WaveformView: UIView, WaveformViewStateDelegate {
+class WaveformView: UIView {
     
     // - UI
     @IBOutlet weak var waveformInternalView: WaveformInternalView!
@@ -24,7 +24,7 @@ class WaveformView: UIView, WaveformViewStateDelegate {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        let view = Bundle(for: type(of: self)).loadNibNamed("WaveformView", owner: self, options: nil)?.first as! UIView
+        let view = Bundle(for: type(of: self)).loadNibNamed("\(WaveformView.self)", owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view)
@@ -36,7 +36,7 @@ class WaveformView: UIView, WaveformViewStateDelegate {
 // MARK: -
 // MARK: - WaveformViewStateDelegate
 
-extension WaveformView {
+extension WaveformView: WaveformViewStateDelegate {
     
     func didAddInterval(interval: WaveformViewState.WaveformViewInterval) {
         print("log: interval \(interval) was added")

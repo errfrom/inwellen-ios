@@ -12,6 +12,10 @@ import Accelerate
 
 class WaveformInternalView: UIView {
     
+    // - UI
+    private var backWaveformPlaceholderShapeLayer: CAShapeLayer?
+    private var frontWaveformShapeLayer: CAShapeLayer?
+    
     // - Aliases
     fileprivate typealias Samples = [Float]
     
@@ -27,6 +31,7 @@ class WaveformInternalView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         backgroundColor = .clear
+        configureLayers()
     }
     
 }
@@ -47,15 +52,16 @@ extension WaveformInternalView {
             path.append(UIBezierPath(roundedRect: segmentRect, cornerRadius: segmentCornerRadius))
         }
         
-        AppColor.lightGray.setFill()
-        path.fill()
+        backWaveformPlaceholderShapeLayer?.path = path.cgPath
+        backWaveformPlaceholderShapeLayer?.fillColor = AppColor.lightGray.cgColor
+
         drawSamples(rect, numSegments: numSegments, horizontalMargin: horizontalMargin)
     }
     
     private func drawSamples(_ rect: CGRect, numSegments: Int, horizontalMargin: Int) {
         guard let samples = samples, samples.count >= numSegments else { return }
-        let path = UIBezierPath()
         
+        let path = UIBezierPath()
         for (segmentIndex, sample) in zip(0..<numSegments, samples) {
             let sample = sample > 0.1 ? sample : 0.1
             let segmentRectX = horizontalMargin + segmentIndex * (segmentWidth + interitemSpace)
@@ -64,8 +70,8 @@ extension WaveformInternalView {
             path.append(UIBezierPath(roundedRect: segmentRect, cornerRadius: segmentCornerRadius))
         }
         
-        AppColor.darkGray.setFill()
-        path.fill()
+        frontWaveformShapeLayer?.path = path.cgPath
+        frontWaveformShapeLayer?.fillColor = AppColor.darkGray.cgColor
     }
     
 }
@@ -148,6 +154,28 @@ fileprivate extension WaveformInternalView {
         let min_ = samples.min()!
         let max_ = samples.max()!
         return samples.map() { ($0 - min_) / max_ - min_ }
+    }
+    
+}
+
+// MARK: -
+// MARK: - Configure Layers
+
+fileprivate extension WaveformInternalView {
+    
+    private func configureLayers() {
+        configureBackWaveformPlaceholderShapeLayer()
+        configureFrontWaveformShapeLayer()
+    }
+    
+    private func configureBackWaveformPlaceholderShapeLayer() {
+        backWaveformPlaceholderShapeLayer = CAShapeLayer()
+        self.layer.insertSublayer(backWaveformPlaceholderShapeLayer!, at: 0)
+    }
+    
+    private func configureFrontWaveformShapeLayer() {
+        frontWaveformShapeLayer = CAShapeLayer()
+        self.layer.addSublayer(frontWaveformShapeLayer!)
     }
     
 }

@@ -10,16 +10,37 @@ import UIKit
 
 class WaveformSelectedIntervalView: UIView {
     
+    // - UI
+    @IBOutlet weak var intervalView: UIView!
+    
+    // - Init
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        let view = Bundle(for: type(of: self)).loadNibNamed("\(WaveformSelectedIntervalView.self)", owner: self, options: nil)?.first as! UIView
+        view.frame = self.bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(view)
+        configure()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("\(WaveformSelectedIntervalView.self): init from storyboard forbidden.")
+    }
     
 }
 
 // MARK: -
-// MARK: - Set
+// MARK: - Configure
 
-extension WaveformSelectedIntervalView {
+fileprivate extension WaveformSelectedIntervalView {
     
-    func set(interval: WaveformViewState.WaveformViewInterval) {
-        
+    private func configure() {
+        configureIntervalView()
+    }
+    
+    private func configureIntervalView() {
+        intervalView.layer.cornerRadius = 1.5
     }
     
 }
