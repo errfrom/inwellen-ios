@@ -11,9 +11,11 @@
 		EE170DEF250F82A2007341BE /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE170DEE250F82A2007341BE /* AppColor.swift */; };
 		EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */; };
 		EE94D410250FE80C00BEAE00 /* WaveformViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D40F250FE80C00BEAE00 /* WaveformViewState.swift */; };
-		EE94D413250FEB1900BEAE00 /* WaveformViewStateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D412250FEB1900BEAE00 /* WaveformViewStateDelegate.swift */; };
 		EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */; };
-		EE94D4192510FE3100BEAE00 /* WaveformSelectedIntervalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE94D4182510FE3100BEAE00 /* WaveformSelectedIntervalView.xib */; };
+		EE94D41B2511044000BEAE00 /* dom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE94D41A2511044000BEAE00 /* dom.mp3 */; };
+		EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D41C25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift */; };
+		EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D41F25126F9900BEAE00 /* WaveformViewIntervalModel.swift */; };
+		EE94D42225127BAD00BEAE00 /* WaveformSelectedIntervalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE94D42125127BAC00BEAE00 /* WaveformSelectedIntervalView.xib */; };
 		EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */; };
 		EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE999C75250E8D6B001CFBB7 /* Main.storyboard */; };
 		EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE999C78250E8D6F001CFBB7 /* Assets.xcassets */; };
@@ -32,9 +34,11 @@
 		EE170DEE250F82A2007341BE /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalView.swift; sourceTree = "<group>"; };
 		EE94D40F250FE80C00BEAE00 /* WaveformViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewState.swift; sourceTree = "<group>"; };
-		EE94D412250FEB1900BEAE00 /* WaveformViewStateDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewStateDelegate.swift; sourceTree = "<group>"; };
 		EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformSelectedIntervalView.swift; sourceTree = "<group>"; };
-		EE94D4182510FE3100BEAE00 /* WaveformSelectedIntervalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformSelectedIntervalView.xib; sourceTree = "<group>"; };
+		EE94D41A2511044000BEAE00 /* dom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dom.mp3; sourceTree = "<group>"; };
+		EE94D41C25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformIntervalViewDelegate.swift; sourceTree = "<group>"; };
+		EE94D41F25126F9900BEAE00 /* WaveformViewIntervalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewIntervalModel.swift; sourceTree = "<group>"; };
+		EE94D42125127BAC00BEAE00 /* WaveformSelectedIntervalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformSelectedIntervalView.xib; sourceTree = "<group>"; };
 		EE999C6C250E8D6B001CFBB7 /* Unison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unison.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE999C76250E8D6B001CFBB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,9 +91,17 @@
 		EE94D411250FEB0E00BEAE00 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				EE94D412250FEB1900BEAE00 /* WaveformViewStateDelegate.swift */,
+				EE94D41C25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		EE94D41E25126F8800BEAE00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE94D41F25126F9900BEAE00 /* WaveformViewIntervalModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EE999C63250E8D6B001CFBB7 = {
@@ -117,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */,
+				EE94D41A2511044000BEAE00 /* dom.mp3 */,
 				EE999C75250E8D6B001CFBB7 /* Main.storyboard */,
 				EE999C7A250E8D6F001CFBB7 /* LaunchScreen.storyboard */,
 				EE999C78250E8D6F001CFBB7 /* Assets.xcassets */,
@@ -135,6 +148,7 @@
 		EE999C84250E9034001CFBB7 /* WaveformView */ = {
 			isa = PBXGroup;
 			children = (
+				EE94D41E25126F8800BEAE00 /* Model */,
 				EE94D411250FEB0E00BEAE00 /* Delegate */,
 				EE94D40E250FE7FC00BEAE00 /* Types */,
 				EE999C8C250E91C0001CFBB7 /* Manager */,
@@ -148,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				EE999C87250E9109001CFBB7 /* WaveformView.xib */,
-				EE94D4182510FE3100BEAE00 /* WaveformSelectedIntervalView.xib */,
+				EE94D42125127BAC00BEAE00 /* WaveformSelectedIntervalView.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -273,9 +287,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE94D4192510FE3100BEAE00 /* WaveformSelectedIntervalView.xib in Resources */,
+				EE94D42225127BAD00BEAE00 /* WaveformSelectedIntervalView.xib in Resources */,
 				EE999C7C250E8D6F001CFBB7 /* LaunchScreen.storyboard in Resources */,
 				EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */,
+				EE94D41B2511044000BEAE00 /* dom.mp3 in Resources */,
 				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
 				EE999C88250E9109001CFBB7 /* WaveformView.xib in Resources */,
 			);
@@ -313,7 +328,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE94D413250FEB1900BEAE00 /* WaveformViewStateDelegate.swift in Sources */,
 				EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */,
 				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */,
 				EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */,
@@ -323,6 +337,8 @@
 				EE94D410250FE80C00BEAE00 /* WaveformViewState.swift in Sources */,
 				EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */,
 				EE170DEF250F82A2007341BE /* AppColor.swift in Sources */,
+				EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */,
+				EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

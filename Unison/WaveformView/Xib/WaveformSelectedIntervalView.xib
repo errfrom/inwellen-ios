@@ -2,51 +2,78 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16097.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WaveformSelectedIntervalView" customModule="Unison" customModuleProvider="target">
-            <connections>
-                <outlet property="intervalView" destination="HzG-TY-kPd" id="W6N-ga-WSc"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WaveformSelectedIntervalView" customModule="Unison" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" interfaceStyle="light" id="kHF-El-LIh">
-            <rect key="frame" x="0.0" y="0.0" width="187" height="90"/>
+        <view contentMode="scaleToFill" interfaceStyle="light" id="PUO-Sa-lLD">
+            <rect key="frame" x="0.0" y="0.0" width="279" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ljx-fh-JAZ">
-                    <rect key="frame" x="0.0" y="0.0" width="20" height="90"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioy-qp-6D0" userLabel="Left Edge ">
+                    <rect key="frame" x="0.0" y="0.0" width="44" height="90"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="20" id="sy9-yV-BhH"/>
+                        <constraint firstAttribute="width" constant="44" id="R7U-mQ-q3S"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="wen-HT-MSO" appends="YES" id="UiY-Dk-ncu"/>
+                    </connections>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HzG-TY-kPd" userLabel="Interval View">
-                    <rect key="frame" x="20" y="0.0" width="147" height="90"/>
-                    <color key="backgroundColor" red="0.91372549020000005" green="0.82352941180000006" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJc-rU-vUy" userLabel="IntervalView">
+                    <rect key="frame" x="44" y="0.0" width="191" height="90"/>
+                    <color key="backgroundColor" red="0.91372549020000005" green="0.82352941180000006" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="dmb-wf-S8Z" appends="YES" id="s7Q-88-wWJ"/>
+                    </connections>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKs-2i-6G8">
-                    <rect key="frame" x="167" y="0.0" width="20" height="90"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8u-eh-nTp" userLabel="Right Edge">
+                    <rect key="frame" x="235" y="0.0" width="44" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="KEq-Ok-PSY"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="6HX-4j-Reo" appends="YES" id="ZGe-yw-ARI"/>
+                    </connections>
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="yKs-2i-6G8" firstAttribute="top" secondItem="kHF-El-LIh" secondAttribute="top" id="Gec-a4-uvL"/>
-                <constraint firstAttribute="trailing" secondItem="yKs-2i-6G8" secondAttribute="trailing" id="Hch-wf-F8a"/>
-                <constraint firstItem="yKs-2i-6G8" firstAttribute="width" secondItem="Ljx-fh-JAZ" secondAttribute="width" id="Vk3-Mg-ola"/>
-                <constraint firstAttribute="bottom" secondItem="yKs-2i-6G8" secondAttribute="bottom" id="W2m-ES-S8O"/>
-                <constraint firstAttribute="bottom" secondItem="HzG-TY-kPd" secondAttribute="bottom" id="a67-HO-Hjb"/>
-                <constraint firstItem="HzG-TY-kPd" firstAttribute="top" secondItem="kHF-El-LIh" secondAttribute="top" id="bWj-du-3Tb"/>
-                <constraint firstAttribute="bottom" secondItem="Ljx-fh-JAZ" secondAttribute="bottom" id="c13-dv-d49"/>
-                <constraint firstItem="yKs-2i-6G8" firstAttribute="leading" secondItem="HzG-TY-kPd" secondAttribute="trailing" id="cIa-Sx-uTb"/>
-                <constraint firstItem="Ljx-fh-JAZ" firstAttribute="leading" secondItem="kHF-El-LIh" secondAttribute="leading" id="l5a-85-tEM"/>
-                <constraint firstItem="HzG-TY-kPd" firstAttribute="leading" secondItem="Ljx-fh-JAZ" secondAttribute="trailing" id="nQe-qM-tGr"/>
-                <constraint firstItem="Ljx-fh-JAZ" firstAttribute="top" secondItem="kHF-El-LIh" secondAttribute="top" id="pyK-hI-nD9"/>
+                <constraint firstItem="ioy-qp-6D0" firstAttribute="leading" secondItem="PUO-Sa-lLD" secondAttribute="leading" id="1iv-VS-ftD"/>
+                <constraint firstAttribute="bottom" secondItem="bJc-rU-vUy" secondAttribute="bottom" id="5Fd-jd-zXN"/>
+                <constraint firstAttribute="trailing" secondItem="e8u-eh-nTp" secondAttribute="trailing" id="5MU-1z-byo"/>
+                <constraint firstItem="bJc-rU-vUy" firstAttribute="top" secondItem="PUO-Sa-lLD" secondAttribute="top" id="ISr-vS-GYQ"/>
+                <constraint firstItem="e8u-eh-nTp" firstAttribute="width" secondItem="ioy-qp-6D0" secondAttribute="width" id="K1d-IN-eNX"/>
+                <constraint firstItem="bJc-rU-vUy" firstAttribute="leading" secondItem="ioy-qp-6D0" secondAttribute="trailing" id="LWy-8C-SWp"/>
+                <constraint firstItem="e8u-eh-nTp" firstAttribute="leading" secondItem="bJc-rU-vUy" secondAttribute="trailing" id="NfO-yr-PdO"/>
+                <constraint firstItem="ioy-qp-6D0" firstAttribute="top" secondItem="PUO-Sa-lLD" secondAttribute="top" id="P8s-tj-5cd"/>
+                <constraint firstAttribute="bottom" secondItem="e8u-eh-nTp" secondAttribute="bottom" id="elk-ER-d4I"/>
+                <constraint firstAttribute="bottom" secondItem="ioy-qp-6D0" secondAttribute="bottom" id="pWg-3b-ylR"/>
+                <constraint firstItem="e8u-eh-nTp" firstAttribute="top" secondItem="PUO-Sa-lLD" secondAttribute="top" id="zK9-DK-k4P"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-250.00000000000003" y="564.50892857142856"/>
+            <point key="canvasLocation" x="-515.21739130434787" y="187.5"/>
         </view>
+        <tapGestureRecognizer id="dmb-wf-S8Z">
+            <connections>
+                <action selector="didRecognizeTapGesture:" destination="-1" id="AUu-rs-3MG"/>
+                <outlet property="delegate" destination="bJc-rU-vUy" id="TUu-ay-sHu"/>
+            </connections>
+        </tapGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="wen-HT-MSO" userLabel="Left Edge Pan Gesture Recognizer">
+            <connections>
+                <action selector="didRecognizeLeftEdgePanGesture:" destination="-1" id="F4e-Hs-d0N"/>
+                <outlet property="delegate" destination="ioy-qp-6D0" id="ECJ-uT-5h2"/>
+            </connections>
+        </panGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="6HX-4j-Reo" userLabel="Right Edge Gesture Recognizer">
+            <connections>
+                <action selector="didRecognizeRightEdgePanGesture:" destination="-1" id="Sdf-Dx-2sh"/>
+                <outlet property="delegate" destination="e8u-eh-nTp" id="Rjm-PZ-vkt"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
 </document>
