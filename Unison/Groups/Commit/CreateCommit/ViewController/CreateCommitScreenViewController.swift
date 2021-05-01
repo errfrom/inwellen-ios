@@ -47,6 +47,17 @@ extension CreateCommitScreenViewController: CreateCommitScreenDelegate {
         coordinator.moveToChooseProject()
     }
     
+    func forceDismissKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    // MARK: - TextViewTableViewCellDelegate
+    
+    func textViewDidUpdateHeight() {
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
 }
 
 // MARK: -

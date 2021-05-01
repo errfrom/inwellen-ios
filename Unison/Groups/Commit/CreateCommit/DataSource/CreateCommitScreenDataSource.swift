@@ -43,7 +43,9 @@ extension CreateCommitScreenDataSource: UITableViewDataSource {
         switch cells[indexPath.item].cell {
             case .chooseProjectCell:
                 return chooseProjectCell(tableView, cellForRowAt: indexPath)
-            case .uploadAudio:
+            case .textViewCell:
+                return textViewCell(tableView, cellForRowAt: indexPath)
+            case .uploadAudioCell:
                 return uploadAudioCell(tableView, cellForRowAt: indexPath)
             case .sectionSeparatorCell:
                 return sectionSeparatorCell(tableView, cellForRowAt: indexPath)
@@ -56,8 +58,17 @@ extension CreateCommitScreenDataSource: UITableViewDataSource {
         return cell
     }
     
+    private func textViewCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.textViewCell.rawValue, for: indexPath) as! TextViewTableViewCell
+        cell.backgroundColor = .clear
+        if let config = cells[indexPath.item].config as? TextViewCellConfiguration {
+            cell.set(withConfig: config, delegate: delegate)
+        }
+        return cell
+    }
+    
     private func uploadAudioCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.uploadAudio.rawValue, for: indexPath) as! CreateCommitUploadAudioTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.uploadAudioCell.rawValue, for: indexPath) as! CreateCommitUploadAudioTableViewCell
         cell.backgroundColor = .clear
         return cell
     }
@@ -78,7 +89,13 @@ extension CreateCommitScreenDataSource: UITableViewDataSource {
 fileprivate extension CreateCommitScreenDataSource {
     
     private func registerCells() {
+        registerTextViewCell()
         registerSectionSeparatorCell()
+    }
+    
+    private func registerTextViewCell() {
+        let nib = UINib(nibName: "\(TextViewTableViewCell.self)", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: Cell.textViewCell.rawValue)
     }
     
     private func registerSectionSeparatorCell() {
@@ -94,8 +111,16 @@ fileprivate extension CreateCommitScreenDataSource {
 extension CreateCommitScreenDataSource: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if case .chooseProjectCell = cells[indexPath.item].cell {
-            delegate?.didTapChooseProjectCell()
+        switch cells[indexPath.item].cell {
+            case .chooseProjectCell:
+                delegate?.didTapChooseProjectCell()
+            
+            case .textViewCell:
+                let cell = tableView.cellForRow(at: indexPath) as? TextViewTableViewCell
+                cell?.makeTextViewFirstResponder()
+            
+            default:
+                delegate?.forceDismissKeyboard()
         }
     }
     
@@ -108,7 +133,8 @@ fileprivate extension CreateCommitScreenDataSource {
     
     private enum Cell: String {
         case chooseProjectCell = "ChooseProjectCell"
-        case uploadAudio = "UploadAudioCell"
+        case textViewCell = "TextViewCell"
+        case uploadAudioCell = "UploadAudioCell"
         case sectionSeparatorCell = "SectionSeparatorCell"
     }
     
@@ -120,15 +146,18 @@ fileprivate extension CreateCommitScreenDataSource {
     private func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
     }
     
     private func configureCells() {
         cells.removeAll()
         appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Choose project", showSeparatorLine: false))
         appendCell(.chooseProjectCell)
-        // appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Name & description", bottomMargin: 8))
-        appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Upload commit audio"))
-        appendCell(.uploadAudio)
+        appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Name & description", bottomMargin: 8))
+        appendCell(.textViewCell, config: TextViewCellConfiguration.commitNameTextView)
+        appendCell(.textViewCell, config: TextViewCellConfiguration.commitDescriptionTextView)
+        appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Upload commit audio", topMargin: 40))
+        appendCell(.uploadAudioCell)
         tableView.reloadData()
     }
     

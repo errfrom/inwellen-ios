@@ -6,6 +6,7 @@
 //  Copyright © 2021 Unison. All rights reserved.
 //
 
-protocol CreateCommitScreenDelegate: class {
+protocol CreateCommitScreenDelegate: TextViewTableViewCellDelegate {
     func didTapChooseProjectCell()
+    func forceDismissKeyboard()
 }
