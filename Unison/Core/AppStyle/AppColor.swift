@@ -9,6 +9,11 @@
 import UIKit
 
 enum AppColor {
+    
+    static let defaultBackgroundColor = UIColor(named: "DefaultBackgroundColor")!
+    static let defaultTextColor = UIColor(named: "DefaultTextColor")!
+    static let defaultBorderColor = UIColor(named: "DefaultBorderColor")!
+    
     static let ivory     = AppColor.color(fromHex: "F6EFE5")
     static let darkIvory = AppColor.color(fromHex: "E9D2B5")
     static let lightGray = AppColor.color(fromHex: "E9E5DF")

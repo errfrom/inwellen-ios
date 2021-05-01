@@ -6,12 +6,23 @@
 //  Copyright © 2020 Unison. All rights reserved.
 //
 
+import UIKit
+
 enum Storyboard: String {
     
-    case main = "Main"
+    // - Commit
+    case createCommit = "CreateCommit"
+    
+}
+
+extension Storyboard {
     
     var filename: String {
         return rawValue
+    }
+    
+    var viewController: UIViewController {
+        return UIStoryboard(storyboard: self).instantiateInitialViewController()!
     }
     
 }

@@ -1,0 +1,7 @@
+*.mp3
+
+# Xcode
+.DS_Store
+Pods/
+xcuserdata
+DerivedData

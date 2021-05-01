@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0L9-jQ-ADJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SuisseIntl-Medium.otf">
+            <string>SuisseIntl-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Create Commit Screen View Controller-->
+        <scene sceneID="zIk-vm-eBC">
+            <objects>
+                <viewController id="0L9-jQ-ADJ" customClass="CreateCommitScreenViewController" customModule="Unison" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SRK-7i-rtU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4i-na-R5s" userLabel="Header">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQB-Zz-RAh" userLabel="Back">
+                                        <rect key="frame" x="17" y="8" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="tdI-MD-QcD"/>
+                                            <constraint firstAttribute="height" constant="44" id="vl3-yW-sZl"/>
+                                        </constraints>
+                                        <state key="normal" image="e-remove"/>
+                                        <connections>
+                                            <action selector="didTapBackButton:" destination="0L9-jQ-ADJ" eventType="touchUpInside" id="Rwp-VJ-TDL"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Commit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhv-Vh-s82">
+                                        <rect key="frame" x="154.5" y="19.5" width="105.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="18"/>
+                                        <color key="textColor" name="DefaultTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="she-i2-AvN" userLabel="Separator">
+                                        <rect key="frame" x="0.0" y="55" width="414" height="1"/>
+                                        <color key="backgroundColor" name="DefaultBorderColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="cm7-9j-fbr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qhv-Vh-s82" firstAttribute="centerY" secondItem="gQB-Zz-RAh" secondAttribute="centerY" id="9an-xg-fhv"/>
+                                    <constraint firstItem="qhv-Vh-s82" firstAttribute="centerX" secondItem="C4i-na-R5s" secondAttribute="centerX" id="AOe-8W-ByK"/>
+                                    <constraint firstItem="gQB-Zz-RAh" firstAttribute="leading" secondItem="C4i-na-R5s" secondAttribute="leading" constant="17" id="GVD-w8-sTe"/>
+                                    <constraint firstItem="she-i2-AvN" firstAttribute="leading" secondItem="C4i-na-R5s" secondAttribute="leading" id="KAe-US-IpH"/>
+                                    <constraint firstAttribute="trailing" secondItem="she-i2-AvN" secondAttribute="trailing" id="cAU-ac-1GD"/>
+                                    <constraint firstAttribute="bottom" secondItem="gQB-Zz-RAh" secondAttribute="bottom" constant="4" id="fKI-wk-fWe"/>
+                                    <constraint firstAttribute="bottom" secondItem="she-i2-AvN" secondAttribute="bottom" id="hNC-U3-GnS"/>
+                                    <constraint firstItem="gQB-Zz-RAh" firstAttribute="top" secondItem="C4i-na-R5s" secondAttribute="top" constant="8" id="sCa-1f-ajr"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vJo-Ow-NT0">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="DefaultBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zIt-0b-xwn" firstAttribute="trailing" secondItem="vJo-Ow-NT0" secondAttribute="trailing" id="2Du-8Q-Ppm"/>
+                            <constraint firstItem="C4i-na-R5s" firstAttribute="top" secondItem="zIt-0b-xwn" secondAttribute="top" id="4e9-L7-rRP"/>
+                            <constraint firstItem="vJo-Ow-NT0" firstAttribute="leading" secondItem="zIt-0b-xwn" secondAttribute="leading" id="Fb5-n7-Ule"/>
+                            <constraint firstItem="vJo-Ow-NT0" firstAttribute="top" secondItem="C4i-na-R5s" secondAttribute="bottom" id="PII-FT-dSb"/>
+                            <constraint firstItem="C4i-na-R5s" firstAttribute="leading" secondItem="zIt-0b-xwn" secondAttribute="leading" id="a2L-BC-kBT"/>
+                            <constraint firstItem="zIt-0b-xwn" firstAttribute="trailing" secondItem="C4i-na-R5s" secondAttribute="trailing" id="iGE-Uz-H7n"/>
+                            <constraint firstItem="zIt-0b-xwn" firstAttribute="bottom" secondItem="vJo-Ow-NT0" secondAttribute="bottom" id="sOt-lx-A6r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zIt-0b-xwn"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="vJo-Ow-NT0" id="Io8-ZC-28M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFg-12-4Ea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-53" y="-437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="e-remove" width="14" height="14"/>
+        <namedColor name="DefaultBackgroundColor">
+            <color red="0.9882352941176471" green="0.98039215686274506" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DefaultBorderColor">
+            <color red="0.92549019607843142" green="0.91764705882352937" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DefaultTextColor">
+            <color red="0.023529411764705882" green="0.050980392156862744" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

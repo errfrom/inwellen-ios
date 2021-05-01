@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,6 @@
 		EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */; };
 		EE94D410250FE80C00BEAE00 /* WaveformViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D40F250FE80C00BEAE00 /* WaveformViewState.swift */; };
 		EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */; };
-		EE94D41B2511044000BEAE00 /* dom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE94D41A2511044000BEAE00 /* dom.mp3 */; };
 		EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D41C25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift */; };
 		EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D41F25126F9900BEAE00 /* WaveformViewIntervalModel.swift */; };
 		EE94D42225127BAD00BEAE00 /* WaveformSelectedIntervalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE94D42125127BAC00BEAE00 /* WaveformSelectedIntervalView.xib */; };
@@ -25,6 +24,13 @@
 		EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */; };
 		EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */; };
 		EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */; };
+		EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A71263D86E60051ECB9 /* CreateCommit.storyboard */; };
+		EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A74263D86F40051ECB9 /* CreateCommitScreenViewController.swift */; };
+		EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A76263D8A070051ECB9 /* Constant.swift */; };
+		EEEE8A7A263D8E4B0051ECB9 /* SuisseIntl-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A79263D8E4B0051ECB9 /* SuisseIntl-Medium.otf */; };
+		EEEE8A7C263D8E8D0051ECB9 /* SuisseIntl-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A7B263D8E8D0051ECB9 /* SuisseIntl-Regular.otf */; };
+		EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A7D263D8EE70051ECB9 /* AppFont.swift */; };
+		EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A82263D91B20051ECB9 /* CreateCommitScreenDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +41,6 @@
 		EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalView.swift; sourceTree = "<group>"; };
 		EE94D40F250FE80C00BEAE00 /* WaveformViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewState.swift; sourceTree = "<group>"; };
 		EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformSelectedIntervalView.swift; sourceTree = "<group>"; };
-		EE94D41A2511044000BEAE00 /* dom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dom.mp3; sourceTree = "<group>"; };
 		EE94D41C25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformIntervalViewDelegate.swift; sourceTree = "<group>"; };
 		EE94D41F25126F9900BEAE00 /* WaveformViewIntervalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewIntervalModel.swift; sourceTree = "<group>"; };
 		EE94D42125127BAC00BEAE00 /* WaveformSelectedIntervalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformSelectedIntervalView.xib; sourceTree = "<group>"; };
@@ -50,6 +55,13 @@
 		EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManager.swift; sourceTree = "<group>"; };
 		EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardEnum.swift; sourceTree = "<group>"; };
 		EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		EEEE8A71263D86E60051ECB9 /* CreateCommit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateCommit.storyboard; sourceTree = "<group>"; };
+		EEEE8A74263D86F40051ECB9 /* CreateCommitScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenViewController.swift; sourceTree = "<group>"; };
+		EEEE8A76263D8A070051ECB9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		EEEE8A79263D8E4B0051ECB9 /* SuisseIntl-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SuisseIntl-Medium.otf"; path = "../../../../../../fonts/SuisseIntl/SuisseIntl-Medium/SuisseIntl-Medium.otf"; sourceTree = "<group>"; };
+		EEEE8A7B263D8E8D0051ECB9 /* SuisseIntl-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SuisseIntl-Regular.otf"; path = "../../../../../../fonts/SuisseIntl/SuisseIntl-Regular/SuisseIntl-Regular.otf"; sourceTree = "<group>"; };
+		EEEE8A7D263D8EE70051ECB9 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		EEEE8A82263D91B20051ECB9 /* CreateCommitScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +87,8 @@
 		EE170DED250F827F007341BE /* AppStyle */ = {
 			isa = PBXGroup;
 			children = (
+				EEEE8A78263D8E1C0051ECB9 /* Fonts */,
+				EEEE8A7D263D8EE70051ECB9 /* AppFont.swift */,
 				EE170DEE250F82A2007341BE /* AppColor.swift */,
 			);
 			path = AppStyle;
@@ -129,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */,
-				EE94D41A2511044000BEAE00 /* dom.mp3 */,
 				EE999C75250E8D6B001CFBB7 /* Main.storyboard */,
 				EE999C7A250E8D6F001CFBB7 /* LaunchScreen.storyboard */,
 				EE999C78250E8D6F001CFBB7 /* Assets.xcassets */,
@@ -141,6 +154,7 @@
 		EE999C83250E902F001CFBB7 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
+				EEEE8A6E263D86B30051ECB9 /* Commit */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -207,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */,
+				EEEE8A76263D8A070051ECB9 /* Constant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -217,6 +232,57 @@
 				EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		EEEE8A6E263D86B30051ECB9 /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A6F263D86CE0051ECB9 /* CreateCommit */,
+			);
+			path = Commit;
+			sourceTree = "<group>";
+		};
+		EEEE8A6F263D86CE0051ECB9 /* CreateCommit */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A7F263D91950051ECB9 /* DataSource */,
+				EEEE8A73263D86E80051ECB9 /* ViewController */,
+				EEEE8A70263D86D50051ECB9 /* Storyboard */,
+			);
+			path = CreateCommit;
+			sourceTree = "<group>";
+		};
+		EEEE8A70263D86D50051ECB9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A71263D86E60051ECB9 /* CreateCommit.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EEEE8A73263D86E80051ECB9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A74263D86F40051ECB9 /* CreateCommitScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EEEE8A78263D8E1C0051ECB9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A7B263D8E8D0051ECB9 /* SuisseIntl-Regular.otf */,
+				EEEE8A79263D8E4B0051ECB9 /* SuisseIntl-Medium.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EEEE8A7F263D91950051ECB9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A82263D91B20051ECB9 /* CreateCommitScreenDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */ = {
@@ -239,6 +305,7 @@
 				EE999C68250E8D6B001CFBB7 /* Sources */,
 				EE999C69250E8D6B001CFBB7 /* Frameworks */,
 				EE999C6A250E8D6B001CFBB7 /* Resources */,
+				0BA6E4E72A9F56B10AB1679D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -290,7 +357,9 @@
 				EE94D42225127BAD00BEAE00 /* WaveformSelectedIntervalView.xib in Resources */,
 				EE999C7C250E8D6F001CFBB7 /* LaunchScreen.storyboard in Resources */,
 				EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */,
-				EE94D41B2511044000BEAE00 /* dom.mp3 in Resources */,
+				EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */,
+				EEEE8A7C263D8E8D0051ECB9 /* SuisseIntl-Regular.otf in Resources */,
+				EEEE8A7A263D8E4B0051ECB9 /* SuisseIntl-Medium.otf in Resources */,
 				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
 				EE999C88250E9109001CFBB7 /* WaveformView.xib in Resources */,
 			);
@@ -299,6 +368,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0BA6E4E72A9F56B10AB1679D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Unison/Pods-Unison-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Unison/Pods-Unison-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Unison/Pods-Unison-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6BB26B2E4FD0987F5E2E135D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,12 +416,16 @@
 			files = (
 				EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */,
 				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */,
+				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
+				EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */,
 				EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */,
 				EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */,
 				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
+				EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */,
 				EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */,
 				EE94D410250FE80C00BEAE00 /* WaveformViewState.swift in Sources */,
 				EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */,
+				EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */,
 				EE170DEF250F82A2007341BE /* AppColor.swift in Sources */,
 				EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */,
 				EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */,

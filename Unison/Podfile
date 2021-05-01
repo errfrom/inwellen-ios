@@ -4,5 +4,7 @@
 target 'Unison' do
   use_frameworks!
   
+  # Logging
+  pod 'SwiftyBeaver'
 
 end
