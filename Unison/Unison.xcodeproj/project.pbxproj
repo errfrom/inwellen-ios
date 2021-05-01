@@ -27,10 +27,13 @@
 		EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A71263D86E60051ECB9 /* CreateCommit.storyboard */; };
 		EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A74263D86F40051ECB9 /* CreateCommitScreenViewController.swift */; };
 		EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A76263D8A070051ECB9 /* Constant.swift */; };
-		EEEE8A7A263D8E4B0051ECB9 /* SuisseIntl-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A79263D8E4B0051ECB9 /* SuisseIntl-Medium.otf */; };
-		EEEE8A7C263D8E8D0051ECB9 /* SuisseIntl-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A7B263D8E8D0051ECB9 /* SuisseIntl-Regular.otf */; };
 		EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A7D263D8EE70051ECB9 /* AppFont.swift */; };
 		EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A82263D91B20051ECB9 /* CreateCommitScreenDataSource.swift */; };
+		EEEE8A87263D93BC0051ECB9 /* ReusableBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */; };
+		EEEE8A8A263D94150051ECB9 /* SectionSeparatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A89263D94150051ECB9 /* SectionSeparatorTableViewCell.xib */; };
+		EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A8C263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift */; };
+		EEEE8A93263D94C60051ECB9 /* SimplonNorm-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */; };
+		EEEE8A95263D98270051ECB9 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,10 +61,15 @@
 		EEEE8A71263D86E60051ECB9 /* CreateCommit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateCommit.storyboard; sourceTree = "<group>"; };
 		EEEE8A74263D86F40051ECB9 /* CreateCommitScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenViewController.swift; sourceTree = "<group>"; };
 		EEEE8A76263D8A070051ECB9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		EEEE8A79263D8E4B0051ECB9 /* SuisseIntl-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SuisseIntl-Medium.otf"; path = "../../../../../../fonts/SuisseIntl/SuisseIntl-Medium/SuisseIntl-Medium.otf"; sourceTree = "<group>"; };
-		EEEE8A7B263D8E8D0051ECB9 /* SuisseIntl-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SuisseIntl-Regular.otf"; path = "../../../../../../fonts/SuisseIntl/SuisseIntl-Regular/SuisseIntl-Regular.otf"; sourceTree = "<group>"; };
 		EEEE8A7D263D8EE70051ECB9 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		EEEE8A82263D91B20051ECB9 /* CreateCommitScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenDataSource.swift; sourceTree = "<group>"; };
+		EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableBaseView.swift; sourceTree = "<group>"; };
+		EEEE8A89263D94150051ECB9 /* SectionSeparatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionSeparatorTableViewCell.xib; sourceTree = "<group>"; };
+		EEEE8A8C263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionSeparatorTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8A8F263D94A50051ECB9 /* SuisseIntl-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Regular.otf"; sourceTree = "<group>"; };
+		EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Medium.otf"; sourceTree = "<group>"; };
+		EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SimplonNorm-Bold.otf"; path = "../../../../../../../Downloads/Simplon Norm/SimplonNorm-Bold.otf"; sourceTree = "<group>"; };
+		EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				EE999C84250E9034001CFBB7 /* WaveformView */,
+				EEEE8A84263D93790051ECB9 /* Reusable */,
 				EE999C83250E902F001CFBB7 /* Groups */,
 				EE999C90250EB0E6001CFBB7 /* Core */,
 				EE999C6E250E8D6B001CFBB7 /* Unison */,
@@ -230,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */,
+				EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -271,8 +281,8 @@
 		EEEE8A78263D8E1C0051ECB9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				EEEE8A7B263D8E8D0051ECB9 /* SuisseIntl-Regular.otf */,
-				EEEE8A79263D8E4B0051ECB9 /* SuisseIntl-Medium.otf */,
+				EEEE8A8E263D94A00051ECB9 /* SuisseIntl */,
+				EEEE8A91263D94B10051ECB9 /* SimplonNorm */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -283,6 +293,57 @@
 				EEEE8A82263D91B20051ECB9 /* CreateCommitScreenDataSource.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		EEEE8A84263D93790051ECB9 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */,
+				EEEE8A85263D93860051ECB9 /* SectionSeparatorTableViewCell */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		EEEE8A85263D93860051ECB9 /* SectionSeparatorTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A8B263D94230051ECB9 /* View */,
+				EEEE8A88263D94080051ECB9 /* Xib */,
+			);
+			path = SectionSeparatorTableViewCell;
+			sourceTree = "<group>";
+		};
+		EEEE8A88263D94080051ECB9 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A89263D94150051ECB9 /* SectionSeparatorTableViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EEEE8A8B263D94230051ECB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A8C263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEEE8A8E263D94A00051ECB9 /* SuisseIntl */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A8F263D94A50051ECB9 /* SuisseIntl-Regular.otf */,
+				EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */,
+			);
+			path = SuisseIntl;
+			sourceTree = "<group>";
+		};
+		EEEE8A91263D94B10051ECB9 /* SimplonNorm */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */,
+			);
+			path = SimplonNorm;
 			sourceTree = "<group>";
 		};
 		FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */ = {
@@ -358,10 +419,10 @@
 				EE999C7C250E8D6F001CFBB7 /* LaunchScreen.storyboard in Resources */,
 				EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */,
 				EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */,
-				EEEE8A7C263D8E8D0051ECB9 /* SuisseIntl-Regular.otf in Resources */,
-				EEEE8A7A263D8E4B0051ECB9 /* SuisseIntl-Medium.otf in Resources */,
 				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
 				EE999C88250E9109001CFBB7 /* WaveformView.xib in Resources */,
+				EEEE8A8A263D94150051ECB9 /* SectionSeparatorTableViewCell.xib in Resources */,
+				EEEE8A93263D94C60051ECB9 /* SimplonNorm-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,13 +482,16 @@
 				EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */,
 				EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */,
 				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
+				EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */,
 				EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */,
 				EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */,
 				EE94D410250FE80C00BEAE00 /* WaveformViewState.swift in Sources */,
+				EEEE8A87263D93BC0051ECB9 /* ReusableBaseView.swift in Sources */,
 				EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */,
 				EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */,
 				EE170DEF250F82A2007341BE /* AppColor.swift in Sources */,
 				EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */,
+				EEEE8A95263D98270051ECB9 /* UILabelExtension.swift in Sources */,
 				EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

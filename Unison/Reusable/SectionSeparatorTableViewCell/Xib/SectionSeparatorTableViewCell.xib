@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SimplonNorm-Bold.otf">
+            <string>SimplonNorm-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SectionSeparatorCell" rowHeight="72" id="KcP-d7-hel" customClass="SectionSeparatorTableViewCell" customModule="Unison" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KcP-d7-hel" id="LgF-5Z-BMv">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XlD-NR-QYh" userLabel="SeparatorLine">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="noV-ww-jli"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gc-4f-KDc" userLabel="SectionTitle">
+                        <rect key="frame" x="32" y="34" width="39.5" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="ryo-2U-tNO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SimplonNorm-Bold" family="Simplon Norm" pointSize="14"/>
+                        <color key="textColor" red="0.023529411764705882" green="0.050980392156862744" blue="0.10980392156862745" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8gc-4f-KDc" firstAttribute="top" secondItem="XlD-NR-QYh" secondAttribute="bottom" constant="32" id="58c-EM-1kY"/>
+                    <constraint firstItem="8gc-4f-KDc" firstAttribute="top" secondItem="XlD-NR-QYh" secondAttribute="bottom" constant="32" id="E5p-nE-7bV"/>
+                    <constraint firstAttribute="bottom" secondItem="8gc-4f-KDc" secondAttribute="bottom" constant="24" id="LcT-L2-uVs"/>
+                    <constraint firstItem="XlD-NR-QYh" firstAttribute="leading" secondItem="LgF-5Z-BMv" secondAttribute="leading" id="NlB-WA-Z1K"/>
+                    <constraint firstItem="XlD-NR-QYh" firstAttribute="top" secondItem="LgF-5Z-BMv" secondAttribute="top" id="TYh-FE-rRO"/>
+                    <constraint firstItem="8gc-4f-KDc" firstAttribute="leading" secondItem="LgF-5Z-BMv" secondAttribute="leading" constant="32" id="kUw-O4-5TM"/>
+                    <constraint firstAttribute="trailing" secondItem="XlD-NR-QYh" secondAttribute="trailing" id="wB4-Xh-4hF"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8gc-4f-KDc" secondAttribute="trailing" constant="32" id="x59-3j-UUn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="DefaultBackgroundColor"/>
+            <connections>
+                <outlet property="sectionTitleLabel" destination="8gc-4f-KDc" id="hMm-IM-1Tq"/>
+                <outlet property="separatorLineHeightConstraint" destination="noV-ww-jli" id="f7y-H5-2tS"/>
+            </connections>
+            <point key="canvasLocation" x="-872" y="-201"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DefaultBackgroundColor">
+            <color red="0.9882352941176471" green="0.98039215686274506" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
