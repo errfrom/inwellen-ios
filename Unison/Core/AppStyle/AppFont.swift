@@ -10,11 +10,16 @@ import UIKit
 
 enum AppFont: String {
     
+    case suisseIntlBook = "SuisseIntl-Book"
     case suisseIntlRegular = "SuisseIntl-Regular"
     case suisseIntlMedium = "SuisseIntl-Medium"
     case simplonNormBold = "SimplonNorm-Bold"
     
     // - Suisse Intl
+    static func suisseIntlBook(size: CGFloat) -> UIFont {
+        return UIFont(name: suisseIntlBook.rawValue, size: size)!
+    }
+    
     static func suisseIntlRegular(size: CGFloat) -> UIFont {
         return UIFont(name: suisseIntlRegular.rawValue, size: size)!
     }

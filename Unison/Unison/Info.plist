@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>SuisseIntl-Book.otf</string>
 		<string>SuisseIntl-Regular.otf</string>
 		<string>SuisseIntl-Medium.otf</string>
 		<string>SimplonNorm-Bold.otf</string>

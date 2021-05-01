@@ -23,8 +23,8 @@ class SectionSeparatorTableViewCell: UITableViewCell {
 
 extension SectionSeparatorTableViewCell {
     
-    func set(sectionTitle: String, showSeparatorLine: Bool = true) {
-        self.sectionTitleLabel.text = sectionTitle
+    func set(sectionTitle: String, showSeparatorLine: Bool) {
+        self.sectionTitleLabel.text = sectionTitle.uppercased()
         self.sectionTitleLabel.addAttribute(.kern, value: 0.7)
         self.separatorLineHeightConstraint.constant = showSeparatorLine ? 2 : 0
     }

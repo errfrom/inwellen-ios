@@ -34,6 +34,12 @@
 		EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A8C263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift */; };
 		EEEE8A93263D94C60051ECB9 /* SimplonNorm-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */; };
 		EEEE8A95263D98270051ECB9 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */; };
+		EEEE8A96263D9C3A0051ECB9 /* SuisseIntl-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A8F263D94A50051ECB9 /* SuisseIntl-Regular.otf */; };
+		EEEE8A97263D9C3C0051ECB9 /* SuisseIntl-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */; };
+		EEEE8A9A263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */; };
+		EEEE8A9C263DA1D30051ECB9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */; };
+		EEEE8A9E263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A9D263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift */; };
+		EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +76,10 @@
 		EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Medium.otf"; sourceTree = "<group>"; };
 		EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SimplonNorm-Bold.otf"; path = "../../../../../../../Downloads/Simplon Norm/SimplonNorm-Bold.otf"; sourceTree = "<group>"; };
 		EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitChooseProjectTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		EEEE8A9D263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitUploadAudioTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SuisseIntl-Book.otf"; path = "../../../../../../../Downloads/Suisse - SwissTypeface/Suisse Int'l/SuisseIntl-Book.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */,
+				EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */,
 				EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */,
 			);
 			path = Extension;
@@ -255,6 +266,7 @@
 		EEEE8A6F263D86CE0051ECB9 /* CreateCommit */ = {
 			isa = PBXGroup;
 			children = (
+				EEEE8A98263D9DBD0051ECB9 /* Cell */,
 				EEEE8A7F263D91950051ECB9 /* DataSource */,
 				EEEE8A73263D86E80051ECB9 /* ViewController */,
 				EEEE8A70263D86D50051ECB9 /* Storyboard */,
@@ -332,6 +344,7 @@
 		EEEE8A8E263D94A00051ECB9 /* SuisseIntl */ = {
 			isa = PBXGroup;
 			children = (
+				EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */,
 				EEEE8A8F263D94A50051ECB9 /* SuisseIntl-Regular.otf */,
 				EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */,
 			);
@@ -344,6 +357,15 @@
 				EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */,
 			);
 			path = SimplonNorm;
+			sourceTree = "<group>";
+		};
+		EEEE8A98263D9DBD0051ECB9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */,
+				EEEE8A9D263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */ = {
@@ -420,9 +442,12 @@
 				EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */,
 				EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */,
 				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
+				EEEE8A96263D9C3A0051ECB9 /* SuisseIntl-Regular.otf in Resources */,
+				EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */,
 				EE999C88250E9109001CFBB7 /* WaveformView.xib in Resources */,
 				EEEE8A8A263D94150051ECB9 /* SectionSeparatorTableViewCell.xib in Resources */,
 				EEEE8A93263D94C60051ECB9 /* SimplonNorm-Bold.otf in Resources */,
+				EEEE8A97263D9C3C0051ECB9 /* SuisseIntl-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +503,7 @@
 				EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */,
 				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */,
 				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
+				EEEE8A9E263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift in Sources */,
 				EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */,
 				EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */,
 				EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */,
@@ -485,12 +511,14 @@
 				EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */,
 				EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */,
 				EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */,
+				EEEE8A9C263DA1D30051ECB9 /* UIViewExtension.swift in Sources */,
 				EE94D410250FE80C00BEAE00 /* WaveformViewState.swift in Sources */,
 				EEEE8A87263D93BC0051ECB9 /* ReusableBaseView.swift in Sources */,
 				EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */,
 				EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */,
 				EE170DEF250F82A2007341BE /* AppColor.swift in Sources */,
 				EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */,
+				EEEE8A9A263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift in Sources */,
 				EEEE8A95263D98270051ECB9 /* UILabelExtension.swift in Sources */,
 				EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */,
 			);
