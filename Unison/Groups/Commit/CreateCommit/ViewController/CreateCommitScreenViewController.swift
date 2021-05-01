@@ -16,6 +16,9 @@ class CreateCommitScreenViewController: UIViewController {
     // - DataSource
     private var dataSource: CreateCommitScreenDataSource!
     
+    // - Manager
+    private var coordinator: CreateCommitScreenCoordinator!
+    
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +33,7 @@ class CreateCommitScreenViewController: UIViewController {
 fileprivate extension CreateCommitScreenViewController {
     
     @IBAction private func didTapBackButton(_ sender: UIButton) {
-        
+        coordinator.dismiss()
     }
     
 }
@@ -42,10 +45,15 @@ fileprivate extension CreateCommitScreenViewController {
     
     private func configure() {
         configureDataSource()
+        configureCoordinator()
     }
     
     private func configureDataSource() {
         dataSource = CreateCommitScreenDataSource(tableView: tableView)
+    }
+    
+    private func configureCoordinator() {
+        coordinator = CreateCommitScreenCoordinator(vc: self)
     }
     
 }

@@ -51,8 +51,10 @@
             </tableViewCellContentView>
             <color key="backgroundColor" name="DefaultBackgroundColor"/>
             <connections>
+                <outlet property="sectionTitleBottomConstraint" destination="LcT-L2-uVs" id="oZG-z3-Lbh"/>
                 <outlet property="sectionTitleLabel" destination="8gc-4f-KDc" id="hMm-IM-1Tq"/>
                 <outlet property="separatorLineHeightConstraint" destination="noV-ww-jli" id="f7y-H5-2tS"/>
+                <outlet property="separatorLineTopConstraint" destination="TYh-FE-rRO" id="twO-nb-907"/>
             </connections>
             <point key="canvasLocation" x="-872" y="-201"/>
         </tableViewCell>
