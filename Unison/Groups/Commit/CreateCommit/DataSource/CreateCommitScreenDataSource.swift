@@ -10,6 +10,9 @@ import UIKit
 
 class CreateCommitScreenDataSource: NSObject {
     
+    // - Delegate
+    private weak var delegate: CreateCommitScreenDelegate?
+    
     // - UI
     private unowned let tableView: UITableView
     
@@ -17,8 +20,9 @@ class CreateCommitScreenDataSource: NSObject {
     private var cells: [(cell: Cell, config: CellConfiguration?)] = []
     
     // - Init
-    init(tableView: UITableView) {
+    init(tableView: UITableView, delegate: CreateCommitScreenDelegate) {
         self.tableView = tableView
+        self.delegate = delegate
         super.init()
         registerCells()
         configure()
@@ -85,6 +89,19 @@ fileprivate extension CreateCommitScreenDataSource {
 }
 
 // MARK: -
+// MARK: - Delegate
+
+extension CreateCommitScreenDataSource: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if case .chooseProjectCell = cells[indexPath.item].cell {
+            delegate?.didTapChooseProjectCell()
+        }
+    }
+    
+}
+
+// MARK: -
 // MARK: - Configure
 
 fileprivate extension CreateCommitScreenDataSource {
@@ -102,13 +119,14 @@ fileprivate extension CreateCommitScreenDataSource {
     
     private func configureTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     private func configureCells() {
         cells.removeAll()
         appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Choose project", showSeparatorLine: false))
         appendCell(.chooseProjectCell)
-        appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Name & description", bottomMargin: 8))
+        // appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Name & description", bottomMargin: 8))
         appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Upload commit audio"))
         appendCell(.uploadAudio)
         tableView.reloadData()

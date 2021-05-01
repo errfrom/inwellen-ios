@@ -43,6 +43,14 @@
 		EEEE8AA4263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AA3263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift */; };
 		EEEE8AA7263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AA6263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift */; };
 		EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AAB263DB1A60051ECB9 /* CellConfiguration.swift */; };
+		EEEE8AB2263DCA460051ECB9 /* ChooseProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8AB1263DCA460051ECB9 /* ChooseProject.storyboard */; };
+		EEEE8AB5263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AB4263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift */; };
+		EEEE8AB8263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AB7263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift */; };
+		EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ABB263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift */; };
+		EEEE8ABF263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ABE263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift */; };
+		EEEE8AC2263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AC1263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift */; };
+		EEEE8AC5263DD0800051ECB9 /* ChooseProjectItemTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AC4263DD0800051ECB9 /* ChooseProjectItemTestModel.swift */; };
+		EEEE8AC8263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AC7263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +94,14 @@
 		EEEE8AA3263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenCoordinator.swift; sourceTree = "<group>"; };
 		EEEE8AA6263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionSeparatorCellConfiguration.swift; sourceTree = "<group>"; };
 		EEEE8AAB263DB1A60051ECB9 /* CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfiguration.swift; sourceTree = "<group>"; };
+		EEEE8AB1263DCA460051ECB9 /* ChooseProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseProject.storyboard; sourceTree = "<group>"; };
+		EEEE8AB4263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectScreenViewController.swift; sourceTree = "<group>"; };
+		EEEE8AB7263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenDelegate.swift; sourceTree = "<group>"; };
+		EEEE8ABB263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectScreenCoordinator.swift; sourceTree = "<group>"; };
+		EEEE8ABE263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectScreenDataSource.swift; sourceTree = "<group>"; };
+		EEEE8AC1263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectItemTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8AC4263DD0800051ECB9 /* ChooseProjectItemTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectItemTestModel.swift; sourceTree = "<group>"; };
+		EEEE8AC7263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectScreenDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				EEEE8A6F263D86CE0051ECB9 /* CreateCommit */,
+				EEEE8AAF263DCA240051ECB9 /* ChooseProject */,
 			);
 			path = Commit;
 			sourceTree = "<group>";
@@ -273,6 +290,7 @@
 		EEEE8A6F263D86CE0051ECB9 /* CreateCommit */ = {
 			isa = PBXGroup;
 			children = (
+				EEEE8AB6263DCBD50051ECB9 /* Protocol */,
 				EEEE8A98263D9DBD0051ECB9 /* Cell */,
 				EEEE8A7F263D91950051ECB9 /* DataSource */,
 				EEEE8AA1263DADF10051ECB9 /* Manager */,
@@ -409,6 +427,92 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		EEEE8AAF263DCA240051ECB9 /* ChooseProject */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AC6263DD4A50051ECB9 /* Protocol */,
+				EEEE8AC3263DD0720051ECB9 /* Model */,
+				EEEE8AC0263DD0010051ECB9 /* Cell */,
+				EEEE8ABD263DCF170051ECB9 /* DataSource */,
+				EEEE8AB9263DCDBC0051ECB9 /* Manager */,
+				EEEE8AB3263DCA8C0051ECB9 /* ViewController */,
+				EEEE8AB0263DCA340051ECB9 /* Storyboard */,
+			);
+			path = ChooseProject;
+			sourceTree = "<group>";
+		};
+		EEEE8AB0263DCA340051ECB9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AB1263DCA460051ECB9 /* ChooseProject.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EEEE8AB3263DCA8C0051ECB9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AB4263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EEEE8AB6263DCBD50051ECB9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AB7263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EEEE8AB9263DCDBC0051ECB9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ABA263DCDC00051ECB9 /* Coordinator */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEEE8ABA263DCDC00051ECB9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ABB263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EEEE8ABD263DCF170051ECB9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ABE263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		EEEE8AC0263DD0010051ECB9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AC1263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EEEE8AC3263DD0720051ECB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AC4263DD0800051ECB9 /* ChooseProjectItemTestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEEE8AC6263DD4A50051ECB9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AC7263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +585,7 @@
 				EE94D42225127BAD00BEAE00 /* WaveformSelectedIntervalView.xib in Resources */,
 				EE999C7C250E8D6F001CFBB7 /* LaunchScreen.storyboard in Resources */,
 				EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */,
+				EEEE8AB2263DCA460051ECB9 /* ChooseProject.storyboard in Resources */,
 				EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */,
 				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
 				EEEE8A96263D9C3A0051ECB9 /* SuisseIntl-Regular.otf in Resources */,
@@ -542,24 +647,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */,
+				EEEE8ABF263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift in Sources */,
 				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */,
+				EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */,
 				EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */,
 				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
 				EEEE8A9E263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift in Sources */,
 				EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */,
+				EEEE8AC8263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift in Sources */,
 				EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */,
 				EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */,
+				EEEE8AB8263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift in Sources */,
 				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
 				EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */,
 				EEEE8AA4263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift in Sources */,
 				EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */,
 				EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */,
+				EEEE8AC5263DD0800051ECB9 /* ChooseProjectItemTestModel.swift in Sources */,
 				EEEE8A9C263DA1D30051ECB9 /* UIViewExtension.swift in Sources */,
 				EE94D410250FE80C00BEAE00 /* WaveformViewState.swift in Sources */,
 				EEEE8A87263D93BC0051ECB9 /* ReusableBaseView.swift in Sources */,
 				EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */,
 				EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */,
+				EEEE8AC2263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift in Sources */,
 				EE170DEF250F82A2007341BE /* AppColor.swift in Sources */,
+				EEEE8AB5263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift in Sources */,
 				EEEE8AA7263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift in Sources */,
 				EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */,
 				EEEE8A9A263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift in Sources */,

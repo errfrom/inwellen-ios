@@ -18,7 +18,12 @@ class CreateCommitScreenCoordinator {
     }
     
     func dismiss() {
-        vc.navigationController?.dismiss(animated: true, completion: nil)
+        vc.dismiss(animated: true, completion: nil)
+    }
+    
+    func moveToChooseProject() {
+        let chooseProject_vc = Storyboard.chooseProject.viewController as! ChooseProjectScreenViewController
+        vc.navigationController?.present(chooseProject_vc, animated: true, completion: nil)
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  CreateCommitScreenViewController.swift
+//  ChooseProjectScreenViewController.swift
 //  Unison
 //
 //  Created by Dzmitry Shuysky on 5/1/21.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class CreateCommitScreenViewController: UIViewController {
+class ChooseProjectScreenViewController: UIViewController {
     
     // - UI
     @IBOutlet weak var tableView: UITableView!
     
     // - DataSource
-    private var dataSource: CreateCommitScreenDataSource!
+    private var dataSource: ChooseProjectScreenDataSource!
     
     // - Manager
-    private var coordinator: CreateCommitScreenCoordinator!
+    private var coordinator: ChooseProjectScreenCoordinator!
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class CreateCommitScreenViewController: UIViewController {
 // MARK: -
 // MARK: - Action
 
-fileprivate extension CreateCommitScreenViewController {
+fileprivate extension ChooseProjectScreenViewController {
     
     @IBAction private func didTapCloseButton(_ sender: UIButton) {
         coordinator.dismiss()
@@ -41,10 +41,10 @@ fileprivate extension CreateCommitScreenViewController {
 // MARK: -
 // MARK: - Delegate
 
-extension CreateCommitScreenViewController: CreateCommitScreenDelegate {
+extension ChooseProjectScreenViewController: ChooseProjectScreenDelegate {
     
-    func didTapChooseProjectCell() {
-        coordinator.moveToChooseProject()
+    func didTapProjectCell() {
+        coordinator.dismiss()
     }
     
 }
@@ -52,7 +52,7 @@ extension CreateCommitScreenViewController: CreateCommitScreenDelegate {
 // MARK: -
 // MARK: - Configure
 
-fileprivate extension CreateCommitScreenViewController {
+fileprivate extension ChooseProjectScreenViewController {
     
     private func configure() {
         configureDataSource()
@@ -60,11 +60,11 @@ fileprivate extension CreateCommitScreenViewController {
     }
     
     private func configureDataSource() {
-        dataSource = CreateCommitScreenDataSource(tableView: tableView, delegate: self)
+        dataSource = ChooseProjectScreenDataSource(tableView: tableView, delegate: self)
     }
     
     private func configureCoordinator() {
-        coordinator = CreateCommitScreenCoordinator(vc: self)
+        coordinator = ChooseProjectScreenCoordinator(vc: self)
     }
     
 }
