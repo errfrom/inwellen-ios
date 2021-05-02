@@ -11,10 +11,12 @@ import UIKit
 class CreateCommitAudioTableViewCell: UITableViewCell {
     
     // - Delegate
-    private weak var delegate: CreateCommitScreenDelegate?
+    private(set) weak var delegate: CreateCommitScreenDelegate?
     
     // - UI
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollViewContentView: UIView!
+              weak var containerView: UIView?
     
     @IBOutlet weak var uploadCommitAudioLabel: UILabel!
     @IBOutlet weak var specifyIntervalsLabel: UILabel!
@@ -22,6 +24,7 @@ class CreateCommitAudioTableViewCell: UITableViewCell {
     
     // - Constraints
     @IBOutlet weak var scrollViewContentWidthConstraint: NSLayoutConstraint!
+    @IBOutlet      var uploadAudioFileViewTopBottomConstraints: [NSLayoutConstraint]!
     
     // - Manager
     private var layoutManager: CreateCommitAudioTableViewCellLayoutManager?
@@ -33,9 +36,7 @@ class CreateCommitAudioTableViewCell: UITableViewCell {
     }
     
     // - Data
-    private(set) var currentPage: Page = .uploadAudioFilePage {
-        didSet { layoutManager?.layoutPagesTransition() }
-    }
+    private(set) var currentPage: Page = .uploadAudioFilePage
     
     // - Lifecycle
     override func awakeFromNib() {
@@ -52,7 +53,11 @@ extension CreateCommitAudioTableViewCell {
     
     func set(delegate: CreateCommitScreenDelegate?, page: Page) {
         self.delegate = delegate
-        self.currentPage = page
+        
+        if page != currentPage {
+            self.currentPage = page
+            layoutManager?.layoutPagesTransition()
+        }
     }
     
 }

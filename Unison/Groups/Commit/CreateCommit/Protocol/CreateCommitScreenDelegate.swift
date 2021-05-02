@@ -9,5 +9,7 @@
 protocol CreateCommitScreenDelegate: TextViewTableViewCellDelegate {
     func didTapChooseProjectCell()
     func didTapUploadAudioFileButton()
+    func commitAudioCellDidPerformPageTransition()
+    
     func forceDismissKeyboard()
 }

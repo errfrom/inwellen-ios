@@ -135,7 +135,7 @@
                                             <outlet property="contentView_" destination="bGo-LZ-t41" id="JVV-qa-QZO"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CommitAudioCell" rowHeight="306.5" id="F9W-hX-TGz" userLabel="CommitAudioCell" customClass="CreateCommitAudioTableViewCell" customModule="Unison" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CommitAudioCell" id="F9W-hX-TGz" userLabel="CommitAudioCell" customClass="CreateCommitAudioTableViewCell" customModule="Unison" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="188" width="414" height="306.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F9W-hX-TGz" id="XkF-zc-JeB">
@@ -255,6 +255,7 @@
                                                                     </subviews>
                                                                     <color key="backgroundColor" name="DefaultBackgroundColor"/>
                                                                     <constraints>
+                                                                        <constraint firstAttribute="height" constant="186.5" id="0I3-rY-MbI"/>
                                                                         <constraint firstItem="EIY-qZ-Qhd" firstAttribute="leading" secondItem="9on-bo-voM" secondAttribute="leading" id="1SL-Ep-V19"/>
                                                                         <constraint firstItem="EIY-qZ-Qhd" firstAttribute="top" secondItem="ZLu-W8-MDT" secondAttribute="bottom" constant="32" id="6Jt-xe-dkB"/>
                                                                         <constraint firstItem="sFS-uZ-8Wq" firstAttribute="top" secondItem="9on-bo-voM" secondAttribute="top" id="6Ok-qZ-0MP"/>
@@ -282,6 +283,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                             </subviews>
+                                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="9on-bo-voM" firstAttribute="width" secondItem="azt-yp-jRw" secondAttribute="width" multiplier="0.5" constant="-64" id="Fns-CT-G1e"/>
                                                                 <constraint firstItem="9on-bo-voM" firstAttribute="top" secondItem="azt-yp-jRw" secondAttribute="top" constant="8" id="Ixb-e6-IKQ"/>
@@ -318,9 +320,12 @@
                                         <connections>
                                             <outlet property="backButton" destination="4ts-9h-NNq" id="y9o-dd-dN5"/>
                                             <outlet property="scrollView" destination="xAt-ph-ZJk" id="TL8-YO-Cab"/>
+                                            <outlet property="scrollViewContentView" destination="azt-yp-jRw" id="Sm6-No-sAF"/>
                                             <outlet property="scrollViewContentWidthConstraint" destination="pzj-eW-km9" id="Zfm-2k-YFQ"/>
                                             <outlet property="specifyIntervalsLabel" destination="nYS-yB-18b" id="3vX-P9-T8M"/>
                                             <outlet property="uploadCommitAudioLabel" destination="Tsz-BY-aKt" id="LU4-vv-PcE"/>
+                                            <outletCollection property="uploadAudioFileViewTopBottomConstraints" destination="Ixb-e6-IKQ" collectionClass="NSMutableArray" id="a7q-74-fbx"/>
+                                            <outletCollection property="uploadAudioFileViewTopBottomConstraints" destination="Yzs-7L-YxR" collectionClass="NSMutableArray" id="gM0-Hk-ELf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

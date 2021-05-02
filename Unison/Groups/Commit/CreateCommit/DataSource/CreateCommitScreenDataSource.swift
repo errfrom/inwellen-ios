@@ -39,9 +39,27 @@ extension CreateCommitScreenDataSource {
     func update(commitAudioCellPage: CreateCommitAudioTableViewCell.Page) {
         self.commitAudioCellPage = commitAudioCellPage
         
-        if let commitAudioCellIndex = cells.firstIndex(where: { $0.cell == .commitAudioCell }) {
-            let indexPath = IndexPath(item: commitAudioCellIndex, section: 0)
+        if let indexPath = commitAudioCellIndexPath {
             tableView.reloadRows(at: [indexPath], with: .none)
+        }
+    }
+    
+    func scrollToCommitAudioCellIfNeeded() {
+        guard commitAudioCellPage == .specifyIntervalsPage else { return }
+        
+        if let indexPath = commitAudioCellIndexPath {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                let contentOffset = CGPoint(x: 0, y: cell.frame.minY + 40)
+                tableView.setContentOffset(contentOffset, animated: true)
+            }
+        }
+    }
+    
+    private var commitAudioCellIndexPath: IndexPath? {
+        if let commitAudioCellIndex = cells.firstIndex(where: { $0.cell == .commitAudioCell }) {
+            return IndexPath(item: commitAudioCellIndex, section: 0)
+        } else {
+            return nil
         }
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class CreateCommitAudioTableViewCellLayoutManager {
     
@@ -27,12 +28,26 @@ extension CreateCommitAudioTableViewCellLayoutManager {
     
     func layoutPagesTransition() {
         scrollViewUpdateContentOffset()
+        reprioritizeConstraints()
+    }
+    
+    private func reprioritizeConstraints() {
+        let constraintPriority = UILayoutPriority(cell.currentPage == .uploadAudioFilePage ? 1000 : 998)
+        cell.uploadAudioFileViewTopBottomConstraints.forEach() {
+            $0.priority = constraintPriority
+        }
     }
     
     private func scrollViewUpdateContentOffset() {
         let screenWidth = UIScreen.main.bounds.width
         let contentOffset = CGPoint(x: screenWidth * CGFloat(cell.currentPage.rawValue), y: 0)
-        cell.scrollView.setContentOffset(contentOffset, animated: true)
+        cell.scrollView.layoutIfNeeded()
+        
+        UIView.animate(withDuration: 0.3, animations: { [weak self] in
+            self?.cell.scrollView.setContentOffset(contentOffset, animated: false)
+        }, completion: { [weak self] _ in
+            self?.cell.delegate?.commitAudioCellDidPerformPageTransition()
+        })
     }
     
 }
@@ -44,6 +59,7 @@ fileprivate extension CreateCommitAudioTableViewCellLayoutManager {
     
     private func configure() {
         configureScrollView()
+        configureContainerView()
         configureUploadCommitAudioLabel()
         configureSpecifyIntervalsLabel()
         configureBackButton()
@@ -51,6 +67,20 @@ fileprivate extension CreateCommitAudioTableViewCellLayoutManager {
     
     private func configureScrollView() {
         cell.scrollViewContentWidthConstraint.constant = UIScreen.main.bounds.width * 2
+    }
+    
+    private func configureContainerView() {
+        let containerView = UIView()
+        containerView.backgroundColor = .blue
+        cell.scrollViewContentView.addSubview(containerView)
+        cell.containerView = containerView
+        
+        containerView.snp.makeConstraints { make in
+            make.height.equalTo(600)
+            make.leading.equalToSuperview().offset(UIScreen.main.bounds.width)
+            make.trailing.equalToSuperview()
+            make.top.bottom.equalToSuperview().priority(999)
+        }
     }
     
     private func configureUploadCommitAudioLabel() {

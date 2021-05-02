@@ -4,6 +4,9 @@
 target 'Unison' do
   use_frameworks!
   
+  # UI
+  pod 'SnapKit', '~> 5.0.0'
+  
   # Logging
   pod 'SwiftyBeaver'
 

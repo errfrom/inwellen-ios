@@ -51,6 +51,10 @@ extension CreateCommitScreenViewController: CreateCommitScreenDelegate {
         dataSource.update(commitAudioCellPage: .specifyIntervalsPage)
     }
     
+    func commitAudioCellDidPerformPageTransition() {
+        dataSource.scrollToCommitAudioCellIfNeeded()
+    }
+    
     func forceDismissKeyboard() {
         self.view.endEditing(true)
     }
