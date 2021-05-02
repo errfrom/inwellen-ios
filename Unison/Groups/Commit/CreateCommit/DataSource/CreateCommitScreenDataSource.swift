@@ -18,6 +18,7 @@ class CreateCommitScreenDataSource: NSObject {
     
     // - Data
     private var cells: [(cell: Cell, config: CellConfiguration?)] = []
+    private var commitAudioCellPage: CreateCommitAudioTableViewCell.Page = .uploadAudioFilePage
     
     // - Init
     init(tableView: UITableView, delegate: CreateCommitScreenDelegate) {
@@ -26,6 +27,22 @@ class CreateCommitScreenDataSource: NSObject {
         super.init()
         registerCells()
         configure()
+    }
+    
+}
+
+// MARK: -
+// MARK: - Update
+
+extension CreateCommitScreenDataSource {
+    
+    func update(commitAudioCellPage: CreateCommitAudioTableViewCell.Page) {
+        self.commitAudioCellPage = commitAudioCellPage
+        
+        if let commitAudioCellIndex = cells.firstIndex(where: { $0.cell == .commitAudioCell }) {
+            let indexPath = IndexPath(item: commitAudioCellIndex, section: 0)
+            tableView.reloadRows(at: [indexPath], with: .none)
+        }
     }
     
 }
@@ -70,6 +87,7 @@ extension CreateCommitScreenDataSource: UITableViewDataSource {
     private func commitAudioCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.commitAudioCell.rawValue, for: indexPath) as! CreateCommitAudioTableViewCell
         cell.backgroundColor = .clear
+        cell.set(delegate: delegate, page: commitAudioCellPage)
         return cell
     }
 

@@ -21,6 +21,23 @@ class CreateCommitAudioTableViewCellLayoutManager {
 }
 
 // MARK: -
+// MARK: - Layout
+
+extension CreateCommitAudioTableViewCellLayoutManager {
+    
+    func layoutPagesTransition() {
+        scrollViewUpdateContentOffset()
+    }
+    
+    private func scrollViewUpdateContentOffset() {
+        let screenWidth = UIScreen.main.bounds.width
+        let contentOffset = CGPoint(x: screenWidth * CGFloat(cell.currentPage.rawValue), y: 0)
+        cell.scrollView.setContentOffset(contentOffset, animated: true)
+    }
+    
+}
+
+// MARK: -
 // MARK: - Configure
 
 fileprivate extension CreateCommitAudioTableViewCellLayoutManager {

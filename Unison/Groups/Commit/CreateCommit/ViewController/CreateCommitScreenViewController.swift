@@ -47,6 +47,10 @@ extension CreateCommitScreenViewController: CreateCommitScreenDelegate {
         coordinator.moveToChooseProject()
     }
     
+    func didTapUploadAudioFileButton() {
+        dataSource.update(commitAudioCellPage: .specifyIntervalsPage)
+    }
+    
     func forceDismissKeyboard() {
         self.view.endEditing(true)
     }
