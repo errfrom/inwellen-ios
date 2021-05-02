@@ -45,8 +45,8 @@ extension CreateCommitScreenDataSource: UITableViewDataSource {
                 return chooseProjectCell(tableView, cellForRowAt: indexPath)
             case .textViewCell:
                 return textViewCell(tableView, cellForRowAt: indexPath)
-            case .uploadAudioCell:
-                return uploadAudioCell(tableView, cellForRowAt: indexPath)
+            case .commitAudioCell:
+                return commitAudioCell(tableView, cellForRowAt: indexPath)
             case .sectionSeparatorCell:
                 return sectionSeparatorCell(tableView, cellForRowAt: indexPath)
         }
@@ -67,12 +67,12 @@ extension CreateCommitScreenDataSource: UITableViewDataSource {
         return cell
     }
     
-    private func uploadAudioCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.uploadAudioCell.rawValue, for: indexPath) as! CreateCommitUploadAudioTableViewCell
+    private func commitAudioCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.commitAudioCell.rawValue, for: indexPath) as! CreateCommitAudioTableViewCell
         cell.backgroundColor = .clear
         return cell
     }
-    
+
     private func sectionSeparatorCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.sectionSeparatorCell.rawValue, for: indexPath) as! SectionSeparatorTableViewCell
         if let config = cells[indexPath.item].config as? SectionSeparatorCellConfiguration {
@@ -134,7 +134,7 @@ fileprivate extension CreateCommitScreenDataSource {
     private enum Cell: String {
         case chooseProjectCell = "ChooseProjectCell"
         case textViewCell = "TextViewCell"
-        case uploadAudioCell = "UploadAudioCell"
+        case commitAudioCell = "CommitAudioCell"
         case sectionSeparatorCell = "SectionSeparatorCell"
     }
     
@@ -156,8 +156,7 @@ fileprivate extension CreateCommitScreenDataSource {
         appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Name & description", bottomMargin: 8))
         appendCell(.textViewCell, config: TextViewCellConfiguration.commitNameTextView)
         appendCell(.textViewCell, config: TextViewCellConfiguration.commitDescriptionTextView)
-        appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Upload commit audio", topMargin: 40))
-        appendCell(.uploadAudioCell)
+        appendCell(.commitAudioCell)
         tableView.reloadData()
     }
     

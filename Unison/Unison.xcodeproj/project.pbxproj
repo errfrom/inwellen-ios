@@ -38,7 +38,6 @@
 		EEEE8A97263D9C3C0051ECB9 /* SuisseIntl-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */; };
 		EEEE8A9A263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */; };
 		EEEE8A9C263DA1D30051ECB9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */; };
-		EEEE8A9E263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A9D263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift */; };
 		EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */; };
 		EEEE8AA4263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AA3263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift */; };
 		EEEE8AA7263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AA6263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift */; };
@@ -57,6 +56,8 @@
 		EEEE8AD6263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AD5263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift */; };
 		EEEE8AD9263E07440051ECB9 /* TextViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AD8263E07440051ECB9 /* TextViewCellConfiguration.swift */; };
 		EEEE8ADC263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ADB263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift */; };
+		EEEE8ADE263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ADD263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift */; };
+		EEEE8AE4263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AE3263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,7 +96,6 @@
 		EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitChooseProjectTableViewCell.swift; sourceTree = "<group>"; };
 		EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		EEEE8A9D263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitUploadAudioTableViewCell.swift; sourceTree = "<group>"; };
 		EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SuisseIntl-Book.otf"; path = "../../../../../../../Downloads/Suisse - SwissTypeface/Suisse Int'l/SuisseIntl-Book.otf"; sourceTree = "<group>"; };
 		EEEE8AA3263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenCoordinator.swift; sourceTree = "<group>"; };
 		EEEE8AA6263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionSeparatorCellConfiguration.swift; sourceTree = "<group>"; };
@@ -114,6 +114,8 @@
 		EEEE8AD5263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCellLayoutManager.swift; sourceTree = "<group>"; };
 		EEEE8AD8263E07440051ECB9 /* TextViewCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCellConfiguration.swift; sourceTree = "<group>"; };
 		EEEE8ADB263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		EEEE8ADD263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitAudioTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8AE3263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitAudioTableViewCellLayoutManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,8 +405,8 @@
 		EEEE8A98263D9DBD0051ECB9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				EEEE8ADF263ED7050051ECB9 /* CreateCommitAudioTableViewCell */,
 				EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */,
-				EEEE8A9D263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -587,6 +589,39 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		EEEE8ADF263ED7050051ECB9 /* CreateCommitAudioTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AE1263ED7220051ECB9 /* Manager */,
+				EEEE8AE0263ED71A0051ECB9 /* View */,
+			);
+			path = CreateCommitAudioTableViewCell;
+			sourceTree = "<group>";
+		};
+		EEEE8AE0263ED71A0051ECB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ADD263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEEE8AE1263ED7220051ECB9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AE2263ED7250051ECB9 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEEE8AE2263ED7250051ECB9 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AE3263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,6 +756,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEEE8ADE263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift in Sources */,
 				EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */,
 				EEEE8AD6263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift in Sources */,
 				EEEE8ABF263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift in Sources */,
@@ -728,7 +764,6 @@
 				EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */,
 				EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */,
 				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
-				EEEE8A9E263DA6670051ECB9 /* CreateCommitUploadAudioTableViewCell.swift in Sources */,
 				EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */,
 				EEEE8AC8263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift in Sources */,
 				EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */,
@@ -757,6 +792,7 @@
 				EEEE8A9A263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift in Sources */,
 				EEEE8A95263D98270051ECB9 /* UILabelExtension.swift in Sources */,
 				EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */,
+				EEEE8AE4263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
