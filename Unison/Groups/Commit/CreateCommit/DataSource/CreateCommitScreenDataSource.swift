@@ -55,12 +55,41 @@ extension CreateCommitScreenDataSource {
         }
     }
     
+}
+
+// MARK: -
+// MARK: - Cell
+
+extension CreateCommitScreenDataSource {
+    
+    private enum Cell: String {
+        case chooseProjectCell = "ChooseProjectCell"
+        case textViewCell = "TextViewCell"
+        case commitAudioCell = "CommitAudioCell"
+        case sectionSeparatorCell = "SectionSeparatorCell"
+    }
+    
     private var commitAudioCellIndexPath: IndexPath? {
         if let commitAudioCellIndex = cells.firstIndex(where: { $0.cell == .commitAudioCell }) {
             return IndexPath(item: commitAudioCellIndex, section: 0)
         } else {
             return nil
         }
+    }
+    
+    func textViewCell(withConfig config: TextViewCellConfiguration) -> TextViewTableViewCell? {
+        let textViewCellIndex = cells.firstIndex(where: { (cell, config_) in
+            return cell == .textViewCell && config == (config_ as? TextViewCellConfiguration)
+        })
+        
+        if let item = textViewCellIndex {
+            let indexPath = IndexPath(item: item, section: 0)
+
+            if let textViewCell = tableView.cellForRow(at: indexPath) as? TextViewTableViewCell {
+                return textViewCell
+            }
+        }
+        return nil
     }
     
 }
@@ -166,13 +195,6 @@ extension CreateCommitScreenDataSource: UITableViewDelegate {
 // MARK: - Configure
 
 fileprivate extension CreateCommitScreenDataSource {
-    
-    private enum Cell: String {
-        case chooseProjectCell = "ChooseProjectCell"
-        case textViewCell = "TextViewCell"
-        case commitAudioCell = "CommitAudioCell"
-        case sectionSeparatorCell = "SectionSeparatorCell"
-    }
     
     private func configure() {
         configureTableView()

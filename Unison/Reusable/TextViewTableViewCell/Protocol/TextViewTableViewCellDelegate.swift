@@ -8,4 +8,5 @@
 
 protocol TextViewTableViewCellDelegate: class {
     func textViewDidUpdateHeight()
+    func textViewWillBeginEditing(textViewCellType: TextViewCellType)
 }

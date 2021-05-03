@@ -41,6 +41,7 @@ extension TextViewTableViewCellLayoutManager: UITextViewDelegate {
     
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         if !textView.text.isEmpty { highlightInputIfNeeded(setHighlightingTo: true) }
+        cell.delegate?.textViewWillBeginEditing(textViewCellType: cell.config)
         return true
     }
     

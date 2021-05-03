@@ -8,6 +8,8 @@
 
 import UIKit
 
+typealias TextViewCellType = TextViewCellConfiguration
+
 enum TextViewCellConfiguration: CellConfiguration {
     case commitNameTextView
     case commitDescriptionTextView
