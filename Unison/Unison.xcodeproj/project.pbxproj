@@ -12,6 +12,8 @@
 		EE6A5626263EE7AB00AFAB80 /* SpecifyIntervals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6A5625263EE7AB00AFAB80 /* SpecifyIntervals.storyboard */; };
 		EE6A5629263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A5628263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift */; };
 		EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */; };
+		EE87C78B2640954B00B3C898 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C78A2640954B00B3C898 /* TabBarViewController.swift */; };
+		EE87C796264097B900B3C898 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C795264097B900B3C898 /* TabBarItem.swift */; };
 		EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */; };
 		EE94D410250FE80C00BEAE00 /* WaveformViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D40F250FE80C00BEAE00 /* WaveformViewState.swift */; };
 		EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */; };
@@ -71,6 +73,8 @@
 		EE6A5625263EE7AB00AFAB80 /* SpecifyIntervals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SpecifyIntervals.storyboard; sourceTree = "<group>"; };
 		EE6A5628263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsScreenViewController.swift; sourceTree = "<group>"; };
 		EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenKeyboardManager.swift; sourceTree = "<group>"; };
+		EE87C78A2640954B00B3C898 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		EE87C795264097B900B3C898 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalView.swift; sourceTree = "<group>"; };
 		EE94D40F250FE80C00BEAE00 /* WaveformViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewState.swift; sourceTree = "<group>"; };
 		EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformSelectedIntervalView.swift; sourceTree = "<group>"; };
@@ -187,6 +191,31 @@
 			path = Keyboard;
 			sourceTree = "<group>";
 		};
+		EE87C7882640950700B3C898 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EE87C7922640979100B3C898 /* Types */,
+				EE87C7892640952100B3C898 /* ViewController */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EE87C7892640952100B3C898 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE87C78A2640954B00B3C898 /* TabBarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EE87C7922640979100B3C898 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EE87C795264097B900B3C898 /* TabBarItem.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		EE94D40E250FE7FC00BEAE00 /* Types */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				EEEE8A6E263D86B30051ECB9 /* Commit */,
+				EE87C7882640950700B3C898 /* TabBar */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -806,6 +836,7 @@
 				EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */,
 				EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */,
 				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
+				EE87C78B2640954B00B3C898 /* TabBarViewController.swift in Sources */,
 				EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */,
 				EEEE8AC8263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift in Sources */,
 				EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */,
@@ -814,6 +845,7 @@
 				EEEE8AB8263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift in Sources */,
 				EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */,
 				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
+				EE87C796264097B900B3C898 /* TabBarItem.swift in Sources */,
 				EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */,
 				EEEE8AA4263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift in Sources */,
 				EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */,

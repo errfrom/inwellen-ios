@@ -46,9 +46,9 @@ fileprivate extension AppDelegate {
     }
     
     private func configureRootViewController() {
-        let createCommit_vc = Storyboard.createCommit.viewController as! CreateCommitScreenViewController
+        // let createCommit_vc = Storyboard.createCommit.viewController as! CreateCommitScreenViewController
         
-        let nc = UINavigationController(rootViewController: createCommit_vc)
+        let nc = UINavigationController(rootViewController: TabBarViewController())
         nc.navigationBar.isTranslucent = false
         nc.setNavigationBarHidden(true, animated: false)
         

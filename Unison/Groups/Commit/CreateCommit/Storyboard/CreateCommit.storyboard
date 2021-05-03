@@ -22,7 +22,7 @@
         <!--Create Commit Screen View Controller-->
         <scene sceneID="zIk-vm-eBC">
             <objects>
-                <viewController id="0L9-jQ-ADJ" customClass="CreateCommitScreenViewController" customModule="Unison" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="0L9-jQ-ADJ" customClass="CreateCommitScreenViewController" customModule="Unison" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SRK-7i-rtU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,13 +90,13 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="CG4-Lc-pqB">
                                                             <rect key="frame" x="104" y="32.5" width="153.5" height="39.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Long Time Coming" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-Mq-gZA">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Time Coming" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-Mq-gZA">
                                                                     <rect key="frame" x="0.0" y="0.0" width="153.5" height="21"/>
                                                                     <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="18"/>
                                                                     <color key="textColor" name="DarkBlueColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="by eluvium " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-EY-Rsh">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by eluvium " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-EY-Rsh">
                                                                     <rect key="frame" x="0.0" y="23" width="153.5" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="14"/>
                                                                     <color key="textColor" name="AccentBlueColor"/>
@@ -283,7 +283,6 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstItem="9on-bo-voM" firstAttribute="width" secondItem="azt-yp-jRw" secondAttribute="width" multiplier="0.5" constant="-64" id="Fns-CT-G1e"/>
                                                                 <constraint firstItem="9on-bo-voM" firstAttribute="top" secondItem="azt-yp-jRw" secondAttribute="top" constant="8" id="Ixb-e6-IKQ"/>
