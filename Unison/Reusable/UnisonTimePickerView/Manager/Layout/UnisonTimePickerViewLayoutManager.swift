@@ -65,7 +65,7 @@ extension UnisonTimePickerViewLayoutManager: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.inEditingMode = false
-        view.pickerValue = UnisonTimePickerValue.init(fromTimeLabelString: textField.text ?? "")
+        view.pickerValue = UnisonTimePickerValue.init(fromTimeLabelString: view.timeLabel.text ?? "")
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

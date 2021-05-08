@@ -27,28 +27,16 @@ struct UnisonTimePickerValue {
 
 extension UnisonTimePickerValue {
     
-    init(fromTimeLabelString string: String) { // FIXME: 
-        let digitsArray = Array(string)
-        
-        switch digitsArray.count {
-            case 0:
-                self.init(base: 0)
-            
-            case 1, 2:
-                self.init(base: Int(string) ?? 0)
-            
-            case 3:
-                let minutes = digitsArray[0].wholeNumberValue ?? 0
-                let seconds = Int(String(digitsArray[1...])) ?? 0
-                self.init(base: minutes * 60 + seconds)
-            
-            case 4:
-                let minutes = Int(String(digitsArray[0..<2])) ?? 0
-                let seconds = Int(String(digitsArray[2...])) ?? 0
-                self.init(base: minutes * 60 + seconds)
-            
-            default:
-                self.init(base: 0)
+    init(fromTimeLabelString string: String) {
+        let splitString = string
+            .filter { !$0.isWhitespace }
+            .split(separator: ":", maxSplits: 1, omittingEmptySubsequences: false)
+
+        if splitString.count == 2 {
+            let (minutes_, seconds_) = (Int(splitString[0]) ?? 0, Int(splitString[1]) ?? 0)
+            self.init(base: minutes_ * 60 + seconds_)
+        } else {
+            self.init(base: 0)
         }
     }
 
@@ -73,7 +61,7 @@ extension UnisonTimePickerValue {
     }
     
     var textFieldInput: String {
-        return minutesFormatted + secondsFormatted
+        return String(minutes) + secondsFormatted
     }
     
 }
