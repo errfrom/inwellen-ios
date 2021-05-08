@@ -11,6 +11,12 @@
 		EE170DEF250F82A2007341BE /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE170DEE250F82A2007341BE /* AppColor.swift */; };
 		EE6A5626263EE7AB00AFAB80 /* SpecifyIntervals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6A5625263EE7AB00AFAB80 /* SpecifyIntervals.storyboard */; };
 		EE6A5629263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A5628263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift */; };
+		EE71ED5A264486CF007ECF7F /* UnisonTimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE71ED59264486CF007ECF7F /* UnisonTimePickerView.xib */; };
+		EE71ED5D2644884B007ECF7F /* UnisonTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED5C2644884B007ECF7F /* UnisonTimePickerView.swift */; };
+		EE71ED61264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED60264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift */; };
+		EE71ED642644898B007ECF7F /* UnisonTimePickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED632644898B007ECF7F /* UnisonTimePickerViewDelegate.swift */; };
+		EE71ED78264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED77264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift */; };
+		EE71ED7D26460AB7007ECF7F /* UnisonTimePickerValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED7C26460AB7007ECF7F /* UnisonTimePickerValue.swift */; };
 		EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */; };
 		EE87C78B2640954B00B3C898 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C78A2640954B00B3C898 /* TabBarViewController.swift */; };
 		EE87C796264097B900B3C898 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C795264097B900B3C898 /* TabBarItem.swift */; };
@@ -72,6 +78,12 @@
 		EE170DEE250F82A2007341BE /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		EE6A5625263EE7AB00AFAB80 /* SpecifyIntervals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SpecifyIntervals.storyboard; sourceTree = "<group>"; };
 		EE6A5628263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsScreenViewController.swift; sourceTree = "<group>"; };
+		EE71ED59264486CF007ECF7F /* UnisonTimePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnisonTimePickerView.xib; sourceTree = "<group>"; };
+		EE71ED5C2644884B007ECF7F /* UnisonTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerView.swift; sourceTree = "<group>"; };
+		EE71ED60264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerViewLayoutManager.swift; sourceTree = "<group>"; };
+		EE71ED632644898B007ECF7F /* UnisonTimePickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerViewDelegate.swift; sourceTree = "<group>"; };
+		EE71ED77264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerInputFormatter.swift; sourceTree = "<group>"; };
+		EE71ED7C26460AB7007ECF7F /* UnisonTimePickerValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerValue.swift; sourceTree = "<group>"; };
 		EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenKeyboardManager.swift; sourceTree = "<group>"; };
 		EE87C78A2640954B00B3C898 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EE87C795264097B900B3C898 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
@@ -181,6 +193,75 @@
 				EE6A5628263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EE71ED552644848C007ECF7F /* UnisonTimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED622644897F007ECF7F /* Delegate */,
+				EE71ED6526448B09007ECF7F /* Types */,
+				EE71ED5E264488B9007ECF7F /* Manager */,
+				EE71ED5B26448841007ECF7F /* View */,
+				EE71ED56264486B5007ECF7F /* Xib */,
+			);
+			path = UnisonTimePickerView;
+			sourceTree = "<group>";
+		};
+		EE71ED56264486B5007ECF7F /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED59264486CF007ECF7F /* UnisonTimePickerView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EE71ED5B26448841007ECF7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED5C2644884B007ECF7F /* UnisonTimePickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE71ED5E264488B9007ECF7F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED5F264488BD007ECF7F /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EE71ED5F264488BD007ECF7F /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED76264608AE007ECF7F /* Helpers */,
+				EE71ED60264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EE71ED622644897F007ECF7F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED632644898B007ECF7F /* UnisonTimePickerViewDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		EE71ED6526448B09007ECF7F /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED7C26460AB7007ECF7F /* UnisonTimePickerValue.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EE71ED76264608AE007ECF7F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED77264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		EE87C78526406B1E00B3C898 /* Keyboard */ = {
@@ -424,6 +505,7 @@
 				EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */,
 				EEEE8A85263D93860051ECB9 /* SectionSeparatorTableViewCell */,
 				EEEE8ACA263DFDFD0051ECB9 /* TextViewTableViewCell */,
+				EE71ED552644848C007ECF7F /* UnisonTimePickerView */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -769,6 +851,7 @@
 				EEEE8AB2263DCA460051ECB9 /* ChooseProject.storyboard in Resources */,
 				EEEE8ACD263DFF530051ECB9 /* TextViewTableViewCell.xib in Resources */,
 				EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */,
+				EE71ED5A264486CF007ECF7F /* UnisonTimePickerView.xib in Resources */,
 				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
 				EEEE8A96263D9C3A0051ECB9 /* SuisseIntl-Regular.otf in Resources */,
 				EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */,
@@ -830,11 +913,14 @@
 			files = (
 				EEEE8ADE263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift in Sources */,
 				EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */,
+				EE71ED7D26460AB7007ECF7F /* UnisonTimePickerValue.swift in Sources */,
 				EEEE8AD6263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift in Sources */,
 				EEEE8ABF263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift in Sources */,
+				EE71ED642644898B007ECF7F /* UnisonTimePickerViewDelegate.swift in Sources */,
 				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */,
 				EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */,
 				EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */,
+				EE71ED78264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift in Sources */,
 				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
 				EE87C78B2640954B00B3C898 /* TabBarViewController.swift in Sources */,
 				EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */,
@@ -857,6 +943,8 @@
 				EE6A5629263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift in Sources */,
 				EEEE8AD2263E037A0051ECB9 /* UIViewControllerExtension.swift in Sources */,
 				EEEE8A87263D93BC0051ECB9 /* ReusableBaseView.swift in Sources */,
+				EE71ED61264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift in Sources */,
+				EE71ED5D2644884B007ECF7F /* UnisonTimePickerView.swift in Sources */,
 				EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */,
 				EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */,
 				EEEE8AC2263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift in Sources */,
@@ -1014,6 +1102,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4F3W944NGN;
 				INFOPLIST_FILE = Unison/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
@@ -1034,6 +1123,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4F3W944NGN;
 				INFOPLIST_FILE = Unison/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.3;

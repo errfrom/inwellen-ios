@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SimplonNorm-Bold.otf">
+            <string>SimplonNorm-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UnisonTimePickerView" customModule="Unison" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="FXZ-3w-3Ac" id="Gbo-NM-GXa"/>
+                <outlet property="timeLabel" destination="OGz-GH-aQl" id="Z3L-yv-J6F"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="DxE-GQ-hHa">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="34"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXZ-3w-3Ac" userLabel="TextField" customClass="UnisonTimePickerTextField">
+                    <rect key="frame" x="0.0" y="0.0" width="90" height="34"/>
+                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cPP-2R-S1V">
+                    <rect key="frame" x="0.0" y="0.0" width="90" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGz-GH-aQl">
+                            <rect key="frame" x="0.0" y="8.5" width="90" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="17" id="Pd8-3q-cZW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SimplonNorm-Bold" family="Simplon Norm" pointSize="17"/>
+                            <color key="textColor" name="AccentBlueColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="6"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="DefaultBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="OGz-GH-aQl" secondAttribute="trailing" id="A8f-ge-lKP"/>
+                        <constraint firstAttribute="bottom" secondItem="OGz-GH-aQl" secondAttribute="bottom" constant="8.5" id="EW9-NT-2nw"/>
+                        <constraint firstItem="OGz-GH-aQl" firstAttribute="leading" secondItem="cPP-2R-S1V" secondAttribute="leading" id="M8M-WR-y3W"/>
+                        <constraint firstItem="OGz-GH-aQl" firstAttribute="top" secondItem="cPP-2R-S1V" secondAttribute="top" constant="8.5" id="oDP-9c-0Pb"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="FXZ-3w-3Ac" firstAttribute="leading" secondItem="DxE-GQ-hHa" secondAttribute="leading" id="2PG-az-n3Y"/>
+                <constraint firstItem="FXZ-3w-3Ac" firstAttribute="top" secondItem="DxE-GQ-hHa" secondAttribute="top" id="9oP-Wk-Ne3"/>
+                <constraint firstItem="cPP-2R-S1V" firstAttribute="leading" secondItem="DxE-GQ-hHa" secondAttribute="leading" id="Hcz-4n-yaN"/>
+                <constraint firstAttribute="bottom" secondItem="cPP-2R-S1V" secondAttribute="bottom" id="LJA-dT-i3c"/>
+                <constraint firstAttribute="trailing" secondItem="cPP-2R-S1V" secondAttribute="trailing" id="RUI-ZF-tFY"/>
+                <constraint firstItem="cPP-2R-S1V" firstAttribute="top" secondItem="DxE-GQ-hHa" secondAttribute="top" id="dph-H9-hdO"/>
+                <constraint firstItem="FXZ-3w-3Ac" firstAttribute="trailing" secondItem="DxE-GQ-hHa" secondAttribute="trailing" id="ocO-zI-9bh"/>
+                <constraint firstAttribute="bottom" secondItem="FXZ-3w-3Ac" secondAttribute="bottom" id="ups-SE-tMr"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="6"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="254" y="-188"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentBlueColor">
+            <color red="0.14117647058823529" green="0.30588235294117649" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DefaultBackgroundColor">
+            <color red="0.9882352941176471" green="0.98039215686274506" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
