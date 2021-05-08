@@ -12,11 +12,32 @@ class UnisonTimePickerViewLayoutManager: NSObject {
     
     private unowned let view: UnisonTimePickerView
     
+    // - Data
+    private var inEditingMode: Bool = false {
+        didSet {
+            view.setNeedsLayout()
+            adjustTimeLabelAppearance()
+        }
+    }
+    
+    private var contentViewShadowColor: UIColor {
+        if inEditingMode {
+            return AppColor.accentOrangeColor.withAlphaComponent(0.2)
+        } else {
+            return AppColor.darkBlueColor.withAlphaComponent(0.08)
+        }
+    }
+    
     // - Init
     init(view: UnisonTimePickerView) {
         self.view = view
         super.init()
         configure()
+    }
+    
+    // - Lifecycle
+    func layoutSubviews() {
+        contentViewApplyShadow()
     }
     
 }
@@ -39,11 +60,11 @@ extension UnisonTimePickerViewLayoutManager {
 extension UnisonTimePickerViewLayoutManager: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        layout(editingMode: true)
+        self.inEditingMode = true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        layout(editingMode: false)
+        self.inEditingMode = false
         view.pickerValue = UnisonTimePickerValue.init(fromTimeLabelString: textField.text ?? "")
     }
     
@@ -59,12 +80,30 @@ extension UnisonTimePickerViewLayoutManager: UITextFieldDelegate {
 }
 
 // MARK: -
-// MARK: - Layout
+// MARK: - Appearance
 
 fileprivate extension UnisonTimePickerViewLayoutManager {
     
-    private func layout(editingMode: Bool) {
-        view.timeLabel.textColor = editingMode ? AppColor.accentOrangeColor : AppColor.accentBlueColor
+    private func adjustTimeLabelAppearance() {
+        let animationOptions: UIView.AnimationOptions = [.transitionCrossDissolve, .curveEaseOut]
+        UIView.transition(with: view.timeLabel, duration: 0.25, options: animationOptions, animations: { [weak self] in
+            guard let strongSelf = self else { return }
+            
+            let textColor = strongSelf.inEditingMode ? AppColor.accentOrangeColor : AppColor.accentBlueColor
+            strongSelf.view.timeLabel.textColor = textColor
+        })
+    }
+    
+}
+
+// MARK: -
+// MARK: - Shadow
+
+fileprivate extension UnisonTimePickerViewLayoutManager {
+
+    private func contentViewApplyShadow() {
+        let shadowOffset = CGSize(width: 0, height: 2)
+        view.applyShadow(color: contentViewShadowColor, offset: shadowOffset, blur: 10)
     }
     
 }

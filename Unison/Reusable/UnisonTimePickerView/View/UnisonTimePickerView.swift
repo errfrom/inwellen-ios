@@ -28,7 +28,7 @@ class UnisonTimePickerView: ReusableBaseView {
     private var layoutManager: UnisonTimePickerViewLayoutManager?
     
     // - Data
-    var pickerValue = UnisonTimePickerValue() {
+    var pickerValue: UnisonTimePickerValue! {
         didSet {
             layoutManager?.pickerValueDidChange()
             delegate?.timePickerValueDidChange(toValue: pickerValue)
@@ -39,6 +39,11 @@ class UnisonTimePickerView: ReusableBaseView {
     override func setupView() {
         super.setupView()
         configure()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        layoutManager?.layoutSubviews()
     }
     
 }
@@ -63,10 +68,15 @@ fileprivate extension UnisonTimePickerView {
     
     private func configure() {
         configureLayoutManager()
+        configurePickerValue()
     }
     
     private func configureLayoutManager() {
         layoutManager = UnisonTimePickerViewLayoutManager(view: self)
+    }
+    
+    private func configurePickerValue() {
+        pickerValue = UnisonTimePickerValue()
     }
     
 }

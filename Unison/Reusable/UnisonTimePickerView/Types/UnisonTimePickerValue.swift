@@ -27,7 +27,7 @@ struct UnisonTimePickerValue {
 
 extension UnisonTimePickerValue {
     
-    init(fromTimeLabelString string: String) {
+    init(fromTimeLabelString string: String) { // FIXME: 
         let digitsArray = Array(string)
         
         switch digitsArray.count {
