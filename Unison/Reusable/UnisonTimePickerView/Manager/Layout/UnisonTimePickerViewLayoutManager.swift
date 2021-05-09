@@ -69,12 +69,29 @@ extension UnisonTimePickerViewLayoutManager: UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else { return false }
-        guard text.count <= 4 else { return false }
+        guard let text_ = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else { return false }
+        let (text, shouldReplaceCharacters) = validateAndTransformTextFieldInput(text_)
+        displayTextFieldInput(text)
+        return shouldReplaceCharacters
+    }
+    
+    private func validateAndTransformTextFieldInput(_ text: String) -> (text: String?, shouldReplaceCharacters: Bool) {
+        if view.isCurrentPickerValueInitial, let lastDigit = text.last {
+            let lastDigitString = String(lastDigit)
+            view.textField.text = lastDigitString
+            view.isCurrentPickerValueInitial = false
+            return (text: lastDigitString, shouldReplaceCharacters: false)
+        } else {
+            let isTextLengthValid = text.count <= 4
+            return (text: isTextLengthValid ? text : nil, shouldReplaceCharacters: isTextLengthValid)
+        }
+    }
+
+    private func displayTextFieldInput(_ text: String?) {
+        guard let text = text else { return }
         
         let formattedText = UnisonTimePickerInputFormatter.formatInput(string: text)
         view.timeLabel.text = formattedText
-        return true
     }
 
 }
