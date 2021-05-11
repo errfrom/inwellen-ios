@@ -1,5 +1,5 @@
 //
-//  WaveformViewState.swift
+//  WaveformViewStateOld.swift
 //  Unison
 //
 //  Created by Dzmitry Shuysky on 9/14/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct WaveformViewState {
+struct WaveformViewStateOld {
     
     // - Data
     private var intervals: [WaveformIntervalModel] = []
@@ -25,7 +25,7 @@ struct WaveformViewState {
 // MARK: -
 // MARK: - Interface
 
-extension WaveformViewState {
+extension WaveformViewStateOld {
     
     mutating func addInterval(centerX: CGFloat, completion: @escaping ((WaveformIntervalModel) -> Void)) {
         if let interval = calcInterval(centerX: centerX) {
@@ -63,7 +63,7 @@ extension WaveformViewState {
 // MARK: -
 // MARK: - Internal
 
-fileprivate extension WaveformViewState {
+fileprivate extension WaveformViewStateOld {
     
     typealias Interval = (startX: CGFloat, endX: CGFloat)
     

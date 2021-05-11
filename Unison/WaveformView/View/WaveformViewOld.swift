@@ -1,5 +1,5 @@
 //
-//  WaveformView.swift
+//  WaveformViewOld.swift
 //  Unison
 //
 //  Created by Dzmitry Shuysky on 9/13/20.
@@ -8,22 +8,22 @@
 
 import UIKit
 
-class WaveformView: UIView {
+class WaveformViewOld: UIView {
     
     // - UI
-    @IBOutlet weak var waveformInternalView: WaveformInternalView!
+    @IBOutlet weak var waveformInternalView: WaveformInternalViewOld!
     
     // - Manager
-    private var layoutManager: WaveformViewLayoutManager!
+    private var layoutManager: WaveformViewLayoutManagerOld!
     
     // - State
-    private var state: WaveformViewState!
+    private var state: WaveformViewStateOld!
     
     // - Init
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
-        let view = Bundle(for: type(of: self)).loadNibNamed("\(WaveformView.self)", owner: self, options: nil)?.first as! UIView
+        let view = Bundle(for: type(of: self)).loadNibNamed("\(WaveformViewOld.self)", owner: self, options: nil)?.first as! UIView
         view.frame = self.bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view)
@@ -38,7 +38,7 @@ class WaveformView: UIView {
 // MARK: -
 // MARK: - WaveformIntervalViewDelegate
 
-extension WaveformView: WaveformIntervalViewDelegate {
+extension WaveformViewOld: WaveformIntervalViewDelegate {
     
     func shouldSelectInterval(intervalID: Int) {
         state.selectInterval(id: intervalID)
@@ -49,7 +49,7 @@ extension WaveformView: WaveformIntervalViewDelegate {
 // MARK: -
 // MARK: - Gesture Recognizer
 
-fileprivate extension WaveformView {
+fileprivate extension WaveformViewOld {
     
     @IBAction private func didRecognizeDoubleTapGesture(_ gesture: UITapGestureRecognizer) {
         let x = gesture.location(in: waveformInternalView).x
@@ -66,7 +66,7 @@ fileprivate extension WaveformView {
 // MARK: -
 // MARK: - Set
 
-extension WaveformView {
+extension WaveformViewOld {
     
     func set(audioURL: URL) {
         waveformInternalView.set(audioURL: audioURL)
@@ -77,7 +77,7 @@ extension WaveformView {
 // MARK: -
 // MARK: - Configure
 
-fileprivate extension WaveformView {
+fileprivate extension WaveformViewOld {
     
     private func configure() {
         configureWaveformViewState()
@@ -85,11 +85,11 @@ fileprivate extension WaveformView {
     }
     
     private func configureWaveformViewState() {
-        state = WaveformViewState(waveformViewWidth: bounds.width)
+        state = WaveformViewStateOld(waveformViewWidth: bounds.width)
     }
     
     private func configureLayoutManager() {
-        layoutManager = WaveformViewLayoutManager(view: self)
+        layoutManager = WaveformViewLayoutManagerOld(view: self)
     }
     
 }

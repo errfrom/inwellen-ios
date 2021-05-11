@@ -1,5 +1,5 @@
 //
-//  WaveformInternalView.swift
+//  WaveformInternalViewOld.swift
 //  Unison
 //
 //  Created by Dzmitry Shuysky on 9/14/20.
@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Accelerate
 
-class WaveformInternalView: UIView {
+class WaveformInternalViewOld: UIView {
     
     // - UI
     private var backWaveformPlaceholderShapeLayer: CAShapeLayer?
@@ -39,7 +39,7 @@ class WaveformInternalView: UIView {
 // MARK: -
 // MARK: - Draw
 
-extension WaveformInternalView {
+extension WaveformInternalViewOld {
     
     override func draw(_ rect: CGRect) {
         let (_, r, numSegments) = getNumSegments()
@@ -79,7 +79,7 @@ extension WaveformInternalView {
 // MARK: -
 // MARK: - Set
 
-extension WaveformInternalView {
+extension WaveformInternalViewOld {
     
     func set(audioURL: URL) {
         let (_, _, numSegments) = getNumSegments()
@@ -95,7 +95,7 @@ extension WaveformInternalView {
 // MARK: -
 // MARK: - Internal
 
-fileprivate extension WaveformInternalView {
+fileprivate extension WaveformInternalViewOld {
 
     private func getPCMSamples(fromAudioWith audioURL: URL, numSamples requestedNumSamples: Int,
                                completion: @escaping ((Samples?) -> Void)) {
@@ -141,7 +141,7 @@ fileprivate extension WaveformInternalView {
 // MARK: -
 // MARK: - Helpers
 
-fileprivate extension WaveformInternalView {
+fileprivate extension WaveformInternalViewOld {
     
     private func getNumSegments() -> (_quo: Int, _rem: Int, numSegments: Int) {
         let (q, r) = Int(bounds.width).quotientAndRemainder(dividingBy: segmentWidth + interitemSpace)
@@ -161,7 +161,7 @@ fileprivate extension WaveformInternalView {
 // MARK: -
 // MARK: - Configure Layers
 
-fileprivate extension WaveformInternalView {
+fileprivate extension WaveformInternalViewOld {
     
     private func configureLayers() {
         configureBackWaveformPlaceholderShapeLayer()

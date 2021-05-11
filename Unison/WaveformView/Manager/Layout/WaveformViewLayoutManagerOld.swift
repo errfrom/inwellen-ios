@@ -1,5 +1,5 @@
 //
-//  WaveformViewLayoutManager.swift
+//  WaveformViewLayoutManagerOld.swift
 //  Unison
 //
 //  Created by Dzmitry Shuysky on 9/13/20.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class WaveformViewLayoutManager {
+class WaveformViewLayoutManagerOld {
     
-    private unowned let view: WaveformView
+    private unowned let view: WaveformViewOld
     
     // - Init
-    init(view: WaveformView) {
+    init(view: WaveformViewOld) {
         self.view = view
     }
     

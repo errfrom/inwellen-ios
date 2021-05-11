@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D90666175998757D9388F543 /* Pods_Unison.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589D54D358E797D27B245B8D /* Pods_Unison.framework */; };
 		EE170DEF250F82A2007341BE /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE170DEE250F82A2007341BE /* AppColor.swift */; };
+		EE57324E264B23B300DCC961 /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE57324D264B23B300DCC961 /* WaveformView.xib */; };
+		EE573251264B23FA00DCC961 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE573250264B23FA00DCC961 /* WaveformView.swift */; };
+		EE573253264B283800DCC961 /* WaveformInternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE573252264B283800DCC961 /* WaveformInternalView.swift */; };
 		EE6A5626263EE7AB00AFAB80 /* SpecifyIntervals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6A5625263EE7AB00AFAB80 /* SpecifyIntervals.storyboard */; };
 		EE6A5629263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A5628263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift */; };
 		EE71ED5A264486CF007ECF7F /* UnisonTimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE71ED59264486CF007ECF7F /* UnisonTimePickerView.xib */; };
@@ -20,8 +23,8 @@
 		EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */; };
 		EE87C78B2640954B00B3C898 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C78A2640954B00B3C898 /* TabBarViewController.swift */; };
 		EE87C796264097B900B3C898 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C795264097B900B3C898 /* TabBarItem.swift */; };
-		EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */; };
-		EE94D410250FE80C00BEAE00 /* WaveformViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D40F250FE80C00BEAE00 /* WaveformViewState.swift */; };
+		EE94D3FF250F847900BEAE00 /* WaveformInternalViewOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D3FE250F847900BEAE00 /* WaveformInternalViewOld.swift */; };
+		EE94D410250FE80C00BEAE00 /* WaveformViewStateOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D40F250FE80C00BEAE00 /* WaveformViewStateOld.swift */; };
 		EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */; };
 		EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D41C25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift */; };
 		EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D41F25126F9900BEAE00 /* WaveformViewIntervalModel.swift */; };
@@ -30,9 +33,9 @@
 		EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE999C75250E8D6B001CFBB7 /* Main.storyboard */; };
 		EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE999C78250E8D6F001CFBB7 /* Assets.xcassets */; };
 		EE999C7C250E8D6F001CFBB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE999C7A250E8D6F001CFBB7 /* LaunchScreen.storyboard */; };
-		EE999C88250E9109001CFBB7 /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE999C87250E9109001CFBB7 /* WaveformView.xib */; };
-		EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8A250E91BC001CFBB7 /* WaveformView.swift */; };
-		EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */; };
+		EE999C88250E9109001CFBB7 /* WaveformViewOld.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE999C87250E9109001CFBB7 /* WaveformViewOld.xib */; };
+		EE999C8B250E91BC001CFBB7 /* WaveformViewOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8A250E91BC001CFBB7 /* WaveformViewOld.swift */; };
+		EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift */; };
 		EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */; };
 		EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */; };
 		EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A71263D86E60051ECB9 /* CreateCommit.storyboard */; };
@@ -76,6 +79,9 @@
 		3F29983BC2E8BA1A12698DAC /* Pods-Unison.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unison.release.xcconfig"; path = "Target Support Files/Pods-Unison/Pods-Unison.release.xcconfig"; sourceTree = "<group>"; };
 		589D54D358E797D27B245B8D /* Pods_Unison.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unison.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE170DEE250F82A2007341BE /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		EE57324D264B23B300DCC961 /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
+		EE573250264B23FA00DCC961 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		EE573252264B283800DCC961 /* WaveformInternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalView.swift; sourceTree = "<group>"; };
 		EE6A5625263EE7AB00AFAB80 /* SpecifyIntervals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SpecifyIntervals.storyboard; sourceTree = "<group>"; };
 		EE6A5628263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsScreenViewController.swift; sourceTree = "<group>"; };
 		EE71ED59264486CF007ECF7F /* UnisonTimePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnisonTimePickerView.xib; sourceTree = "<group>"; };
@@ -87,8 +93,8 @@
 		EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenKeyboardManager.swift; sourceTree = "<group>"; };
 		EE87C78A2640954B00B3C898 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		EE87C795264097B900B3C898 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
-		EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalView.swift; sourceTree = "<group>"; };
-		EE94D40F250FE80C00BEAE00 /* WaveformViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewState.swift; sourceTree = "<group>"; };
+		EE94D3FE250F847900BEAE00 /* WaveformInternalViewOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalViewOld.swift; sourceTree = "<group>"; };
+		EE94D40F250FE80C00BEAE00 /* WaveformViewStateOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewStateOld.swift; sourceTree = "<group>"; };
 		EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformSelectedIntervalView.swift; sourceTree = "<group>"; };
 		EE94D41C25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformIntervalViewDelegate.swift; sourceTree = "<group>"; };
 		EE94D41F25126F9900BEAE00 /* WaveformViewIntervalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewIntervalModel.swift; sourceTree = "<group>"; };
@@ -99,9 +105,9 @@
 		EE999C78250E8D6F001CFBB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE999C7B250E8D6F001CFBB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE999C7D250E8D6F001CFBB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE999C87250E9109001CFBB7 /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
-		EE999C8A250E91BC001CFBB7 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
-		EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManager.swift; sourceTree = "<group>"; };
+		EE999C87250E9109001CFBB7 /* WaveformViewOld.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformViewOld.xib; sourceTree = "<group>"; };
+		EE999C8A250E91BC001CFBB7 /* WaveformViewOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewOld.swift; sourceTree = "<group>"; };
+		EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManagerOld.swift; sourceTree = "<group>"; };
 		EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardEnum.swift; sourceTree = "<group>"; };
 		EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		EEEE8A71263D86E60051ECB9 /* CreateCommit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateCommit.storyboard; sourceTree = "<group>"; };
@@ -168,6 +174,32 @@
 				EE170DEE250F82A2007341BE /* AppColor.swift */,
 			);
 			path = AppStyle;
+			sourceTree = "<group>";
+		};
+		EE57324B264B238600DCC961 /* WaveformView */ = {
+			isa = PBXGroup;
+			children = (
+				EE57324F264B23F200DCC961 /* View */,
+				EE57324C264B23A800DCC961 /* Xib */,
+			);
+			path = WaveformView;
+			sourceTree = "<group>";
+		};
+		EE57324C264B23A800DCC961 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EE57324D264B23B300DCC961 /* WaveformView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EE57324F264B23F200DCC961 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE573252264B283800DCC961 /* WaveformInternalView.swift */,
+				EE573250264B23FA00DCC961 /* WaveformView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EE6A5623263EE79500AFAB80 /* SpecifyIntervals */ = {
@@ -300,7 +332,7 @@
 		EE94D40E250FE7FC00BEAE00 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				EE94D40F250FE80C00BEAE00 /* WaveformViewState.swift */,
+				EE94D40F250FE80C00BEAE00 /* WaveformViewStateOld.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -380,7 +412,7 @@
 		EE999C86250E90FF001CFBB7 /* Xib */ = {
 			isa = PBXGroup;
 			children = (
-				EE999C87250E9109001CFBB7 /* WaveformView.xib */,
+				EE999C87250E9109001CFBB7 /* WaveformViewOld.xib */,
 				EE94D42125127BAC00BEAE00 /* WaveformSelectedIntervalView.xib */,
 			);
 			path = Xib;
@@ -389,8 +421,8 @@
 		EE999C89250E91B3001CFBB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EE94D3FE250F847900BEAE00 /* WaveformInternalView.swift */,
-				EE999C8A250E91BC001CFBB7 /* WaveformView.swift */,
+				EE94D3FE250F847900BEAE00 /* WaveformInternalViewOld.swift */,
+				EE999C8A250E91BC001CFBB7 /* WaveformViewOld.swift */,
 				EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */,
 			);
 			path = View;
@@ -407,7 +439,7 @@
 		EE999C8D250E91C3001CFBB7 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManager.swift */,
+				EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -503,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */,
+				EE57324B264B238600DCC961 /* WaveformView */,
 				EEEE8A85263D93860051ECB9 /* SectionSeparatorTableViewCell */,
 				EEEE8ACA263DFDFD0051ECB9 /* TextViewTableViewCell */,
 				EE71ED552644848C007ECF7F /* UnisonTimePickerView */,
@@ -855,9 +888,10 @@
 				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
 				EEEE8A96263D9C3A0051ECB9 /* SuisseIntl-Regular.otf in Resources */,
 				EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */,
-				EE999C88250E9109001CFBB7 /* WaveformView.xib in Resources */,
+				EE999C88250E9109001CFBB7 /* WaveformViewOld.xib in Resources */,
 				EEEE8A8A263D94150051ECB9 /* SectionSeparatorTableViewCell.xib in Resources */,
 				EEEE8A93263D94C60051ECB9 /* SimplonNorm-Bold.otf in Resources */,
+				EE57324E264B23B300DCC961 /* WaveformView.xib in Resources */,
 				EEEE8A97263D9C3C0051ECB9 /* SuisseIntl-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -917,7 +951,7 @@
 				EEEE8AD6263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift in Sources */,
 				EEEE8ABF263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift in Sources */,
 				EE71ED642644898B007ECF7F /* UnisonTimePickerViewDelegate.swift in Sources */,
-				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManager.swift in Sources */,
+				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift in Sources */,
 				EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */,
 				EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */,
 				EE71ED78264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift in Sources */,
@@ -929,23 +963,24 @@
 				EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */,
 				EEEE8ADC263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift in Sources */,
 				EEEE8AB8263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift in Sources */,
+				EE573253264B283800DCC961 /* WaveformInternalView.swift in Sources */,
 				EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */,
 				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
 				EE87C796264097B900B3C898 /* TabBarItem.swift in Sources */,
 				EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */,
 				EEEE8AA4263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift in Sources */,
 				EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */,
-				EE94D3FF250F847900BEAE00 /* WaveformInternalView.swift in Sources */,
+				EE94D3FF250F847900BEAE00 /* WaveformInternalViewOld.swift in Sources */,
 				EEEE8AD9263E07440051ECB9 /* TextViewCellConfiguration.swift in Sources */,
 				EEEE8AC5263DD0800051ECB9 /* ChooseProjectItemTestModel.swift in Sources */,
 				EEEE8A9C263DA1D30051ECB9 /* UIViewExtension.swift in Sources */,
-				EE94D410250FE80C00BEAE00 /* WaveformViewState.swift in Sources */,
+				EE94D410250FE80C00BEAE00 /* WaveformViewStateOld.swift in Sources */,
 				EE6A5629263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift in Sources */,
 				EEEE8AD2263E037A0051ECB9 /* UIViewControllerExtension.swift in Sources */,
 				EEEE8A87263D93BC0051ECB9 /* ReusableBaseView.swift in Sources */,
 				EE71ED61264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift in Sources */,
 				EE71ED5D2644884B007ECF7F /* UnisonTimePickerView.swift in Sources */,
-				EE999C8B250E91BC001CFBB7 /* WaveformView.swift in Sources */,
+				EE999C8B250E91BC001CFBB7 /* WaveformViewOld.swift in Sources */,
 				EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */,
 				EEEE8AC2263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift in Sources */,
 				EE170DEF250F82A2007341BE /* AppColor.swift in Sources */,
@@ -957,6 +992,7 @@
 				EEEE8A95263D98270051ECB9 /* UILabelExtension.swift in Sources */,
 				EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */,
 				EEEE8AE4263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift in Sources */,
+				EE573251264B23FA00DCC961 /* WaveformView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
