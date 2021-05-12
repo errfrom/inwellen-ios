@@ -90,13 +90,13 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="CG4-Lc-pqB">
                                                             <rect key="frame" x="104" y="32.5" width="153.5" height="39.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Time Coming" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-Mq-gZA">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Long Time Coming" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-Mq-gZA">
                                                                     <rect key="frame" x="0.0" y="0.0" width="153.5" height="21"/>
                                                                     <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="18"/>
                                                                     <color key="textColor" name="DarkBlueColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by eluvium " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-EY-Rsh">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="by eluvium " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-EY-Rsh">
                                                                     <rect key="frame" x="0.0" y="23" width="153.5" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="14"/>
                                                                     <color key="textColor" name="AccentBlueColor"/>
@@ -323,6 +323,7 @@
                                             <outlet property="scrollViewContentWidthConstraint" destination="pzj-eW-km9" id="Zfm-2k-YFQ"/>
                                             <outlet property="specifyIntervalsLabel" destination="nYS-yB-18b" id="3vX-P9-T8M"/>
                                             <outlet property="uploadCommitAudioLabel" destination="Tsz-BY-aKt" id="LU4-vv-PcE"/>
+                                            <outlet property="uploadCommitAudioLabelLeadingConstraint" destination="Krp-NJ-RP0" id="Iit-Mt-bVQ"/>
                                             <outletCollection property="uploadAudioFileViewTopBottomConstraints" destination="Ixb-e6-IKQ" collectionClass="NSMutableArray" id="a7q-74-fbx"/>
                                             <outletCollection property="uploadAudioFileViewTopBottomConstraints" destination="Yzs-7L-YxR" collectionClass="NSMutableArray" id="gM0-Hk-ELf"/>
                                         </connections>

@@ -26,6 +26,8 @@ class CreateCommitAudioTableViewCell: UITableViewCell {
     @IBOutlet weak var scrollViewContentWidthConstraint: NSLayoutConstraint!
     @IBOutlet      var uploadAudioFileViewTopBottomConstraints: [NSLayoutConstraint]!
     
+    @IBOutlet weak var uploadCommitAudioLabelLeadingConstraint: NSLayoutConstraint!
+    
     // - Manager
     private var layoutManager: CreateCommitAudioTableViewCellLayoutManager?
     

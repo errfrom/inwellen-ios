@@ -27,8 +27,15 @@ class CreateCommitAudioTableViewCellLayoutManager {
 extension CreateCommitAudioTableViewCellLayoutManager {
     
     func layoutPagesTransition() {
+        // layoutSectionSeparatorLabels()
+        adjustUploadCommitAudioLabelAppearance()
         scrollViewUpdateContentOffset()
         reprioritizeConstraints()
+    }
+    
+    private func layoutSectionSeparatorLabels() {
+        let constraintPriority = UILayoutPriority(cell.currentPage == .uploadAudioFilePage ? 1000 : 998)
+        cell.uploadCommitAudioLabelLeadingConstraint.priority = constraintPriority
     }
     
     private func reprioritizeConstraints() {
@@ -53,6 +60,23 @@ extension CreateCommitAudioTableViewCellLayoutManager {
 }
 
 // MARK: -
+// MARK: - Appearance
+
+fileprivate extension CreateCommitAudioTableViewCellLayoutManager {
+    
+    private func adjustUploadCommitAudioLabelAppearance() {
+        let animationOptions: UIView.AnimationOptions = [.transitionCrossDissolve, .curveEaseOut]
+        UIView.transition(with: cell.uploadCommitAudioLabel, duration: 0.25, options: animationOptions, animations: { [weak self] in
+            guard let strongSelf = self else { return }
+            
+            let text = strongSelf.cell.currentPage == .uploadAudioFilePage ? "Upload commit audio" : "Back"
+            strongSelf.cell.uploadCommitAudioLabel.text = text.uppercased()
+        })
+    }
+    
+}
+
+// MARK: -
 // MARK: - Configure
 
 fileprivate extension CreateCommitAudioTableViewCellLayoutManager {
@@ -60,6 +84,7 @@ fileprivate extension CreateCommitAudioTableViewCellLayoutManager {
     private func configure() {
         configureScrollView()
         configureContainerView()
+        configureSpecifyIntervalsViewController()
         configureUploadCommitAudioLabel()
         configureSpecifyIntervalsLabel()
         configureBackButton()
@@ -81,6 +106,18 @@ fileprivate extension CreateCommitAudioTableViewCellLayoutManager {
             make.trailing.equalToSuperview()
             make.top.bottom.equalToSuperview().priority(999)
         }
+    }
+    
+    private func configureSpecifyIntervalsViewController() {
+        guard let containerView = cell.containerView else { return }
+        
+        let current_vc = UIApplication.shared.currentViewController
+        let specifyIntervals_vc = Storyboard.specifyIntervals.viewController as! SpecifyIntervalsScreenViewController
+        current_vc?.addChild(specifyIntervals_vc)
+        specifyIntervals_vc.willMove(toParent: current_vc)
+        
+        containerView.addSubview(specifyIntervals_vc.view)
+        specifyIntervals_vc.view.frame = containerView.bounds
     }
     
     private func configureUploadCommitAudioLabel() {

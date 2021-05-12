@@ -1,26 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BKW-qL-evg">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SuisseIntl-Medium.otf">
+            <string>SuisseIntl-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Specify Intervals Screen View Controller-->
         <scene sceneID="syi-hm-gcH">
             <objects>
                 <viewController id="BKW-qL-evg" customClass="SpecifyIntervalsScreenViewController" customModule="Unison" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dLt-38-yV0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dLt-38-yV0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Vlz-gt-H5q"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specify which parts of the piece have been changed" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfw-X8-g7f">
+                                <rect key="frame" x="32" y="0.0" width="311" height="47"/>
+                                <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="20"/>
+                                <color key="textColor" name="DarkBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uj9-Jd-oEi" customClass="WaveformView" customModule="Unison" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="79" width="375" height="187"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="187" id="c8G-U5-RfT"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Tx-cd-bLZ">
+                                <rect key="frame" x="0.0" y="282" width="375" height="385"/>
+                                <color key="backgroundColor" name="DefaultBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SpecifyIntervalCell" rowHeight="83" id="V88-DX-4Nq" customClass="SpecifyIntervalTableViewCell" customModule="Unison" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="83"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V88-DX-4Nq" id="2mN-15-PPy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kfi-xO-Jbv">
+                                                    <rect key="frame" x="48.5" y="24" width="278" height="34"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="from" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNw-Tr-3gI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="33" height="34"/>
+                                                            <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="16"/>
+                                                            <color key="textColor" name="DarkBlueColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wm-xb-rQY" customClass="UnisonTimePickerView" customModule="Unison" customModuleProvider="target">
+                                                            <rect key="frame" x="49" y="0.0" width="90" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="90" id="4GO-kM-h5s"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58r-1H-xnp">
+                                                            <rect key="frame" x="155" y="0.0" width="17" height="34"/>
+                                                            <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="16"/>
+                                                            <color key="textColor" name="DarkBlueColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kiE-eh-lZ5" customClass="UnisonTimePickerView" customModule="Unison" customModuleProvider="target">
+                                                            <rect key="frame" x="188" y="0.0" width="90" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="90" id="MJM-aU-GX5"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="Ysa-Hy-7Nr"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICh-94-FJO" userLabel="Separator">
+                                                    <rect key="frame" x="32" y="82" width="311" height="1"/>
+                                                    <color key="backgroundColor" name="DefaultBorderColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="N7f-bR-Zzd"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kfi-xO-Jbv" firstAttribute="leading" secondItem="2mN-15-PPy" secondAttribute="leading" constant="48.5" id="1WE-eO-Jp1"/>
+                                                <constraint firstItem="ICh-94-FJO" firstAttribute="leading" secondItem="2mN-15-PPy" secondAttribute="leading" constant="32" id="7Br-Ve-OGV"/>
+                                                <constraint firstAttribute="trailing" secondItem="kfi-xO-Jbv" secondAttribute="trailing" constant="48.5" id="LO0-yK-eCV"/>
+                                                <constraint firstItem="kfi-xO-Jbv" firstAttribute="top" secondItem="2mN-15-PPy" secondAttribute="top" constant="24" id="X8a-Pe-Ko3"/>
+                                                <constraint firstAttribute="bottom" secondItem="ICh-94-FJO" secondAttribute="bottom" id="eA4-EN-2sb"/>
+                                                <constraint firstItem="ICh-94-FJO" firstAttribute="top" secondItem="kfi-xO-Jbv" secondAttribute="bottom" constant="24" id="u7q-2e-AxY"/>
+                                                <constraint firstAttribute="trailing" secondItem="ICh-94-FJO" secondAttribute="trailing" constant="32" id="xQ1-zB-cXT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="DefaultBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Nfw-X8-g7f" secondAttribute="trailing" constant="32" id="1NK-1q-ZrK"/>
+                            <constraint firstItem="Nfw-X8-g7f" firstAttribute="top" secondItem="dLt-38-yV0" secondAttribute="top" id="4WP-b8-beW"/>
+                            <constraint firstItem="Uj9-Jd-oEi" firstAttribute="leading" secondItem="dLt-38-yV0" secondAttribute="leading" id="HKN-1M-HgS"/>
+                            <constraint firstItem="Uj9-Jd-oEi" firstAttribute="top" secondItem="Nfw-X8-g7f" secondAttribute="bottom" constant="32" id="RlA-vW-T8W"/>
+                            <constraint firstAttribute="bottom" secondItem="9Tx-cd-bLZ" secondAttribute="bottom" id="U8i-QO-qfj"/>
+                            <constraint firstAttribute="trailing" secondItem="9Tx-cd-bLZ" secondAttribute="trailing" id="Vw3-Sf-1rD"/>
+                            <constraint firstItem="9Tx-cd-bLZ" firstAttribute="top" secondItem="Uj9-Jd-oEi" secondAttribute="bottom" constant="16" id="XLD-ro-uMb"/>
+                            <constraint firstItem="Nfw-X8-g7f" firstAttribute="leading" secondItem="dLt-38-yV0" secondAttribute="leading" constant="32" id="fA9-jM-ApU"/>
+                            <constraint firstItem="9Tx-cd-bLZ" firstAttribute="leading" secondItem="dLt-38-yV0" secondAttribute="leading" id="uI7-6G-OiN"/>
+                            <constraint firstAttribute="trailing" secondItem="Uj9-Jd-oEi" secondAttribute="trailing" id="xqa-FT-CbD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="9Tx-cd-bLZ" id="CWw-is-Qxe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFc-PS-lnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-145" y="-340"/>
+            <point key="canvasLocation" x="-146.40000000000001" y="-340.47976011994007"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="DarkBlueColor">
+            <color red="0.023529411764705882" green="0.050980392156862744" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DefaultBackgroundColor">
+            <color red="0.9882352941176471" green="0.98039215686274506" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DefaultBorderColor">
+            <color red="0.92549019607843142" green="0.91764705882352937" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
