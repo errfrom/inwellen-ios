@@ -38,6 +38,9 @@
 		EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift */; };
 		EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */; };
 		EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */; };
+		EEB36C5E264F18B500A91AB9 /* CommitSelectedIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB36C5D264F18B500A91AB9 /* CommitSelectedIntervalView.swift */; };
+		EEB36C61264F192900A91AB9 /* CommitSelectedIntervalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB36C60264F192900A91AB9 /* CommitSelectedIntervalView.xib */; };
+		EEB36C65264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */; };
 		EEE5F37B264C2D8900288883 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5F37A264C2D8900288883 /* UIApplicationExtension.swift */; };
 		EEE5F37E264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5F37D264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift */; };
 		EEE5F381264C31ED00288883 /* SpecifyIntervalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5F380264C31ED00288883 /* SpecifyIntervalTableViewCell.swift */; };
@@ -113,6 +116,9 @@
 		EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManagerOld.swift; sourceTree = "<group>"; };
 		EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardEnum.swift; sourceTree = "<group>"; };
 		EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		EEB36C5D264F18B500A91AB9 /* CommitSelectedIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitSelectedIntervalView.swift; sourceTree = "<group>"; };
+		EEB36C60264F192900A91AB9 /* CommitSelectedIntervalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommitSelectedIntervalView.xib; sourceTree = "<group>"; };
+		EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitSelectedIntervalViewLayoutManager.swift; sourceTree = "<group>"; };
 		EEE5F37A264C2D8900288883 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		EEE5F37D264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsScreenDataSource.swift; sourceTree = "<group>"; };
 		EEE5F380264C31ED00288883 /* SpecifyIntervalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalTableViewCell.swift; sourceTree = "<group>"; };
@@ -484,6 +490,48 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		EEB36C5B264F188F00A91AB9 /* CommitSelectedIntervalView */ = {
+			isa = PBXGroup;
+			children = (
+				EEB36C62264F1E3500A91AB9 /* Manager */,
+				EEB36C5C264F189D00A91AB9 /* View */,
+				EEB36C5F264F18EA00A91AB9 /* Xib */,
+			);
+			path = CommitSelectedIntervalView;
+			sourceTree = "<group>";
+		};
+		EEB36C5C264F189D00A91AB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEB36C5D264F18B500A91AB9 /* CommitSelectedIntervalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEB36C5F264F18EA00A91AB9 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EEB36C60264F192900A91AB9 /* CommitSelectedIntervalView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EEB36C62264F1E3500A91AB9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEB36C63264F1E3800A91AB9 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEB36C63264F1E3800A91AB9 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		EEE5F37C264C308100288883 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +608,7 @@
 			isa = PBXGroup;
 			children = (
 				EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */,
+				EEB36C5B264F188F00A91AB9 /* CommitSelectedIntervalView */,
 				EE57324B264B238600DCC961 /* WaveformView */,
 				EEEE8A85263D93860051ECB9 /* SectionSeparatorTableViewCell */,
 				EEEE8ACA263DFDFD0051ECB9 /* TextViewTableViewCell */,
@@ -911,6 +960,7 @@
 				EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */,
 				EE71ED5A264486CF007ECF7F /* UnisonTimePickerView.xib in Resources */,
 				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
+				EEB36C61264F192900A91AB9 /* CommitSelectedIntervalView.xib in Resources */,
 				EEEE8A96263D9C3A0051ECB9 /* SuisseIntl-Regular.otf in Resources */,
 				EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */,
 				EE999C88250E9109001CFBB7 /* WaveformViewOld.xib in Resources */,
@@ -1016,6 +1066,8 @@
 				EEEE8AB5263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift in Sources */,
 				EEEE8AA7263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift in Sources */,
 				EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */,
+				EEB36C5E264F18B500A91AB9 /* CommitSelectedIntervalView.swift in Sources */,
+				EEB36C65264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift in Sources */,
 				EEEE8A9A263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift in Sources */,
 				EEEE8A95263D98270051ECB9 /* UILabelExtension.swift in Sources */,
 				EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */,

@@ -12,6 +12,7 @@ enum AppColor {
     
     static let defaultBackgroundColor = UIColor(named: "DefaultBackgroundColor")!
     static let defaultBorderColor = UIColor(named: "DefaultBorderColor")!
+    static let lightBlueColor = UIColor(named: "LightBlueColor")!
     static let darkBlueColor = UIColor(named: "DarkBlueColor")!
     static let accentBlueColor = UIColor(named: "AccentBlueColor")!
     static let accentOrangeColor = UIColor(named: "AccentOrangeColor")!

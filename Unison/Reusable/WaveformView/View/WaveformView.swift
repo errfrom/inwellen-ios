@@ -10,9 +10,16 @@ import UIKit
 
 class WaveformView: ReusableBaseView {
     
+    // - UI
+    @IBOutlet weak var view: UIView!
+    @IBOutlet weak var contentView: UIView!
+    
     // - Lifecycle
     override func setupView() {
         super.setupView()
+        
+        let interval = CommitSelectedIntervalView(frame: CGRect(x: 60, y: 0, width: 70 + 44, height: self.bounds.height))
+        view.insertSubview(interval, belowSubview: contentView)
     }
     
 }

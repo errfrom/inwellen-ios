@@ -20,6 +20,16 @@ class WaveformInternalView: UIView {
     // - Data
     private var samples: [Float]? = nil
     
+    // - Init
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        samples = []
+        for _ in 0..<100 {
+            samples?.append(Float.random(in: 0...1))
+        }
+    }
+    
     // - Draw
     override func draw(_ rect: CGRect) {
         let (numSegments, horizontalMargin) = getNumSegments(thatFitIntoRect: rect)
