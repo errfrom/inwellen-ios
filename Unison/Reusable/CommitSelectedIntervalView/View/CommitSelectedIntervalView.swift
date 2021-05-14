@@ -8,9 +8,13 @@
 
 import UIKit
 
-class CommitSelectedIntervalView: ReusableBaseView {
+class CommitSelectedIntervalView: ReusableBaseView, ISelectedIntervalsLayoutComponent {
+    
+    // - Mediator
+    var selectedIntervalsLayoutDirector: ISelectedIntervalsLayoutMediator?
     
     // - UI
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var endTimeLabel: UILabel!
     
@@ -21,6 +25,44 @@ class CommitSelectedIntervalView: ReusableBaseView {
     override func setupView() {
         super.setupView()
         configure()
+    }
+    
+}
+
+// MARK: -
+// MARK: - Interface
+
+extension CommitSelectedIntervalView: ICommitSelectedIntervalView {
+    
+    
+    
+}
+
+// MARK: -
+// MARK: - Action
+
+fileprivate extension CommitSelectedIntervalView {
+    
+    @IBAction private func didRecognizeLeftEdgePanGesture(_ gesture: UIPanGestureRecognizer) {
+        handleEdgeViewPanGesture(gesture)
+    }
+    
+    @IBAction private func didRecognizeRightEdgePanGesture(_ gesture: UIPanGestureRecognizer) {
+        handleEdgeViewPanGesture(gesture)
+    }
+    
+    private func handleEdgeViewPanGesture(_ gesture: UIPanGestureRecognizer) {
+        guard let edgeView = gesture.view else { return }
+        
+        let translationX = gesture.translation(in: contentView).x
+        requestIntervalLocationChange(edgeView: edgeView, translationX: translationX)
+        gesture.setTranslation(.zero, in: contentView)
+    }
+        
+    private func requestIntervalLocationChange(edgeView view: UIView, translationX: CGFloat) {
+        var event: SelectedIntervalsLayoutEvent
+        event = .intervalLocationChangeRequest(dStartX: view.tag == 0 ? translationX : nil, dEndX: view.tag == 1 ? translationX : nil)
+        selectedIntervalsLayoutDirector?.notify(sender: self, event: event)
     }
     
 }

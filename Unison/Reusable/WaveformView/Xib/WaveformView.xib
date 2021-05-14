@@ -37,10 +37,10 @@
                         <constraint firstAttribute="height" constant="1" id="KhX-qr-Hxv"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-Sl-53c" userLabel="ContentView">
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-Sl-53c" userLabel="ContentView">
                     <rect key="frame" x="0.0" y="23" width="414" height="160"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="254-sq-rwh" userLabel="WaveformInternalView" customClass="WaveformInternalView" customModule="Unison" customModuleProvider="target">
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="254-sq-rwh" userLabel="WaveformInternalView" customClass="WaveformInternalView" customModule="Unison" customModuleProvider="target">
                             <rect key="frame" x="60" y="50" width="287" height="60"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>

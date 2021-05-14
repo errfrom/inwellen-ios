@@ -14,6 +14,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommitSelectedIntervalView" customModule="Unison" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="WGH-ms-06m" id="MlK-KY-BFY"/>
                 <outlet property="endTimeLabel" destination="Uzy-mT-jqB" id="OPA-gB-cUW"/>
                 <outlet property="startTimeLabel" destination="r66-6w-yef" id="ioM-ZR-QPf"/>
             </connections>
@@ -90,7 +91,8 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="r66-6w-yef" firstAttribute="leading" secondItem="lG6-a2-NgI" secondAttribute="leading" id="1ep-BJ-9dE"/>
                         <constraint firstItem="r66-6w-yef" firstAttribute="top" secondItem="lG6-a2-NgI" secondAttribute="top" id="4qT-dI-zSP"/>
@@ -100,8 +102,11 @@
                         <constraint firstItem="vaf-mb-r1n" firstAttribute="centerX" secondItem="lG6-a2-NgI" secondAttribute="centerX" id="p1y-Na-D4f"/>
                         <constraint firstAttribute="width" constant="44" id="v99-Bh-Cli"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="lKF-6L-1z4" appends="YES" id="1t7-dL-FeW"/>
+                    </connections>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EA-nw-8M9" userLabel="Right Edge">
+                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EA-nw-8M9" userLabel="Right Edge">
                     <rect key="frame" x="262" y="0.0" width="44" height="187"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzy-mT-jqB" userLabel="EndTime">
@@ -164,7 +169,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="CXJ-Jm-aGK" secondAttribute="bottom" id="8uq-Se-Kos"/>
                         <constraint firstAttribute="width" constant="44" id="IXM-cx-lQK"/>
@@ -174,6 +179,9 @@
                         <constraint firstAttribute="trailing" secondItem="Uzy-mT-jqB" secondAttribute="trailing" id="kne-tm-ns0"/>
                         <constraint firstItem="Uzy-mT-jqB" firstAttribute="leading" secondItem="4EA-nw-8M9" secondAttribute="leading" id="vMH-xZ-zMb"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="EmQ-kY-LFb" appends="YES" id="F6O-g2-nsa"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -194,6 +202,16 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="197.10144927536234" y="37.165178571428569"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="lKF-6L-1z4" userLabel="LeftEdgePanGestureRecognizer">
+            <connections>
+                <action selector="didRecognizeLeftEdgePanGesture:" destination="-1" id="t2K-TM-lol"/>
+            </connections>
+        </panGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="EmQ-kY-LFb" userLabel="RightEdgePanGestureRecognizer">
+            <connections>
+                <action selector="didRecognizeRightEdgePanGesture:" destination="-1" id="1pW-er-snK"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <namedColor name="AccentBlueColor">
