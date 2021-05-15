@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CommitSelectedIntervalView: ReusableBaseView, ISelectedIntervalsLayoutComponent {
+class CommitSelectedIntervalView: ReusableBaseView, ISpecifyIntervalsContextComponent {
     
     // - Mediator
-    var selectedIntervalsLayoutDirector: ISelectedIntervalsLayoutMediator?
+    var specifyIntervalsContextDirector: ISpecifyIntervalsContextMediator?
     
     // - UI
     @IBOutlet weak var contentView: UIView!
@@ -60,9 +60,9 @@ fileprivate extension CommitSelectedIntervalView {
     }
         
     private func requestIntervalLocationChange(edgeView view: UIView, translationX: CGFloat) {
-        var event: SelectedIntervalsLayoutEvent
+        var event: SpecifyIntervalsContextEvent
         event = .intervalLocationChangeRequest(dStartX: view.tag == 0 ? translationX : nil, dEndX: view.tag == 1 ? translationX : nil)
-        selectedIntervalsLayoutDirector?.notify(sender: self, event: event)
+        specifyIntervalsContextDirector?.notify(sender: self, event: event)
     }
     
 }

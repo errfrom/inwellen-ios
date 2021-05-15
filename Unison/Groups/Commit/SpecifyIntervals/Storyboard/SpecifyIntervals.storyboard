@@ -116,6 +116,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="9Tx-cd-bLZ" id="CWw-is-Qxe"/>
+                        <outlet property="waveformView" destination="Uj9-Jd-oEi" id="wnt-Ej-zhe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFc-PS-lnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

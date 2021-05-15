@@ -15,6 +15,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WaveformView" customModule="Unison" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="ATc-Sl-53c" id="J8z-X0-6Au"/>
+                <outlet property="interactiveArea" destination="Fei-Gn-c3n" id="hcv-X8-JMd"/>
                 <outlet property="view" destination="5N9-38-mNN" id="okU-KN-BQ1"/>
             </connections>
         </placeholder>
@@ -37,7 +38,7 @@
                         <constraint firstAttribute="height" constant="1" id="KhX-qr-Hxv"/>
                     </constraints>
                 </view>
-                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-Sl-53c" userLabel="ContentView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-Sl-53c" userLabel="ContentView">
                     <rect key="frame" x="0.0" y="23" width="414" height="160"/>
                     <subviews>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="254-sq-rwh" userLabel="WaveformInternalView" customClass="WaveformInternalView" customModule="Unison" customModuleProvider="target">
@@ -47,6 +48,12 @@
                                 <constraint firstAttribute="height" constant="60" id="YJK-Kt-IyC"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERL-wC-Vd0" userLabel="Duration">
+                            <rect key="frame" x="358" y="73" width="24" height="14"/>
+                            <fontDescription key="fontDescription" name="SimplonNorm-Bold" family="Simplon Norm" pointSize="12"/>
+                            <color key="textColor" name="DarkBlueColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCs-LY-b8M" userLabel="Play">
                             <rect key="frame" x="14.5" y="58" width="44" height="44"/>
                             <constraints>
@@ -55,15 +62,17 @@
                             </constraints>
                             <state key="normal" image="button-play"/>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERL-wC-Vd0" userLabel="Duration">
-                            <rect key="frame" x="358" y="73" width="24" height="14"/>
-                            <fontDescription key="fontDescription" name="SimplonNorm-Bold" family="Simplon Norm" pointSize="12"/>
-                            <color key="textColor" name="DarkBlueColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fei-Gn-c3n">
+                            <rect key="frame" x="60" y="1" width="287" height="159"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="LZl-yz-iMl" appends="YES" id="VG3-IE-d1p"/>
+                            </connections>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="eCs-LY-b8M" firstAttribute="centerY" secondItem="ATc-Sl-53c" secondAttribute="centerY" id="2oC-yy-Y4N"/>
+                        <constraint firstAttribute="bottom" secondItem="Fei-Gn-c3n" secondAttribute="bottom" id="ENg-51-oQT"/>
                         <constraint firstAttribute="trailing" secondItem="ERL-wC-Vd0" secondAttribute="trailing" constant="32" id="O1D-qQ-2IN"/>
                         <constraint firstItem="254-sq-rwh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eCs-LY-b8M" secondAttribute="trailing" constant="1.5" id="O79-V9-a5T"/>
                         <constraint firstItem="254-sq-rwh" firstAttribute="centerY" secondItem="ATc-Sl-53c" secondAttribute="centerY" id="Td6-uy-lBK"/>
@@ -71,7 +80,10 @@
                         <constraint firstItem="ERL-wC-Vd0" firstAttribute="centerY" secondItem="ATc-Sl-53c" secondAttribute="centerY" id="We1-IC-apr"/>
                         <constraint firstItem="254-sq-rwh" firstAttribute="leading" secondItem="ATc-Sl-53c" secondAttribute="leading" constant="60" id="c2a-mf-3dp"/>
                         <constraint firstItem="ERL-wC-Vd0" firstAttribute="leading" secondItem="254-sq-rwh" secondAttribute="trailing" constant="11" id="eAP-gI-1OE"/>
+                        <constraint firstItem="Fei-Gn-c3n" firstAttribute="trailing" secondItem="254-sq-rwh" secondAttribute="trailing" id="gPq-4c-97j"/>
+                        <constraint firstItem="Fei-Gn-c3n" firstAttribute="leading" secondItem="254-sq-rwh" secondAttribute="leading" id="pnr-dV-Wp3"/>
                         <constraint firstAttribute="height" constant="160" id="rkb-kd-wZ5"/>
+                        <constraint firstItem="Fei-Gn-c3n" firstAttribute="top" secondItem="ATc-Sl-53c" secondAttribute="top" constant="1" id="v5L-S3-Ifk"/>
                     </constraints>
                 </view>
             </subviews>
@@ -93,6 +105,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="198.55072463768118" y="-166.40625"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="LZl-yz-iMl">
+            <connections>
+                <action selector="didRecognizeInteractiveAreaPanGesture:" destination="-1" id="88k-iU-wXp"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
     <resources>
         <image name="button-play" width="9" height="12"/>

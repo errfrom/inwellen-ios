@@ -1,5 +1,5 @@
 //
-//  SelectedIntervalsLayoutEvent.swift
+//  SpecifyIntervalsContextEvent.swift
 //  Unison
 //
 //  Created by Dzmitry Shuysky on 5/15/21.
@@ -8,6 +8,7 @@
 
 import UIKit
 
-enum SelectedIntervalsLayoutEvent {
+enum SpecifyIntervalsContextEvent {
+    case addIntervalRequest(locationX: CGFloat)
     case intervalLocationChangeRequest(dStartX: CGFloat?, dEndX: CGFloat?)
 }
