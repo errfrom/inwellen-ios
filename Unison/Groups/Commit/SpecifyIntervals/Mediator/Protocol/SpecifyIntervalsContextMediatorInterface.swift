@@ -6,6 +6,9 @@
 //  Copyright © 2021 Unison. All rights reserved.
 //
 
+import struct UIKit.CGFloat
+
 protocol ISpecifyIntervalsContextMediator {
     func notify(sender: ISpecifyIntervalsContextComponent, event: SpecifyIntervalsContextEvent)
+    var locationXToSecondRatio: CGFloat { get }
 }

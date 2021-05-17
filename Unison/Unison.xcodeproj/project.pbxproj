@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D90666175998757D9388F543 /* Pods_Unison.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 589D54D358E797D27B245B8D /* Pods_Unison.framework */; };
 		EE170DEF250F82A2007341BE /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE170DEE250F82A2007341BE /* AppColor.swift */; };
+		EE30617326530C9500DF8C6E /* SortedArray in Frameworks */ = {isa = PBXBuildFile; productRef = EE30617226530C9500DF8C6E /* SortedArray */; };
+		EE30619426530E9400DF8C6E /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30619326530E9400DF8C6E /* ID.swift */; };
+		EE3061B52653141C00DF8C6E /* IntervalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3061B42653141C00DF8C6E /* IntervalModel.swift */; };
 		EE57324E264B23B300DCC961 /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE57324D264B23B300DCC961 /* WaveformView.xib */; };
 		EE573251264B23FA00DCC961 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE573250264B23FA00DCC961 /* WaveformView.swift */; };
 		EE573253264B283800DCC961 /* WaveformInternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE573252264B283800DCC961 /* WaveformInternalView.swift */; };
@@ -91,6 +94,8 @@
 		3F29983BC2E8BA1A12698DAC /* Pods-Unison.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unison.release.xcconfig"; path = "Target Support Files/Pods-Unison/Pods-Unison.release.xcconfig"; sourceTree = "<group>"; };
 		589D54D358E797D27B245B8D /* Pods_Unison.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unison.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE170DEE250F82A2007341BE /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		EE30619326530E9400DF8C6E /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
+		EE3061B42653141C00DF8C6E /* IntervalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalModel.swift; sourceTree = "<group>"; };
 		EE57324D264B23B300DCC961 /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
 		EE573250264B23FA00DCC961 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 		EE573252264B283800DCC961 /* WaveformInternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalView.swift; sourceTree = "<group>"; };
@@ -176,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D90666175998757D9388F543 /* Pods_Unison.framework in Frameworks */,
+				EE30617326530C9500DF8C6E /* SortedArray in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +204,22 @@
 				EE170DEE250F82A2007341BE /* AppColor.swift */,
 			);
 			path = AppStyle;
+			sourceTree = "<group>";
+		};
+		EE30617526530E8B00DF8C6E /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EE30619326530E9400DF8C6E /* ID.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EE3061B3265313FA00DF8C6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE3061B42653141C00DF8C6E /* IntervalModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EE57324B264B238600DCC961 /* WaveformView */ = {
@@ -343,6 +365,7 @@
 		EE8048D3264F311C000BE233 /* Mediator */ = {
 			isa = PBXGroup;
 			children = (
+				EE3061B3265313FA00DF8C6E /* Models */,
 				EE8048DE264F31ED000BE233 /* Types */,
 				EE8048D9264F316E000BE233 /* Protocol */,
 				EE58E55026502C010033B438 /* SpecifyIntervalsContextMediator.swift */,
@@ -518,6 +541,7 @@
 		EE999C90250EB0E6001CFBB7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EE30617526530E8B00DF8C6E /* Types */,
 				EEEE8AA8263DB15C0051ECB9 /* Protocol */,
 				EE999C94250EB147001CFBB7 /* Extension */,
 				EE999C91250EB0FF001CFBB7 /* Constants */,
@@ -967,6 +991,9 @@
 			dependencies = (
 			);
 			name = Unison;
+			packageProductDependencies = (
+				EE30617226530C9500DF8C6E /* SortedArray */,
+			);
 			productName = Unison;
 			productReference = EE999C6C250E8D6B001CFBB7 /* Unison.app */;
 			productType = "com.apple.product-type.application";
@@ -995,6 +1022,9 @@
 				Base,
 			);
 			mainGroup = EE999C63250E8D6B001CFBB7;
+			packageReferences = (
+				EE30617126530C9500DF8C6E /* XCRemoteSwiftPackageReference "SortedArray" */,
+			);
 			productRefGroup = EE999C6D250E8D6B001CFBB7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1086,7 +1116,9 @@
 				EE71ED642644898B007ECF7F /* UnisonTimePickerViewDelegate.swift in Sources */,
 				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift in Sources */,
 				EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */,
+				EE30619426530E9400DF8C6E /* ID.swift in Sources */,
 				EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */,
+				EE3061B52653141C00DF8C6E /* IntervalModel.swift in Sources */,
 				EE71ED78264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift in Sources */,
 				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
 				EE8048D1264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift in Sources */,
@@ -1340,6 +1372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE30617126530C9500DF8C6E /* XCRemoteSwiftPackageReference "SortedArray" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ole/SortedArray.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE30617226530C9500DF8C6E /* SortedArray */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE30617126530C9500DF8C6E /* XCRemoteSwiftPackageReference "SortedArray" */;
+			productName = SortedArray;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EE999C64250E8D6B001CFBB7 /* Project object */;
 }

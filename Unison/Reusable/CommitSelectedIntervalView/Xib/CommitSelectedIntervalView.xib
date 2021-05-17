@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -91,7 +92,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <gestureRecognizers/>
                     <constraints>
                         <constraint firstItem="r66-6w-yef" firstAttribute="leading" secondItem="lG6-a2-NgI" secondAttribute="leading" id="1ep-BJ-9dE"/>
@@ -169,10 +170,9 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="CXJ-Jm-aGK" secondAttribute="bottom" id="8uq-Se-Kos"/>
-                        <constraint firstAttribute="width" constant="44" id="IXM-cx-lQK"/>
                         <constraint firstItem="CXJ-Jm-aGK" firstAttribute="top" secondItem="Uzy-mT-jqB" secondAttribute="bottom" constant="5" id="bKr-qB-5Qj"/>
                         <constraint firstItem="Uzy-mT-jqB" firstAttribute="top" secondItem="4EA-nw-8M9" secondAttribute="top" id="bYU-UL-Qh2"/>
                         <constraint firstItem="CXJ-Jm-aGK" firstAttribute="centerX" secondItem="4EA-nw-8M9" secondAttribute="centerX" id="d5e-z5-ATL"/>
@@ -189,6 +189,7 @@
                 <constraint firstAttribute="trailing" secondItem="4EA-nw-8M9" secondAttribute="trailing" id="4rB-TM-Z1h"/>
                 <constraint firstItem="4EA-nw-8M9" firstAttribute="top" secondItem="WGH-ms-06m" secondAttribute="top" id="9wC-xh-b2h"/>
                 <constraint firstAttribute="bottom" secondItem="4EA-nw-8M9" secondAttribute="bottom" id="IvT-2A-egJ"/>
+                <constraint firstItem="lG6-a2-NgI" firstAttribute="width" secondItem="4EA-nw-8M9" secondAttribute="width" id="Qwi-AK-XMs"/>
                 <constraint firstAttribute="leading" secondItem="lG6-a2-NgI" secondAttribute="leading" id="adJ-MJ-Aqh"/>
                 <constraint firstAttribute="trailing" secondItem="fv9-hc-TqZ" secondAttribute="trailing" constant="22" id="d14-AP-k1b"/>
                 <constraint firstAttribute="bottom" secondItem="lG6-a2-NgI" secondAttribute="bottom" id="iKl-TD-wvV"/>
