@@ -50,6 +50,7 @@
 		EEB36C5E264F18B500A91AB9 /* CommitSelectedIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB36C5D264F18B500A91AB9 /* CommitSelectedIntervalView.swift */; };
 		EEB36C61264F192900A91AB9 /* CommitSelectedIntervalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB36C60264F192900A91AB9 /* CommitSelectedIntervalView.xib */; };
 		EEB36C65264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */; };
+		EEDBECA02659BECD006E8FE0 /* WaveformViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDBEC9F2659BECD006E8FE0 /* WaveformViewLayoutManager.swift */; };
 		EEE5F37B264C2D8900288883 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5F37A264C2D8900288883 /* UIApplicationExtension.swift */; };
 		EEE5F37E264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5F37D264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift */; };
 		EEE5F381264C31ED00288883 /* SpecifyIntervalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5F380264C31ED00288883 /* SpecifyIntervalTableViewCell.swift */; };
@@ -87,6 +88,7 @@
 		EEEE8ADC263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ADB263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift */; };
 		EEEE8ADE263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ADD263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift */; };
 		EEEE8AE4263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AE3263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift */; };
+		EEFC4F3526546914000FCD73 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC4F3426546914000FCD73 /* TimeInterval.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +138,7 @@
 		EEB36C5D264F18B500A91AB9 /* CommitSelectedIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitSelectedIntervalView.swift; sourceTree = "<group>"; };
 		EEB36C60264F192900A91AB9 /* CommitSelectedIntervalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommitSelectedIntervalView.xib; sourceTree = "<group>"; };
 		EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitSelectedIntervalViewLayoutManager.swift; sourceTree = "<group>"; };
+		EEDBEC9F2659BECD006E8FE0 /* WaveformViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManager.swift; sourceTree = "<group>"; };
 		EEE5F37A264C2D8900288883 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		EEE5F37D264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsScreenDataSource.swift; sourceTree = "<group>"; };
 		EEE5F380264C31ED00288883 /* SpecifyIntervalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,6 +176,7 @@
 		EEEE8ADB263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		EEEE8ADD263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitAudioTableViewCell.swift; sourceTree = "<group>"; };
 		EEEE8AE3263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitAudioTableViewCellLayoutManager.swift; sourceTree = "<group>"; };
+		EEFC4F3426546914000FCD73 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				EE3061B42653141C00DF8C6E /* IntervalModel.swift */,
+				EEFC4F3426546914000FCD73 /* TimeInterval.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				EE58E55426502D1A0033B438 /* Protocol */,
+				EEDBEC9D2659BEB8006E8FE0 /* Manager */,
 				EE57324F264B23F200DCC961 /* View */,
 				EE57324C264B23A800DCC961 /* Xib */,
 			);
@@ -610,6 +616,22 @@
 			isa = PBXGroup;
 			children = (
 				EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EEDBEC9D2659BEB8006E8FE0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEDBEC9E2659BEBD006E8FE0 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEDBEC9E2659BEBD006E8FE0 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EEDBEC9F2659BECD006E8FE0 /* WaveformViewLayoutManager.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -1132,6 +1154,7 @@
 				EEEE8AB8263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift in Sources */,
 				EE573253264B283800DCC961 /* WaveformInternalView.swift in Sources */,
 				EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */,
+				EEDBECA02659BECD006E8FE0 /* WaveformViewLayoutManager.swift in Sources */,
 				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
 				EEE5F381264C31ED00288883 /* SpecifyIntervalTableViewCell.swift in Sources */,
 				EE58E54D26502BC60033B438 /* SpecifyIntervalsContextMediatorInterface.swift in Sources */,
@@ -1169,6 +1192,7 @@
 				EE58E54F26502BE20033B438 /* SpecifyIntervalsContextComponentInterface.swift in Sources */,
 				EE573251264B23FA00DCC961 /* WaveformView.swift in Sources */,
 				EE58E55326502C2B0033B438 /* SpecifyIntervalsContextEvent.swift in Sources */,
+				EEFC4F3526546914000FCD73 /* TimeInterval.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

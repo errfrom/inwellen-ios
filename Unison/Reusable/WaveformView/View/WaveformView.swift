@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class WaveformView: ReusableBaseView, ISpecifyIntervalsContextComponent {
     
@@ -20,6 +21,9 @@ class WaveformView: ReusableBaseView, ISpecifyIntervalsContextComponent {
     
     private weak var activeIntervalView: CommitSelectedIntervalView?
     
+    // - Manager
+    private var layoutManager: WaveformViewLayoutManager!
+    
     // - Constants
     private struct Constant {
         static let intervalViewHorizontalPadding: CGFloat = 44
@@ -28,6 +32,20 @@ class WaveformView: ReusableBaseView, ISpecifyIntervalsContextComponent {
     // - Lifecycle
     override func setupView() {
         super.setupView()
+        configure()
+        
+        // let frame = CGRect(x: 120, y: 0, width: 88, height: bounds.height)
+        // let intervalView = CommitSelectedIntervalView()
+        // view.insertSubview(intervalView, belowSubview: contentView)
+        // activeIntervalView = intervalView
+        // intervalView.snp.makeConstraints { make in
+        //     make.leading.equalTo(120)
+        //    make.top.height.equalToSuperview()
+        // }
+        // intervalView.visibleViewWidthConstraint.constant = 60
+        // view.insertSubview(intervalView, belowSubview: contentView)
+        // intervalView.visibleViewWidthConstraint.constant = 5
+        // intervalView.setNeedsLayout()
     }
     
 }
@@ -37,15 +55,21 @@ class WaveformView: ReusableBaseView, ISpecifyIntervalsContextComponent {
 
 extension WaveformView: IWaveformView {
 
-    func createAndDisplayOneSecondInterval(locationX: CGFloat) -> (intervalView: CommitSelectedIntervalView, endX: CGFloat)? {
-        guard let locationXToSecondRatio = specifyIntervalsContextDirector?.locationXToSecondRatio else { return nil }
+    func createAndDisplayIntervalView(timeInterval: TimeInterval) -> CommitSelectedIntervalView? {
+        guard let contextDirector = specifyIntervalsContextDirector else { return nil }
         
-        let frame = prepareIntervalViewFrame(locationX, locationXToSecondRatio)
-        let intervalView = CommitSelectedIntervalView(frame: frame)
+        let intervalView = CommitSelectedIntervalView()
+        intervalView.setInitially(contextDirector: contextDirector, timeInterval: timeInterval)
+        layoutManager?.insert(intervalView: intervalView, intervalViewMinX: 80)
+        return intervalView
+        // guard let locationXToSecondRatio = specifyIntervalsContextDirector?.locationXToSecondRatio else { return nil }
         
-        view.insertSubview(intervalView, belowSubview: contentView)
-        self.activeIntervalView = intervalView
-        return (intervalView, locationX + locationXToSecondRatio)
+        // let frame = prepareIntervalViewFrame(locationX, locationXToSecondRatio)
+        // let intervalView = CommitSelectedIntervalView(frame: frame)
+        
+        // view.insertSubview(intervalView, belowSubview: contentView)
+        // self.activeIntervalView = intervalView
+        // return (intervalView, locationX + locationXToSecondRatio)
     }
     
     private func prepareIntervalViewFrame(_ locationX: CGFloat, _ locationXToSecondRatio: CGFloat) -> CGRect {
@@ -68,7 +92,12 @@ fileprivate extension WaveformView {
                 let addIntervalRequest: SpecifyIntervalsContextEvent = .addIntervalRequest(locationX: locationX)
                 specifyIntervalsContextDirector?.notify(sender: self, event: addIntervalRequest)
             
-            case .changed: // TODO: 
+            case .changed:
+                return
+                // let translationX = gesture.translation(in: interactiveArea).x
+                // activeIntervalView?.visibleViewWidthConstraint.constant += translationX
+                // print("DISTANCE BETWEEN LABELS: \(activeIntervalView!.endTimeLabel.frame.minX - activeIntervalView!.startTimeLabel.frame.maxX)")
+                // gesture.setTranslation(.zero, in: interactiveArea)
                 guard let intervalView = activeIntervalView else { return }
                 let translationX = gesture.translation(in: interactiveArea).x
                 
@@ -79,6 +108,21 @@ fileprivate extension WaveformView {
             default:
                 return
         }
+    }
+    
+}
+
+// MARK: -
+// MARK: - Configure
+
+fileprivate extension WaveformView {
+    
+    private func configure() {
+        configureLayoutManager()
+    }
+    
+    private func configureLayoutManager() {
+        layoutManager = WaveformViewLayoutManager(view: self)
     }
     
 }

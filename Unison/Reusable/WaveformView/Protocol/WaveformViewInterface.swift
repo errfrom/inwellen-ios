@@ -9,5 +9,5 @@
 import struct UIKit.CGFloat
 
 protocol IWaveformView: class {
-    func createAndDisplayOneSecondInterval(locationX: CGFloat) -> (intervalView: CommitSelectedIntervalView, endX: CGFloat)?
+    func createAndDisplayIntervalView(timeInterval: TimeInterval) -> CommitSelectedIntervalView?
 }

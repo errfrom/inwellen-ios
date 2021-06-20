@@ -9,6 +9,37 @@
 import struct UIKit.CGFloat
 import struct SortedArray.SortedArray
 
+/* MARK: - Algorithm for creating and displaying an interval view.
+ 
+    1. One of the components captures the request to create a new interval
+    and sends it to the mediator.
+ 
+    2. The mediator checks whether it's possible to add a new interval
+    based on the information about the intervals already created.
+ 
+    3. If it's possible to create an interval, the mediator calls the
+    waveformView's `createAndDisplayIntervalView` function with
+    a `TimeInterval` argument.
+ 
+    4. The waveformView initializes an intervalView with the specified
+    timeInterval.
+ 
+    5. The newly created interval view uses the mediator's
+    `locationXToSecondRatio` property to calculate the visible intervalView's
+    width and set the corresponding width constraint.
+
+    6. Once the interval view has been completely set up, the waveformView
+    adds it to the view hierarchy constraint-based and returns it
+    to the mediator.
+ 
+    7. The mediator then assigns an id to the intervalView,
+    wraps it in a special internal model, and adds it to the sorted array.
+ 
+*/
+
+// MARK: -
+// MARK: - SpecifyIntervalsContextMediator
+
 class SpecifyIntervalsContextMediator {
     
     // - Components
@@ -56,12 +87,18 @@ fileprivate extension SpecifyIntervalsContextMediator {
     private func handleAddIntervalRequest(sender: IWaveformView, locationX: CGFloat) {
         log.debug("mediator -> got add interval request, locationX: \(locationX)")
         
-        if let (intervalView, endX) = sender.createAndDisplayOneSecondInterval(locationX: locationX) {
-            log.debug("mediator -> new interval with (startX: \(locationX), endX: \(endX))")
-            let id: ID<IntervalModel> = .init(.int(value: self.intervalId))
-            let intervalModel = IntervalModel(intervalView: intervalView, id: id, startX: locationX, endX: endX)
-            intervals.insert(intervalModel)
+        let startTimeBase = Int(locationX / locationXToSecondRatio)
+        let endTimeBase = startTimeBase + 1
+        if let intervalView = sender.createAndDisplayIntervalView(timeInterval: TimeInterval(startTimeBase: startTimeBase, endTimeBase: endTimeBase)) {
+            print("OK")
         }
+        
+        // if let (intervalView, endX) = sender.createAndDisplayOneSecondInterval(locationX: locationX) {
+        //    log.debug("mediator -> new interval with (startX: \(locationX), endX: \(endX))")
+        //    let id: ID<IntervalModel> = .init(.int(value: self.intervalId))
+        //    let intervalModel = IntervalModel(intervalView: intervalView, id: id, startX: locationX, endX: endX)
+        //    intervals.insert(intervalModel)
+        // }
     }
     
     private func handleIntervalLocationChangeRequest(sender: ICommitSelectedIntervalView, _ dStartX: CGFloat?, _ dEndX: CGFloat?) {
