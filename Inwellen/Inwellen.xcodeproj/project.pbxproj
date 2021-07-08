@@ -1,0 +1,1539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100B4C39D477DD6740CC4E45 /* Pods_Inwellen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9993384B2A60C9109A7DFFBD /* Pods_Inwellen.framework */; };
+		EE170DEF250F82A2007341BE /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE170DEE250F82A2007341BE /* AppColor.swift */; };
+		EE30617326530C9500DF8C6E /* SortedArray in Frameworks */ = {isa = PBXBuildFile; productRef = EE30617226530C9500DF8C6E /* SortedArray */; };
+		EE30619426530E9400DF8C6E /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30619326530E9400DF8C6E /* ID.swift */; };
+		EE3061B52653141C00DF8C6E /* IntervalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3061B42653141C00DF8C6E /* IntervalModel.swift */; };
+		EE57324E264B23B300DCC961 /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE57324D264B23B300DCC961 /* WaveformView.xib */; };
+		EE573251264B23FA00DCC961 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE573250264B23FA00DCC961 /* WaveformView.swift */; };
+		EE573253264B283800DCC961 /* WaveformInternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE573252264B283800DCC961 /* WaveformInternalView.swift */; };
+		EE58E54D26502BC60033B438 /* SpecifyIntervalsContextMediatorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58E54C26502BC60033B438 /* SpecifyIntervalsContextMediatorInterface.swift */; };
+		EE58E54F26502BE20033B438 /* SpecifyIntervalsContextComponentInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58E54E26502BE20033B438 /* SpecifyIntervalsContextComponentInterface.swift */; };
+		EE58E55126502C010033B438 /* SpecifyIntervalsContextMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58E55026502C010033B438 /* SpecifyIntervalsContextMediator.swift */; };
+		EE58E55326502C2B0033B438 /* SpecifyIntervalsContextEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58E55226502C2B0033B438 /* SpecifyIntervalsContextEvent.swift */; };
+		EE58E55626502D280033B438 /* WaveformViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE58E55526502D280033B438 /* WaveformViewInterface.swift */; };
+		EE61F3E92690C58E00A04B89 /* ProjectShelfView+Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61F3E82690C58E00A04B89 /* ProjectShelfView+Item.swift */; };
+		EE61F3EB2690D71D00A04B89 /* ProjectShelfView+Computed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61F3EA2690D71D00A04B89 /* ProjectShelfView+Computed.swift */; };
+		EE6A53182690B87900D34483 /* ProjectShelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A53172690B87900D34483 /* ProjectShelfView.swift */; };
+		EE6A531C2690B95F00D34483 /* ProjectShelfViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A531B2690B95F00D34483 /* ProjectShelfViewLayoutManager.swift */; };
+		EE6A5626263EE7AB00AFAB80 /* SpecifyIntervals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6A5625263EE7AB00AFAB80 /* SpecifyIntervals.storyboard */; };
+		EE6A5629263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6A5628263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift */; };
+		EE71ED5A264486CF007ECF7F /* UnisonTimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE71ED59264486CF007ECF7F /* UnisonTimePickerView.xib */; };
+		EE71ED5D2644884B007ECF7F /* UnisonTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED5C2644884B007ECF7F /* UnisonTimePickerView.swift */; };
+		EE71ED61264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED60264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift */; };
+		EE71ED642644898B007ECF7F /* UnisonTimePickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED632644898B007ECF7F /* UnisonTimePickerViewDelegate.swift */; };
+		EE71ED78264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED77264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift */; };
+		EE71ED7D26460AB7007ECF7F /* UnisonTimePickerValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED7C26460AB7007ECF7F /* UnisonTimePickerValue.swift */; };
+		EE8048D1264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8048D0264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift */; };
+		EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */; };
+		EE87C78B2640954B00B3C898 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C78A2640954B00B3C898 /* TabBarViewController.swift */; };
+		EE87C796264097B900B3C898 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C795264097B900B3C898 /* TabBarItem.swift */; };
+		EE94D3FF250F847900BEAE00 /* WaveformInternalViewOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D3FE250F847900BEAE00 /* WaveformInternalViewOld.swift */; };
+		EE94D410250FE80C00BEAE00 /* WaveformViewStateOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D40F250FE80C00BEAE00 /* WaveformViewStateOld.swift */; };
+		EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */; };
+		EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D41C25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift */; };
+		EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94D41F25126F9900BEAE00 /* WaveformViewIntervalModel.swift */; };
+		EE94D42225127BAD00BEAE00 /* WaveformSelectedIntervalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE94D42125127BAC00BEAE00 /* WaveformSelectedIntervalView.xib */; };
+		EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */; };
+		EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE999C75250E8D6B001CFBB7 /* Main.storyboard */; };
+		EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE999C78250E8D6F001CFBB7 /* Assets.xcassets */; };
+		EE999C7C250E8D6F001CFBB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE999C7A250E8D6F001CFBB7 /* LaunchScreen.storyboard */; };
+		EE999C88250E9109001CFBB7 /* WaveformViewOld.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE999C87250E9109001CFBB7 /* WaveformViewOld.xib */; };
+		EE999C8B250E91BC001CFBB7 /* WaveformViewOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8A250E91BC001CFBB7 /* WaveformViewOld.swift */; };
+		EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift */; };
+		EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */; };
+		EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */; };
+		EEB36C5E264F18B500A91AB9 /* CommitSelectedIntervalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB36C5D264F18B500A91AB9 /* CommitSelectedIntervalView.swift */; };
+		EEB36C61264F192900A91AB9 /* CommitSelectedIntervalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEB36C60264F192900A91AB9 /* CommitSelectedIntervalView.xib */; };
+		EEB36C65264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */; };
+		EEBB6C9926977D5700481A27 /* ProjectShelfView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB6C9826977D5700481A27 /* ProjectShelfView+Constants.swift */; };
+		EEBB6CA2269781D500481A27 /* ProjectShelfViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB6CA1269781D500481A27 /* ProjectShelfViewInterface.swift */; };
+		EEBB6CA426978D4A00481A27 /* ProjectShelfViewItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB6CA326978D4A00481A27 /* ProjectShelfViewItemModel.swift */; };
+		EEBB6CA726979DA400481A27 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EEBB6CA626979DA400481A27 /* .swiftlint.yml */; };
+		EEDBECA02659BECD006E8FE0 /* WaveformViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDBEC9F2659BECD006E8FE0 /* WaveformViewLayoutManager.swift */; };
+		EEE424E5267FDA0000C2C298 /* CircularDoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE424E4267FDA0000C2C298 /* CircularDoublyLinkedList.swift */; };
+		EEE5F37B264C2D8900288883 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5F37A264C2D8900288883 /* UIApplicationExtension.swift */; };
+		EEE5F37E264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5F37D264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift */; };
+		EEE5F381264C31ED00288883 /* SpecifyIntervalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5F380264C31ED00288883 /* SpecifyIntervalTableViewCell.swift */; };
+		EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A71263D86E60051ECB9 /* CreateCommit.storyboard */; };
+		EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A74263D86F40051ECB9 /* CreateCommitScreenViewController.swift */; };
+		EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A76263D8A070051ECB9 /* Constant.swift */; };
+		EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A7D263D8EE70051ECB9 /* AppFont.swift */; };
+		EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A82263D91B20051ECB9 /* CreateCommitScreenDataSource.swift */; };
+		EEEE8A87263D93BC0051ECB9 /* ReusableBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */; };
+		EEEE8A8A263D94150051ECB9 /* SectionSeparatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A89263D94150051ECB9 /* SectionSeparatorTableViewCell.xib */; };
+		EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A8C263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift */; };
+		EEEE8A93263D94C60051ECB9 /* SimplonNorm-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */; };
+		EEEE8A95263D98270051ECB9 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */; };
+		EEEE8A96263D9C3A0051ECB9 /* SuisseIntl-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A8F263D94A50051ECB9 /* SuisseIntl-Regular.otf */; };
+		EEEE8A97263D9C3C0051ECB9 /* SuisseIntl-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */; };
+		EEEE8A9A263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */; };
+		EEEE8A9C263DA1D30051ECB9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */; };
+		EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */; };
+		EEEE8AA4263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AA3263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift */; };
+		EEEE8AA7263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AA6263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift */; };
+		EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AAB263DB1A60051ECB9 /* CellConfiguration.swift */; };
+		EEEE8AB2263DCA460051ECB9 /* ChooseProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8AB1263DCA460051ECB9 /* ChooseProject.storyboard */; };
+		EEEE8AB5263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AB4263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift */; };
+		EEEE8AB8263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AB7263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift */; };
+		EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ABB263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift */; };
+		EEEE8ABF263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ABE263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift */; };
+		EEEE8AC2263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AC1263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift */; };
+		EEEE8AC5263DD0800051ECB9 /* ChooseProjectItemTestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AC4263DD0800051ECB9 /* ChooseProjectItemTestModel.swift */; };
+		EEEE8AC8263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AC7263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift */; };
+		EEEE8ACD263DFF530051ECB9 /* TextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8ACC263DFF530051ECB9 /* TextViewTableViewCell.xib */; };
+		EEEE8AD0263DFF740051ECB9 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ACF263DFF740051ECB9 /* TextViewTableViewCell.swift */; };
+		EEEE8AD2263E037A0051ECB9 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AD1263E037A0051ECB9 /* UIViewControllerExtension.swift */; };
+		EEEE8AD6263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AD5263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift */; };
+		EEEE8AD9263E07440051ECB9 /* TextViewCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AD8263E07440051ECB9 /* TextViewCellConfiguration.swift */; };
+		EEEE8ADC263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ADB263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift */; };
+		EEEE8ADE263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ADD263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift */; };
+		EEEE8AE4263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AE3263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift */; };
+		EEF81CA2267FEF4F005DA8E5 /* LinkedListInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF81CA1267FEF4F005DA8E5 /* LinkedListInterface.swift */; };
+		EEF81CA4267FF440005DA8E5 /* CircularDoublyLinkedListInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF81CA3267FF440005DA8E5 /* CircularDoublyLinkedListInterface.swift */; };
+		EEFC4F3526546914000FCD73 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC4F3426546914000FCD73 /* TimeInterval.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4338FB2311027B066167EDA7 /* Pods-Inwellen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inwellen.release.xcconfig"; path = "Target Support Files/Pods-Inwellen/Pods-Inwellen.release.xcconfig"; sourceTree = "<group>"; };
+		660A9483E96801BC531D301B /* Pods-Inwellen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inwellen.debug.xcconfig"; path = "Target Support Files/Pods-Inwellen/Pods-Inwellen.debug.xcconfig"; sourceTree = "<group>"; };
+		9993384B2A60C9109A7DFFBD /* Pods_Inwellen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inwellen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE170DEE250F82A2007341BE /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		EE30619326530E9400DF8C6E /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
+		EE3061B42653141C00DF8C6E /* IntervalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalModel.swift; sourceTree = "<group>"; };
+		EE57324D264B23B300DCC961 /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
+		EE573250264B23FA00DCC961 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		EE573252264B283800DCC961 /* WaveformInternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalView.swift; sourceTree = "<group>"; };
+		EE58E54C26502BC60033B438 /* SpecifyIntervalsContextMediatorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsContextMediatorInterface.swift; sourceTree = "<group>"; };
+		EE58E54E26502BE20033B438 /* SpecifyIntervalsContextComponentInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsContextComponentInterface.swift; sourceTree = "<group>"; };
+		EE58E55026502C010033B438 /* SpecifyIntervalsContextMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsContextMediator.swift; sourceTree = "<group>"; };
+		EE58E55226502C2B0033B438 /* SpecifyIntervalsContextEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsContextEvent.swift; sourceTree = "<group>"; };
+		EE58E55526502D280033B438 /* WaveformViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewInterface.swift; sourceTree = "<group>"; };
+		EE61F3E82690C58E00A04B89 /* ProjectShelfView+Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectShelfView+Item.swift"; sourceTree = "<group>"; };
+		EE61F3EA2690D71D00A04B89 /* ProjectShelfView+Computed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectShelfView+Computed.swift"; sourceTree = "<group>"; };
+		EE6A53172690B87900D34483 /* ProjectShelfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectShelfView.swift; sourceTree = "<group>"; };
+		EE6A531B2690B95F00D34483 /* ProjectShelfViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectShelfViewLayoutManager.swift; sourceTree = "<group>"; };
+		EE6A5625263EE7AB00AFAB80 /* SpecifyIntervals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SpecifyIntervals.storyboard; sourceTree = "<group>"; };
+		EE6A5628263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsScreenViewController.swift; sourceTree = "<group>"; };
+		EE71ED59264486CF007ECF7F /* UnisonTimePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnisonTimePickerView.xib; sourceTree = "<group>"; };
+		EE71ED5C2644884B007ECF7F /* UnisonTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerView.swift; sourceTree = "<group>"; };
+		EE71ED60264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerViewLayoutManager.swift; sourceTree = "<group>"; };
+		EE71ED632644898B007ECF7F /* UnisonTimePickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerViewDelegate.swift; sourceTree = "<group>"; };
+		EE71ED77264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerInputFormatter.swift; sourceTree = "<group>"; };
+		EE71ED7C26460AB7007ECF7F /* UnisonTimePickerValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerValue.swift; sourceTree = "<group>"; };
+		EE8048D0264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitSelectedIntervalViewInterface.swift; sourceTree = "<group>"; };
+		EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenKeyboardManager.swift; sourceTree = "<group>"; };
+		EE87C78A2640954B00B3C898 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		EE87C795264097B900B3C898 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		EE94D3FE250F847900BEAE00 /* WaveformInternalViewOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalViewOld.swift; sourceTree = "<group>"; };
+		EE94D40F250FE80C00BEAE00 /* WaveformViewStateOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewStateOld.swift; sourceTree = "<group>"; };
+		EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformSelectedIntervalView.swift; sourceTree = "<group>"; };
+		EE94D41C25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformIntervalViewDelegate.swift; sourceTree = "<group>"; };
+		EE94D41F25126F9900BEAE00 /* WaveformViewIntervalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewIntervalModel.swift; sourceTree = "<group>"; };
+		EE94D42125127BAC00BEAE00 /* WaveformSelectedIntervalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformSelectedIntervalView.xib; sourceTree = "<group>"; };
+		EE999C6C250E8D6B001CFBB7 /* Inwellen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inwellen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE999C76250E8D6B001CFBB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE999C78250E8D6F001CFBB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE999C7B250E8D6F001CFBB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE999C7D250E8D6F001CFBB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE999C87250E9109001CFBB7 /* WaveformViewOld.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformViewOld.xib; sourceTree = "<group>"; };
+		EE999C8A250E91BC001CFBB7 /* WaveformViewOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewOld.swift; sourceTree = "<group>"; };
+		EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManagerOld.swift; sourceTree = "<group>"; };
+		EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardEnum.swift; sourceTree = "<group>"; };
+		EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		EEB36C5D264F18B500A91AB9 /* CommitSelectedIntervalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitSelectedIntervalView.swift; sourceTree = "<group>"; };
+		EEB36C60264F192900A91AB9 /* CommitSelectedIntervalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommitSelectedIntervalView.xib; sourceTree = "<group>"; };
+		EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitSelectedIntervalViewLayoutManager.swift; sourceTree = "<group>"; };
+		EEBB6C9826977D5700481A27 /* ProjectShelfView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectShelfView+Constants.swift"; sourceTree = "<group>"; };
+		EEBB6CA1269781D500481A27 /* ProjectShelfViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectShelfViewInterface.swift; sourceTree = "<group>"; };
+		EEBB6CA326978D4A00481A27 /* ProjectShelfViewItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectShelfViewItemModel.swift; sourceTree = "<group>"; };
+		EEBB6CA626979DA400481A27 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; tabWidth = 2; };
+		EEDBEC9F2659BECD006E8FE0 /* WaveformViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManager.swift; sourceTree = "<group>"; };
+		EEE424E4267FDA0000C2C298 /* CircularDoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularDoublyLinkedList.swift; sourceTree = "<group>"; };
+		EEE5F37A264C2D8900288883 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		EEE5F37D264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalsScreenDataSource.swift; sourceTree = "<group>"; };
+		EEE5F380264C31ED00288883 /* SpecifyIntervalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecifyIntervalTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8A71263D86E60051ECB9 /* CreateCommit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateCommit.storyboard; sourceTree = "<group>"; };
+		EEEE8A74263D86F40051ECB9 /* CreateCommitScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenViewController.swift; sourceTree = "<group>"; };
+		EEEE8A76263D8A070051ECB9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		EEEE8A7D263D8EE70051ECB9 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		EEEE8A82263D91B20051ECB9 /* CreateCommitScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenDataSource.swift; sourceTree = "<group>"; };
+		EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableBaseView.swift; sourceTree = "<group>"; };
+		EEEE8A89263D94150051ECB9 /* SectionSeparatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionSeparatorTableViewCell.xib; sourceTree = "<group>"; };
+		EEEE8A8C263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionSeparatorTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8A8F263D94A50051ECB9 /* SuisseIntl-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Regular.otf"; sourceTree = "<group>"; };
+		EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Medium.otf"; sourceTree = "<group>"; };
+		EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SimplonNorm-Bold.otf"; path = "../../../../../../../Downloads/Simplon Norm/SimplonNorm-Bold.otf"; sourceTree = "<group>"; };
+		EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitChooseProjectTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SuisseIntl-Book.otf"; path = "../../../../../../../Downloads/Suisse - SwissTypeface/Suisse Int'l/SuisseIntl-Book.otf"; sourceTree = "<group>"; };
+		EEEE8AA3263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenCoordinator.swift; sourceTree = "<group>"; };
+		EEEE8AA6263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionSeparatorCellConfiguration.swift; sourceTree = "<group>"; };
+		EEEE8AAB263DB1A60051ECB9 /* CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfiguration.swift; sourceTree = "<group>"; };
+		EEEE8AB1263DCA460051ECB9 /* ChooseProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChooseProject.storyboard; sourceTree = "<group>"; };
+		EEEE8AB4263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectScreenViewController.swift; sourceTree = "<group>"; };
+		EEEE8AB7263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenDelegate.swift; sourceTree = "<group>"; };
+		EEEE8ABB263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectScreenCoordinator.swift; sourceTree = "<group>"; };
+		EEEE8ABE263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectScreenDataSource.swift; sourceTree = "<group>"; };
+		EEEE8AC1263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectItemTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8AC4263DD0800051ECB9 /* ChooseProjectItemTestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectItemTestModel.swift; sourceTree = "<group>"; };
+		EEEE8AC7263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseProjectScreenDelegate.swift; sourceTree = "<group>"; };
+		EEEE8ACC263DFF530051ECB9 /* TextViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewTableViewCell.xib; sourceTree = "<group>"; };
+		EEEE8ACF263DFF740051ECB9 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8AD1263E037A0051ECB9 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		EEEE8AD5263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCellLayoutManager.swift; sourceTree = "<group>"; };
+		EEEE8AD8263E07440051ECB9 /* TextViewCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewCellConfiguration.swift; sourceTree = "<group>"; };
+		EEEE8ADB263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		EEEE8ADD263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitAudioTableViewCell.swift; sourceTree = "<group>"; };
+		EEEE8AE3263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitAudioTableViewCellLayoutManager.swift; sourceTree = "<group>"; };
+		EEF81CA1267FEF4F005DA8E5 /* LinkedListInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListInterface.swift; sourceTree = "<group>"; };
+		EEF81CA3267FF440005DA8E5 /* CircularDoublyLinkedListInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularDoublyLinkedListInterface.swift; sourceTree = "<group>"; };
+		EEFC4F3426546914000FCD73 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE999C69250E8D6B001CFBB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE30617326530C9500DF8C6E /* SortedArray in Frameworks */,
+				100B4C39D477DD6740CC4E45 /* Pods_Inwellen.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B27810CDC24F42CED66E79EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9993384B2A60C9109A7DFFBD /* Pods_Inwellen.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE170DED250F827F007341BE /* AppStyle */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A78263D8E1C0051ECB9 /* Fonts */,
+				EEEE8A7D263D8EE70051ECB9 /* AppFont.swift */,
+				EE170DEE250F82A2007341BE /* AppColor.swift */,
+			);
+			path = AppStyle;
+			sourceTree = "<group>";
+		};
+		EE30617526530E8B00DF8C6E /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EEF81C9F267FEF2C005DA8E5 /* LinkedList */,
+				EE30619326530E9400DF8C6E /* ID.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EE3061B3265313FA00DF8C6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EE3061B42653141C00DF8C6E /* IntervalModel.swift */,
+				EEFC4F3426546914000FCD73 /* TimeInterval.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EE57324B264B238600DCC961 /* WaveformView */ = {
+			isa = PBXGroup;
+			children = (
+				EE58E55426502D1A0033B438 /* Protocol */,
+				EEDBEC9D2659BEB8006E8FE0 /* Manager */,
+				EE57324F264B23F200DCC961 /* View */,
+				EE57324C264B23A800DCC961 /* Xib */,
+			);
+			path = WaveformView;
+			sourceTree = "<group>";
+		};
+		EE57324C264B23A800DCC961 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EE57324D264B23B300DCC961 /* WaveformView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EE57324F264B23F200DCC961 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE573252264B283800DCC961 /* WaveformInternalView.swift */,
+				EE573250264B23FA00DCC961 /* WaveformView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE58E55426502D1A0033B438 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EE58E55526502D280033B438 /* WaveformViewInterface.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EE6A53152690B7B300D34483 /* ProjectShelfView */ = {
+			isa = PBXGroup;
+			children = (
+				EEBB6CA0269781C800481A27 /* Protocol */,
+				EE6A53192690B95200D34483 /* Manager */,
+				EE6A53162690B86900D34483 /* View */,
+			);
+			path = ProjectShelfView;
+			sourceTree = "<group>";
+		};
+		EE6A53162690B86900D34483 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE6A53172690B87900D34483 /* ProjectShelfView.swift */,
+				EE61F3E82690C58E00A04B89 /* ProjectShelfView+Item.swift */,
+				EEBB6C9826977D5700481A27 /* ProjectShelfView+Constants.swift */,
+				EE61F3EA2690D71D00A04B89 /* ProjectShelfView+Computed.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE6A53192690B95200D34483 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EE6A531A2690B95500D34483 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EE6A531A2690B95500D34483 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EE6A531B2690B95F00D34483 /* ProjectShelfViewLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EE6A5623263EE79500AFAB80 /* SpecifyIntervals */ = {
+			isa = PBXGroup;
+			children = (
+				EE8048D3264F311C000BE233 /* Mediator */,
+				EEE5F37F264C31B200288883 /* Cell */,
+				EEE5F37C264C308100288883 /* DataSource */,
+				EE6A5627263EE7BA00AFAB80 /* ViewController */,
+				EE6A5624263EE7A100AFAB80 /* Storyboard */,
+			);
+			path = SpecifyIntervals;
+			sourceTree = "<group>";
+		};
+		EE6A5624263EE7A100AFAB80 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EE6A5625263EE7AB00AFAB80 /* SpecifyIntervals.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EE6A5627263EE7BA00AFAB80 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE6A5628263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EE71ED552644848C007ECF7F /* UnisonTimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED622644897F007ECF7F /* Delegate */,
+				EE71ED6526448B09007ECF7F /* Types */,
+				EE71ED5E264488B9007ECF7F /* Manager */,
+				EE71ED5B26448841007ECF7F /* View */,
+				EE71ED56264486B5007ECF7F /* Xib */,
+			);
+			path = UnisonTimePickerView;
+			sourceTree = "<group>";
+		};
+		EE71ED56264486B5007ECF7F /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED59264486CF007ECF7F /* UnisonTimePickerView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EE71ED5B26448841007ECF7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED5C2644884B007ECF7F /* UnisonTimePickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE71ED5E264488B9007ECF7F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED5F264488BD007ECF7F /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EE71ED5F264488BD007ECF7F /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED76264608AE007ECF7F /* Helpers */,
+				EE71ED60264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EE71ED622644897F007ECF7F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED632644898B007ECF7F /* UnisonTimePickerViewDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		EE71ED6526448B09007ECF7F /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED7C26460AB7007ECF7F /* UnisonTimePickerValue.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EE71ED76264608AE007ECF7F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EE71ED77264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EE8048CD264F3092000BE233 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EE8048D0264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EE8048D3264F311C000BE233 /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				EE3061B3265313FA00DF8C6E /* Models */,
+				EE8048DE264F31ED000BE233 /* Types */,
+				EE8048D9264F316E000BE233 /* Protocol */,
+				EE58E55026502C010033B438 /* SpecifyIntervalsContextMediator.swift */,
+			);
+			path = Mediator;
+			sourceTree = "<group>";
+		};
+		EE8048D9264F316E000BE233 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EE58E54C26502BC60033B438 /* SpecifyIntervalsContextMediatorInterface.swift */,
+				EE58E54E26502BE20033B438 /* SpecifyIntervalsContextComponentInterface.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EE8048DE264F31ED000BE233 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EE58E55226502C2B0033B438 /* SpecifyIntervalsContextEvent.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EE87C78526406B1E00B3C898 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		EE87C7882640950700B3C898 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EE87C7922640979100B3C898 /* Types */,
+				EE87C7892640952100B3C898 /* ViewController */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EE87C7892640952100B3C898 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE87C78A2640954B00B3C898 /* TabBarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EE87C7922640979100B3C898 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EE87C795264097B900B3C898 /* TabBarItem.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EE94D40E250FE7FC00BEAE00 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EE94D40F250FE80C00BEAE00 /* WaveformViewStateOld.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EE94D411250FEB0E00BEAE00 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EE94D41C25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		EE94D41E25126F8800BEAE00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE94D41F25126F9900BEAE00 /* WaveformViewIntervalModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE999C63250E8D6B001CFBB7 = {
+			isa = PBXGroup;
+			children = (
+				EE999C84250E9034001CFBB7 /* WaveformView */,
+				EEEE8A84263D93790051ECB9 /* Reusable */,
+				EE999C83250E902F001CFBB7 /* Groups */,
+				EE999C90250EB0E6001CFBB7 /* Core */,
+				EE999C6E250E8D6B001CFBB7 /* Inwellen */,
+				EE999C6D250E8D6B001CFBB7 /* Products */,
+				FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */,
+				B27810CDC24F42CED66E79EF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE999C6D250E8D6B001CFBB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C6C250E8D6B001CFBB7 /* Inwellen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE999C6E250E8D6B001CFBB7 /* Inwellen */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C6F250E8D6B001CFBB7 /* AppDelegate.swift */,
+				EE999C75250E8D6B001CFBB7 /* Main.storyboard */,
+				EE999C7A250E8D6F001CFBB7 /* LaunchScreen.storyboard */,
+				EE999C78250E8D6F001CFBB7 /* Assets.xcassets */,
+				EE999C7D250E8D6F001CFBB7 /* Info.plist */,
+				EEBB6CA626979DA400481A27 /* .swiftlint.yml */,
+			);
+			path = Inwellen;
+			sourceTree = "<group>";
+		};
+		EE999C83250E902F001CFBB7 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A6E263D86B30051ECB9 /* Commit */,
+				EE87C7882640950700B3C898 /* TabBar */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		EE999C84250E9034001CFBB7 /* WaveformView */ = {
+			isa = PBXGroup;
+			children = (
+				EE94D41E25126F8800BEAE00 /* Model */,
+				EE94D411250FEB0E00BEAE00 /* Delegate */,
+				EE94D40E250FE7FC00BEAE00 /* Types */,
+				EE999C8C250E91C0001CFBB7 /* Manager */,
+				EE999C89250E91B3001CFBB7 /* View */,
+				EE999C86250E90FF001CFBB7 /* Xib */,
+			);
+			path = WaveformView;
+			sourceTree = "<group>";
+		};
+		EE999C86250E90FF001CFBB7 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C87250E9109001CFBB7 /* WaveformViewOld.xib */,
+				EE94D42125127BAC00BEAE00 /* WaveformSelectedIntervalView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EE999C89250E91B3001CFBB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE94D3FE250F847900BEAE00 /* WaveformInternalViewOld.swift */,
+				EE999C8A250E91BC001CFBB7 /* WaveformViewOld.swift */,
+				EE94D414250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE999C8C250E91C0001CFBB7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C8D250E91C3001CFBB7 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EE999C8D250E91C3001CFBB7 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C8E250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EE999C90250EB0E6001CFBB7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AA8263DB15C0051ECB9 /* Protocol */,
+				EE30617526530E8B00DF8C6E /* Types */,
+				EE999C94250EB147001CFBB7 /* Extension */,
+				EE999C91250EB0FF001CFBB7 /* Constants */,
+				EE170DED250F827F007341BE /* AppStyle */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EE999C91250EB0FF001CFBB7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EE999C92250EB10D001CFBB7 /* StoryboardEnum.swift */,
+				EEEE8A76263D8A070051ECB9 /* Constant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EE999C94250EB147001CFBB7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5F37A264C2D8900288883 /* UIApplicationExtension.swift */,
+				EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */,
+				EEEE8AD1263E037A0051ECB9 /* UIViewControllerExtension.swift */,
+				EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */,
+				EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EEB36C5B264F188F00A91AB9 /* CommitSelectedIntervalView */ = {
+			isa = PBXGroup;
+			children = (
+				EE8048CD264F3092000BE233 /* Protocol */,
+				EEB36C62264F1E3500A91AB9 /* Manager */,
+				EEB36C5C264F189D00A91AB9 /* View */,
+				EEB36C5F264F18EA00A91AB9 /* Xib */,
+			);
+			path = CommitSelectedIntervalView;
+			sourceTree = "<group>";
+		};
+		EEB36C5C264F189D00A91AB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEB36C5D264F18B500A91AB9 /* CommitSelectedIntervalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEB36C5F264F18EA00A91AB9 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EEB36C60264F192900A91AB9 /* CommitSelectedIntervalView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EEB36C62264F1E3500A91AB9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEB36C63264F1E3800A91AB9 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEB36C63264F1E3800A91AB9 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EEBB6CA0269781C800481A27 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EEBB6CA326978D4A00481A27 /* ProjectShelfViewItemModel.swift */,
+				EEBB6CA1269781D500481A27 /* ProjectShelfViewInterface.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EEDBEC9D2659BEB8006E8FE0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEDBEC9E2659BEBD006E8FE0 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEDBEC9E2659BEBD006E8FE0 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EEDBEC9F2659BECD006E8FE0 /* WaveformViewLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EEE5F37C264C308100288883 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5F37D264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		EEE5F37F264C31B200288883 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5F380264C31ED00288883 /* SpecifyIntervalTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EEEE8A6E263D86B30051ECB9 /* Commit */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A6F263D86CE0051ECB9 /* CreateCommit */,
+				EEEE8AAF263DCA240051ECB9 /* ChooseProject */,
+				EE6A5623263EE79500AFAB80 /* SpecifyIntervals */,
+			);
+			path = Commit;
+			sourceTree = "<group>";
+		};
+		EEEE8A6F263D86CE0051ECB9 /* CreateCommit */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AB6263DCBD50051ECB9 /* Protocol */,
+				EEEE8A98263D9DBD0051ECB9 /* Cell */,
+				EEEE8A7F263D91950051ECB9 /* DataSource */,
+				EEEE8AA1263DADF10051ECB9 /* Manager */,
+				EEEE8A73263D86E80051ECB9 /* ViewController */,
+				EEEE8A70263D86D50051ECB9 /* Storyboard */,
+			);
+			path = CreateCommit;
+			sourceTree = "<group>";
+		};
+		EEEE8A70263D86D50051ECB9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A71263D86E60051ECB9 /* CreateCommit.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EEEE8A73263D86E80051ECB9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A74263D86F40051ECB9 /* CreateCommitScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EEEE8A78263D8E1C0051ECB9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A8E263D94A00051ECB9 /* SuisseIntl */,
+				EEEE8A91263D94B10051ECB9 /* SimplonNorm */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EEEE8A7F263D91950051ECB9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A82263D91B20051ECB9 /* CreateCommitScreenDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		EEEE8A84263D93790051ECB9 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */,
+				EEB36C5B264F188F00A91AB9 /* CommitSelectedIntervalView */,
+				EE57324B264B238600DCC961 /* WaveformView */,
+				EEEE8A85263D93860051ECB9 /* SectionSeparatorTableViewCell */,
+				EEEE8ACA263DFDFD0051ECB9 /* TextViewTableViewCell */,
+				EE71ED552644848C007ECF7F /* UnisonTimePickerView */,
+				EE6A53152690B7B300D34483 /* ProjectShelfView */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		EEEE8A85263D93860051ECB9 /* SectionSeparatorTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AA5263DB0300051ECB9 /* Types */,
+				EEEE8A8B263D94230051ECB9 /* View */,
+				EEEE8A88263D94080051ECB9 /* Xib */,
+			);
+			path = SectionSeparatorTableViewCell;
+			sourceTree = "<group>";
+		};
+		EEEE8A88263D94080051ECB9 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A89263D94150051ECB9 /* SectionSeparatorTableViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EEEE8A8B263D94230051ECB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A8C263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEEE8A8E263D94A00051ECB9 /* SuisseIntl */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */,
+				EEEE8A8F263D94A50051ECB9 /* SuisseIntl-Regular.otf */,
+				EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */,
+			);
+			path = SuisseIntl;
+			sourceTree = "<group>";
+		};
+		EEEE8A91263D94B10051ECB9 /* SimplonNorm */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */,
+			);
+			path = SimplonNorm;
+			sourceTree = "<group>";
+		};
+		EEEE8A98263D9DBD0051ECB9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ADF263ED7050051ECB9 /* CreateCommitAudioTableViewCell */,
+				EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EEEE8AA1263DADF10051ECB9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EE87C78526406B1E00B3C898 /* Keyboard */,
+				EEEE8AA2263DADF90051ECB9 /* Coordinator */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEEE8AA2263DADF90051ECB9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AA3263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EEEE8AA5263DB0300051ECB9 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AA6263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EEEE8AA8263DB15C0051ECB9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AAB263DB1A60051ECB9 /* CellConfiguration.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EEEE8AAF263DCA240051ECB9 /* ChooseProject */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AC6263DD4A50051ECB9 /* Protocol */,
+				EEEE8AC3263DD0720051ECB9 /* Model */,
+				EEEE8AC0263DD0010051ECB9 /* Cell */,
+				EEEE8ABD263DCF170051ECB9 /* DataSource */,
+				EEEE8AB9263DCDBC0051ECB9 /* Manager */,
+				EEEE8AB3263DCA8C0051ECB9 /* ViewController */,
+				EEEE8AB0263DCA340051ECB9 /* Storyboard */,
+			);
+			path = ChooseProject;
+			sourceTree = "<group>";
+		};
+		EEEE8AB0263DCA340051ECB9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AB1263DCA460051ECB9 /* ChooseProject.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EEEE8AB3263DCA8C0051ECB9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AB4263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EEEE8AB6263DCBD50051ECB9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AB7263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EEEE8AB9263DCDBC0051ECB9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ABA263DCDC00051ECB9 /* Coordinator */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEEE8ABA263DCDC00051ECB9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ABB263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EEEE8ABD263DCF170051ECB9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ABE263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		EEEE8AC0263DD0010051ECB9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AC1263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EEEE8AC3263DD0720051ECB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AC4263DD0800051ECB9 /* ChooseProjectItemTestModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEEE8AC6263DD4A50051ECB9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AC7263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EEEE8ACA263DFDFD0051ECB9 /* TextViewTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ADA263E0CEE0051ECB9 /* Protocol */,
+				EEEE8AD7263E07360051ECB9 /* Types */,
+				EEEE8AD3263E04600051ECB9 /* Manager */,
+				EEEE8ACE263DFF690051ECB9 /* View */,
+				EEEE8ACB263DFF430051ECB9 /* Xib */,
+			);
+			path = TextViewTableViewCell;
+			sourceTree = "<group>";
+		};
+		EEEE8ACB263DFF430051ECB9 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ACC263DFF530051ECB9 /* TextViewTableViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EEEE8ACE263DFF690051ECB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ACF263DFF740051ECB9 /* TextViewTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEEE8AD3263E04600051ECB9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AD4263E04650051ECB9 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEEE8AD4263E04650051ECB9 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AD5263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EEEE8AD7263E07360051ECB9 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AD8263E07440051ECB9 /* TextViewCellConfiguration.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EEEE8ADA263E0CEE0051ECB9 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ADB263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EEEE8ADF263ED7050051ECB9 /* CreateCommitAudioTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AE1263ED7220051ECB9 /* Manager */,
+				EEEE8AE0263ED71A0051ECB9 /* View */,
+			);
+			path = CreateCommitAudioTableViewCell;
+			sourceTree = "<group>";
+		};
+		EEEE8AE0263ED71A0051ECB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8ADD263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEEE8AE1263ED7220051ECB9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AE2263ED7250051ECB9 /* Layout */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EEEE8AE2263ED7250051ECB9 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EEEE8AE3263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		EEF81C9F267FEF2C005DA8E5 /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				EEF81CA0267FEF43005DA8E5 /* Protocol */,
+				EEE424E4267FDA0000C2C298 /* CircularDoublyLinkedList.swift */,
+			);
+			path = LinkedList;
+			sourceTree = "<group>";
+		};
+		EEF81CA0267FEF43005DA8E5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EEF81CA1267FEF4F005DA8E5 /* LinkedListInterface.swift */,
+				EEF81CA3267FF440005DA8E5 /* CircularDoublyLinkedListInterface.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				660A9483E96801BC531D301B /* Pods-Inwellen.debug.xcconfig */,
+				4338FB2311027B066167EDA7 /* Pods-Inwellen.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE999C6B250E8D6B001CFBB7 /* Inwellen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE999C80250E8D6F001CFBB7 /* Build configuration list for PBXNativeTarget "Inwellen" */;
+			buildPhases = (
+				7E868769E960B504EFA820C7 /* [CP] Check Pods Manifest.lock */,
+				EEBB6CA526979C8D00481A27 /* Run SwiftLint */,
+				EE999C68250E8D6B001CFBB7 /* Sources */,
+				EE999C69250E8D6B001CFBB7 /* Frameworks */,
+				EE999C6A250E8D6B001CFBB7 /* Resources */,
+				5C11C0E5B14EE4D8A67BF5AC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Inwellen;
+			packageProductDependencies = (
+				EE30617226530C9500DF8C6E /* SortedArray */,
+			);
+			productName = Unison;
+			productReference = EE999C6C250E8D6B001CFBB7 /* Inwellen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE999C64250E8D6B001CFBB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = Inwellen;
+				TargetAttributes = {
+					EE999C6B250E8D6B001CFBB7 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = EE999C67250E8D6B001CFBB7 /* Build configuration list for PBXProject "Inwellen" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE999C63250E8D6B001CFBB7;
+			packageReferences = (
+				EE30617126530C9500DF8C6E /* XCRemoteSwiftPackageReference "SortedArray" */,
+			);
+			productRefGroup = EE999C6D250E8D6B001CFBB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE999C6B250E8D6B001CFBB7 /* Inwellen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE999C6A250E8D6B001CFBB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEBB6CA726979DA400481A27 /* .swiftlint.yml in Resources */,
+				EE94D42225127BAD00BEAE00 /* WaveformSelectedIntervalView.xib in Resources */,
+				EE6A5626263EE7AB00AFAB80 /* SpecifyIntervals.storyboard in Resources */,
+				EE999C7C250E8D6F001CFBB7 /* LaunchScreen.storyboard in Resources */,
+				EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */,
+				EEEE8AB2263DCA460051ECB9 /* ChooseProject.storyboard in Resources */,
+				EEEE8ACD263DFF530051ECB9 /* TextViewTableViewCell.xib in Resources */,
+				EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */,
+				EE71ED5A264486CF007ECF7F /* UnisonTimePickerView.xib in Resources */,
+				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
+				EEB36C61264F192900A91AB9 /* CommitSelectedIntervalView.xib in Resources */,
+				EEEE8A96263D9C3A0051ECB9 /* SuisseIntl-Regular.otf in Resources */,
+				EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */,
+				EE999C88250E9109001CFBB7 /* WaveformViewOld.xib in Resources */,
+				EEEE8A8A263D94150051ECB9 /* SectionSeparatorTableViewCell.xib in Resources */,
+				EEEE8A93263D94C60051ECB9 /* SimplonNorm-Bold.otf in Resources */,
+				EE57324E264B23B300DCC961 /* WaveformView.xib in Resources */,
+				EEEE8A97263D9C3C0051ECB9 /* SuisseIntl-Medium.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C11C0E5B14EE4D8A67BF5AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Inwellen/Pods-Inwellen-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Inwellen/Pods-Inwellen-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Inwellen/Pods-Inwellen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E868769E960B504EFA820C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Inwellen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEBB6CA526979C8D00481A27 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE999C68250E8D6B001CFBB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEEE8ADE263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift in Sources */,
+				EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */,
+				EEE424E5267FDA0000C2C298 /* CircularDoublyLinkedList.swift in Sources */,
+				EE6A531C2690B95F00D34483 /* ProjectShelfViewLayoutManager.swift in Sources */,
+				EE71ED7D26460AB7007ECF7F /* UnisonTimePickerValue.swift in Sources */,
+				EEEE8AD6263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift in Sources */,
+				EEEE8ABF263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift in Sources */,
+				EE71ED642644898B007ECF7F /* UnisonTimePickerViewDelegate.swift in Sources */,
+				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift in Sources */,
+				EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */,
+				EE30619426530E9400DF8C6E /* ID.swift in Sources */,
+				EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */,
+				EE3061B52653141C00DF8C6E /* IntervalModel.swift in Sources */,
+				EE71ED78264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift in Sources */,
+				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
+				EE8048D1264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift in Sources */,
+				EEF81CA4267FF440005DA8E5 /* CircularDoublyLinkedListInterface.swift in Sources */,
+				EE87C78B2640954B00B3C898 /* TabBarViewController.swift in Sources */,
+				EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */,
+				EEBB6C9926977D5700481A27 /* ProjectShelfView+Constants.swift in Sources */,
+				EE58E55626502D280033B438 /* WaveformViewInterface.swift in Sources */,
+				EEEE8AC8263DD4B00051ECB9 /* ChooseProjectScreenDelegate.swift in Sources */,
+				EE999C93250EB10D001CFBB7 /* StoryboardEnum.swift in Sources */,
+				EE61F3EB2690D71D00A04B89 /* ProjectShelfView+Computed.swift in Sources */,
+				EE999C96250EB157001CFBB7 /* UIStoryboardExtension.swift in Sources */,
+				EEEE8ADC263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift in Sources */,
+				EEEE8AB8263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift in Sources */,
+				EE573253264B283800DCC961 /* WaveformInternalView.swift in Sources */,
+				EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */,
+				EEBB6CA426978D4A00481A27 /* ProjectShelfViewItemModel.swift in Sources */,
+				EEDBECA02659BECD006E8FE0 /* WaveformViewLayoutManager.swift in Sources */,
+				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
+				EEE5F381264C31ED00288883 /* SpecifyIntervalTableViewCell.swift in Sources */,
+				EEBB6CA2269781D500481A27 /* ProjectShelfViewInterface.swift in Sources */,
+				EE58E54D26502BC60033B438 /* SpecifyIntervalsContextMediatorInterface.swift in Sources */,
+				EE87C796264097B900B3C898 /* TabBarItem.swift in Sources */,
+				EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */,
+				EEEE8AA4263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift in Sources */,
+				EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */,
+				EE94D3FF250F847900BEAE00 /* WaveformInternalViewOld.swift in Sources */,
+				EE58E55126502C010033B438 /* SpecifyIntervalsContextMediator.swift in Sources */,
+				EEEE8AD9263E07440051ECB9 /* TextViewCellConfiguration.swift in Sources */,
+				EEEE8AC5263DD0800051ECB9 /* ChooseProjectItemTestModel.swift in Sources */,
+				EEEE8A9C263DA1D30051ECB9 /* UIViewExtension.swift in Sources */,
+				EE94D410250FE80C00BEAE00 /* WaveformViewStateOld.swift in Sources */,
+				EE6A5629263EE7C700AFAB80 /* SpecifyIntervalsScreenViewController.swift in Sources */,
+				EEE5F37E264C308F00288883 /* SpecifyIntervalsScreenDataSource.swift in Sources */,
+				EE6A53182690B87900D34483 /* ProjectShelfView.swift in Sources */,
+				EEEE8AD2263E037A0051ECB9 /* UIViewControllerExtension.swift in Sources */,
+				EEEE8A87263D93BC0051ECB9 /* ReusableBaseView.swift in Sources */,
+				EE71ED61264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift in Sources */,
+				EE71ED5D2644884B007ECF7F /* UnisonTimePickerView.swift in Sources */,
+				EEF81CA2267FEF4F005DA8E5 /* LinkedListInterface.swift in Sources */,
+				EE999C8B250E91BC001CFBB7 /* WaveformViewOld.swift in Sources */,
+				EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */,
+				EEEE8AC2263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift in Sources */,
+				EE170DEF250F82A2007341BE /* AppColor.swift in Sources */,
+				EEEE8AD0263DFF740051ECB9 /* TextViewTableViewCell.swift in Sources */,
+				EEE5F37B264C2D8900288883 /* UIApplicationExtension.swift in Sources */,
+				EEEE8AB5263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift in Sources */,
+				EEEE8AA7263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift in Sources */,
+				EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */,
+				EE61F3E92690C58E00A04B89 /* ProjectShelfView+Item.swift in Sources */,
+				EEB36C5E264F18B500A91AB9 /* CommitSelectedIntervalView.swift in Sources */,
+				EEB36C65264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift in Sources */,
+				EEEE8A9A263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift in Sources */,
+				EEEE8A95263D98270051ECB9 /* UILabelExtension.swift in Sources */,
+				EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */,
+				EEEE8AE4263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift in Sources */,
+				EE58E54F26502BE20033B438 /* SpecifyIntervalsContextComponentInterface.swift in Sources */,
+				EE573251264B23FA00DCC961 /* WaveformView.swift in Sources */,
+				EE58E55326502C2B0033B438 /* SpecifyIntervalsContextEvent.swift in Sources */,
+				EEFC4F3526546914000FCD73 /* TimeInterval.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE999C75250E8D6B001CFBB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE999C76250E8D6B001CFBB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE999C7A250E8D6F001CFBB7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE999C7B250E8D6F001CFBB7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE999C7E250E8D6F001CFBB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE999C7F250E8D6F001CFBB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE999C81250E8D6F001CFBB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 660A9483E96801BC531D301B /* Pods-Inwellen.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4F3W944NGN;
+				INFOPLIST_FILE = Inwellen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inwellen.Inwellen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE999C82250E8D6F001CFBB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4338FB2311027B066167EDA7 /* Pods-Inwellen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4F3W944NGN;
+				INFOPLIST_FILE = Inwellen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inwellen.Inwellen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE999C67250E8D6B001CFBB7 /* Build configuration list for PBXProject "Inwellen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE999C7E250E8D6F001CFBB7 /* Debug */,
+				EE999C7F250E8D6F001CFBB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE999C80250E8D6F001CFBB7 /* Build configuration list for PBXNativeTarget "Inwellen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE999C81250E8D6F001CFBB7 /* Debug */,
+				EE999C82250E8D6F001CFBB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE30617126530C9500DF8C6E /* XCRemoteSwiftPackageReference "SortedArray" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ole/SortedArray.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE30617226530C9500DF8C6E /* SortedArray */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE30617126530C9500DF8C6E /* XCRemoteSwiftPackageReference "SortedArray" */;
+			productName = SortedArray;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EE999C64250E8D6B001CFBB7 /* Project object */;
+}

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SortedArray",
+        "repositoryURL": "https://github.com/ole/SortedArray.git",
+        "state": {
+          "branch": null,
+          "revision": "a521f750fccb0743ad082b7cb890a62e132c4fbf",
+          "version": "0.7.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
