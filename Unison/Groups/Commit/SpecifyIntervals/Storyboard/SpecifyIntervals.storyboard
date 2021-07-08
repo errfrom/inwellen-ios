@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BKW-qL-evg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BKW-qL-evg">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -99,6 +100,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="3NO-jI-AkP"/>
                         <color key="backgroundColor" name="DefaultBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Nfw-X8-g7f" secondAttribute="trailing" constant="32" id="1NK-1q-ZrK"/>
@@ -112,7 +114,6 @@
                             <constraint firstItem="9Tx-cd-bLZ" firstAttribute="leading" secondItem="dLt-38-yV0" secondAttribute="leading" id="uI7-6G-OiN"/>
                             <constraint firstAttribute="trailing" secondItem="Uj9-Jd-oEi" secondAttribute="trailing" id="xqa-FT-CbD"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="3NO-jI-AkP"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="9Tx-cd-bLZ" id="CWw-is-Qxe"/>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Pi-z9-QU0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Pi-z9-QU0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -78,13 +79,13 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="tbM-r3-oZ1">
                                                             <rect key="frame" x="88" y="48.5" width="262" height="39.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgF-xd-Cjh" userLabel="ProjectTitle">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgF-xd-Cjh" userLabel="ProjectTitle">
                                                                     <rect key="frame" x="0.0" y="0.0" width="262" height="21"/>
                                                                     <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="18"/>
                                                                     <color key="textColor" name="DarkBlueColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR5-Ry-B2T" userLabel="ProjectAuthor">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR5-Ry-B2T" userLabel="ProjectAuthor">
                                                                     <rect key="frame" x="0.0" y="23" width="262" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="14"/>
                                                                     <color key="textColor" name="AccentBlueColor"/>
@@ -130,6 +131,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="tIK-Th-Zvi"/>
                         <color key="backgroundColor" name="DefaultBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2My-nW-CZO" firstAttribute="top" secondItem="tIK-Th-Zvi" secondAttribute="top" id="50Z-eE-qqK"/>
@@ -140,7 +142,6 @@
                             <constraint firstItem="x5b-uZ-6Tw" firstAttribute="top" secondItem="2My-nW-CZO" secondAttribute="bottom" id="qTm-ov-b54"/>
                             <constraint firstItem="tIK-Th-Zvi" firstAttribute="trailing" secondItem="2My-nW-CZO" secondAttribute="trailing" id="ts0-9w-6RA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="tIK-Th-Zvi"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="x5b-uZ-6Tw" id="NO7-o8-b0k"/>

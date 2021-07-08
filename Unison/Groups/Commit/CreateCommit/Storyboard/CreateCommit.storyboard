@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0L9-jQ-ADJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0L9-jQ-ADJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -90,13 +91,13 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="CG4-Lc-pqB">
                                                             <rect key="frame" x="104" y="32.5" width="153.5" height="39.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Long Time Coming" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-Mq-gZA">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Time Coming" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syg-Mq-gZA">
                                                                     <rect key="frame" x="0.0" y="0.0" width="153.5" height="21"/>
                                                                     <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="18"/>
                                                                     <color key="textColor" name="DarkBlueColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="by eluvium " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-EY-Rsh">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by eluvium " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oU-EY-Rsh">
                                                                     <rect key="frame" x="0.0" y="23" width="153.5" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="14"/>
                                                                     <color key="textColor" name="AccentBlueColor"/>
@@ -213,7 +214,7 @@
                                                                                         </label>
                                                                                     </subviews>
                                                                                 </stackView>
-                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZU-Fm-p8O" userLabel="UploadAudioFile">
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZU-Fm-p8O" userLabel="UploadAudioFile">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="56"/>
                                                                                     <connections>
                                                                                         <action selector="didTapUploadAudioFileButton:" destination="F9W-hX-TGz" eventType="touchUpInside" id="dw4-V1-bcU"/>
@@ -331,6 +332,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="zIt-0b-xwn"/>
                         <color key="backgroundColor" name="DefaultBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zIt-0b-xwn" firstAttribute="trailing" secondItem="vJo-Ow-NT0" secondAttribute="trailing" id="2Du-8Q-Ppm"/>
@@ -341,7 +343,6 @@
                             <constraint firstItem="zIt-0b-xwn" firstAttribute="trailing" secondItem="C4i-na-R5s" secondAttribute="trailing" id="iGE-Uz-H7n"/>
                             <constraint firstItem="zIt-0b-xwn" firstAttribute="bottom" secondItem="vJo-Ow-NT0" secondAttribute="bottom" id="sOt-lx-A6r"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="zIt-0b-xwn"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="vJo-Ow-NT0" id="Io8-ZC-28M"/>
