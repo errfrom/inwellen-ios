@@ -6,9 +6,11 @@
 //  Copyright © 2021 Inwellen. All rights reserved.
 //
 
+import struct Foundation.UUID
+
 enum IDBase: Equatable {
+    case uuid(value: UUID)
     case int(value: Int)
-    case string(value: String)
     case invalid
     
     // - Equatable

@@ -47,7 +47,7 @@ fileprivate extension TabBarViewController {
     
     private func configureTabBarAppearance() {
         tabBar.isTranslucent = false
-        tabBar.barTintColor = AppColor.darkBlueColor
+        tabBar.barTintColor = AppColor.richBlack
     }
     
     private func configureViewControllers() {

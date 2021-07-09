@@ -68,19 +68,20 @@ fileprivate extension TextViewTableViewCellLayoutManager {
     private func layoutPlaceholderLabelIfNeeded() {
         cell.placeholderLabel.isHidden = !cell.textView.text.isEmpty
     }
-    
+
+    // swiftlint:disable:next discouraged_optional_boolean
     private func highlightInputIfNeeded(setHighlightingTo highlighting: Bool? = nil) {
         let shouldHighlightInput = highlighting ?? !cell.textView.text.isEmpty
         guard shouldHighlightInput != isInputHighlighted else { return }
         self.isInputHighlighted = shouldHighlightInput
         
-        cell.textView.textColor = shouldHighlightInput ? AppColor.accentBlueColor : AppColor.darkBlueColor
+        cell.textView.textColor = shouldHighlightInput ? AppColor.absoluteZero : AppColor.richBlack
         
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let strongSelf = self else { return }
             
             strongSelf.cell.bottomBorderView.backgroundColor =
-                shouldHighlightInput ? AppColor.accentBlueColor : AppColor.defaultBorderColor
+                shouldHighlightInput ? AppColor.absoluteZero : AppColor.platinum
         }
     }
     

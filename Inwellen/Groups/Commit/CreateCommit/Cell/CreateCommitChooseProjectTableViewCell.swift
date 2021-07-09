@@ -27,7 +27,7 @@ class CreateCommitChooseProjectTableViewCell: UITableViewCell {
 fileprivate extension CreateCommitChooseProjectTableViewCell {
     
     private func contentViewApplyShadow() {
-        contentView_.applyShadow(color: AppColor.darkBlueColor, blur: 10, opacity: 0.06)
+        contentView_.applyShadow(color: AppColor.richBlack, blur: 10, opacity: 0.06)
     }
     
 }

@@ -25,7 +25,7 @@ class CommitSelectedIntervalView: ReusableBaseView, ISpecifyIntervalsContextComp
     private var layoutManager: CommitSelectedIntervalViewLayoutManager!
     
     // - Constant
-    private struct Constant {
+    private enum Constant {
         static let minIntervalViewWidth = 88
         
     }

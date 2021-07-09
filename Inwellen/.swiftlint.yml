@@ -10,7 +10,7 @@ included:
   - Reusable
   - Groups
   - Core
-  - Unison
+  - Inwellen
   
 excluded:
   - Pods
@@ -21,12 +21,12 @@ disabled_rules:
   - trailing_whitespace
   - inclusive_language
   - identifier_name
+  - type_name
   - nesting
 
 opt_in_rules:
   - weak_delegate
   - anyobject_protocol
-  - attributes
   - capture_variable
   - contains_over_filter_count
   - contains_over_filter_is_empty
@@ -46,7 +46,6 @@ opt_in_rules:
   - function_default_parameter_at_end
   - identical_operands
   - last_where
-  - legacy_objc_type
   - modifier_order
   - prefer_nimble
   - prefer_self_type_over_type_of_self

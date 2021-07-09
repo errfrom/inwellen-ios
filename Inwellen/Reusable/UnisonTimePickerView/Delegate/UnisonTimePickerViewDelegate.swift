@@ -6,6 +6,6 @@
 //  Copyright © 2021 Inwellen. All rights reserved.
 //
 
-protocol UnisonTimePickerViewDelegate: class {
+protocol UnisonTimePickerViewDelegate: AnyObject {
     func timePickerValueDidChange(toValue pickerValue: UnisonTimePickerValue)
 }

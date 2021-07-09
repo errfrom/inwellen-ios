@@ -6,7 +6,7 @@
 //  Copyright © 2021 Inwellen. All rights reserved.
 //
 
-protocol TextViewTableViewCellDelegate: class {
+protocol TextViewTableViewCellDelegate: AnyObject {
     func textViewDidUpdateHeight()
     func textViewWillBeginEditing(textViewCellType: TextViewCellType)
 }

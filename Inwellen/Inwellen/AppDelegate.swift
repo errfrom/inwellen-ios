@@ -46,8 +46,6 @@ fileprivate extension AppDelegate {
     }
     
     private func configureRootViewController() {
-        // let createCommit_vc = Storyboard.createCommit.viewController as! CreateCommitScreenViewController
-        
         let nc = UINavigationController(rootViewController: TabBarViewController())
         nc.navigationBar.isTranslucent = false
         nc.setNavigationBarHidden(true, animated: false)
@@ -59,7 +57,7 @@ fileprivate extension AppDelegate {
     private func configureSwiftyBeaverLogDestinations() {
         if DEBUG {
             let consoleDest = ConsoleDestination()
-            consoleDest.format = "$DHH:mm:ss$d $T $C$L: $M | $X"
+            consoleDest.format = "$DHH:mm:ss$d $T $C($L) $M"
             log.addDestination(consoleDest)
         }
     }

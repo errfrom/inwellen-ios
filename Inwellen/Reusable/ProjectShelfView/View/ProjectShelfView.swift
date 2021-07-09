@@ -73,7 +73,7 @@ fileprivate extension ProjectShelfView {
         let translationX = gesture.translation(in: self).x
         gesture.setTranslation(.zero, in: self)
 
-        let headItemLeadingMargin = headItemLeadingMargin + translationX
+        let headItemLeadingMargin = self.headItemLeadingMargin + translationX / 2
         headItem?.constraints.leading?.update(offset: headItemLeadingMargin)
 
         normalizeItemsAppearanceIfNeeded(headItemLeadingMargin)

@@ -54,7 +54,8 @@ class UnisonTimePickerView: ReusableBaseView {
 // MARK: - Set
 
 extension UnisonTimePickerView {
-    
+
+    // swiftlint:disable:next line_length
     func set(pickerValue: UnisonTimePickerValue, isInitValue: Bool, delegate: UnisonTimePickerViewDelegate?) {
         self.pickerValue = pickerValue
         self.isCurrentPickerValueInitial = isInitValue

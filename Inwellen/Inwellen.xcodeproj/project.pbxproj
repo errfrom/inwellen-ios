@@ -97,8 +97,12 @@
 		EEEE8ADC263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ADB263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift */; };
 		EEEE8ADE263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8ADD263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift */; };
 		EEEE8AE4263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AE3263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift */; };
-		EEF81CA2267FEF4F005DA8E5 /* LinkedListInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF81CA1267FEF4F005DA8E5 /* LinkedListInterface.swift */; };
-		EEF81CA4267FF440005DA8E5 /* CircularDoublyLinkedListInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF81CA3267FF440005DA8E5 /* CircularDoublyLinkedListInterface.swift */; };
+		EEF60CA12698D8BF008FDE44 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF60CA02698D8BF008FDE44 /* Home.storyboard */; };
+		EEF60CA52698D8D4008FDE44 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CA42698D8D4008FDE44 /* HomeScreenViewController.swift */; };
+		EEF60CA92698E833008FDE44 /* HomeScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CA82698E833008FDE44 /* HomeScreenDataSource.swift */; };
+		EEF60CAF2698EA97008FDE44 /* ProjectPreviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CAE2698EA97008FDE44 /* ProjectPreviewModel.swift */; };
+		EEF60CB42698ED3D008FDE44 /* HomeProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CB32698ED3D008FDE44 /* HomeProjectTableViewCell.swift */; };
+		EEF60CBA2698FBD6008FDE44 /* HomeScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CB92698FBD6008FDE44 /* HomeScreenDelegate.swift */; };
 		EEFC4F3526546914000FCD73 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC4F3426546914000FCD73 /* TimeInterval.swift */; };
 /* End PBXBuildFile section */
 
@@ -196,8 +200,12 @@
 		EEEE8ADB263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		EEEE8ADD263ED5F60051ECB9 /* CreateCommitAudioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitAudioTableViewCell.swift; sourceTree = "<group>"; };
 		EEEE8AE3263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitAudioTableViewCellLayoutManager.swift; sourceTree = "<group>"; };
-		EEF81CA1267FEF4F005DA8E5 /* LinkedListInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListInterface.swift; sourceTree = "<group>"; };
-		EEF81CA3267FF440005DA8E5 /* CircularDoublyLinkedListInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularDoublyLinkedListInterface.swift; sourceTree = "<group>"; };
+		EEF60CA02698D8BF008FDE44 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EEF60CA42698D8D4008FDE44 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		EEF60CA82698E833008FDE44 /* HomeScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenDataSource.swift; sourceTree = "<group>"; };
+		EEF60CAE2698EA97008FDE44 /* ProjectPreviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPreviewModel.swift; sourceTree = "<group>"; };
+		EEF60CB32698ED3D008FDE44 /* HomeProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProjectTableViewCell.swift; sourceTree = "<group>"; };
+		EEF60CB92698FBD6008FDE44 /* HomeScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenDelegate.swift; sourceTree = "<group>"; };
 		EEFC4F3426546914000FCD73 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -235,7 +243,7 @@
 		EE30617526530E8B00DF8C6E /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				EEF81C9F267FEF2C005DA8E5 /* LinkedList */,
+				EEE424E4267FDA0000C2C298 /* CircularDoublyLinkedList.swift */,
 				EE30619326530E9400DF8C6E /* ID.swift */,
 			);
 			path = Types;
@@ -551,6 +559,7 @@
 		EE999C83250E902F001CFBB7 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
+				EEF60C9E2698D8A0008FDE44 /* Home */,
 				EEEE8A6E263D86B30051ECB9 /* Commit */,
 				EE87C7882640950700B3C898 /* TabBar */,
 			);
@@ -608,8 +617,9 @@
 		EE999C90250EB0E6001CFBB7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				EEEE8AA8263DB15C0051ECB9 /* Protocol */,
+				EEEE8AA8263DB15C0051ECB9 /* Protocols */,
 				EE30617526530E8B00DF8C6E /* Types */,
+				EEF60CAB2698EA58008FDE44 /* Models */,
 				EE999C94250EB147001CFBB7 /* Extension */,
 				EE999C91250EB0FF001CFBB7 /* Constants */,
 				EE170DED250F827F007341BE /* AppStyle */,
@@ -870,12 +880,12 @@
 			path = Types;
 			sourceTree = "<group>";
 		};
-		EEEE8AA8263DB15C0051ECB9 /* Protocol */ = {
+		EEEE8AA8263DB15C0051ECB9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				EEEE8AAB263DB1A60051ECB9 /* CellConfiguration.swift */,
 			);
-			path = Protocol;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		EEEE8AAF263DCA240051ECB9 /* ChooseProject */ = {
@@ -1057,20 +1067,62 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
-		EEF81C9F267FEF2C005DA8E5 /* LinkedList */ = {
+		EEF60C9E2698D8A0008FDE44 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				EEF81CA0267FEF43005DA8E5 /* Protocol */,
-				EEE424E4267FDA0000C2C298 /* CircularDoublyLinkedList.swift */,
+				EEF60CB72698FBCB008FDE44 /* Protocol */,
+				EEF60CB22698ED30008FDE44 /* Cell */,
+				EEF60CA72698E827008FDE44 /* DataSource */,
+				EEF60CA32698D8C9008FDE44 /* ViewController */,
+				EEF60C9F2698D8B6008FDE44 /* Storyboard */,
 			);
-			path = LinkedList;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		EEF81CA0267FEF43005DA8E5 /* Protocol */ = {
+		EEF60C9F2698D8B6008FDE44 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				EEF81CA1267FEF4F005DA8E5 /* LinkedListInterface.swift */,
-				EEF81CA3267FF440005DA8E5 /* CircularDoublyLinkedListInterface.swift */,
+				EEF60CA02698D8BF008FDE44 /* Home.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EEF60CA32698D8C9008FDE44 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EEF60CA42698D8D4008FDE44 /* HomeScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EEF60CA72698E827008FDE44 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EEF60CA82698E833008FDE44 /* HomeScreenDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		EEF60CAB2698EA58008FDE44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEF60CAE2698EA97008FDE44 /* ProjectPreviewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EEF60CB22698ED30008FDE44 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EEF60CB32698ED3D008FDE44 /* HomeProjectTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EEF60CB72698FBCB008FDE44 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EEF60CB92698FBD6008FDE44 /* HomeScreenDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1166,6 +1218,7 @@
 				EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */,
 				EE999C88250E9109001CFBB7 /* WaveformViewOld.xib in Resources */,
 				EEEE8A8A263D94150051ECB9 /* SectionSeparatorTableViewCell.xib in Resources */,
+				EEF60CA12698D8BF008FDE44 /* Home.storyboard in Resources */,
 				EEEE8A93263D94C60051ECB9 /* SimplonNorm-Bold.otf in Resources */,
 				EE57324E264B23B300DCC961 /* WaveformView.xib in Resources */,
 				EEEE8A97263D9C3C0051ECB9 /* SuisseIntl-Medium.otf in Resources */,
@@ -1255,7 +1308,7 @@
 				EE71ED78264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift in Sources */,
 				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
 				EE8048D1264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift in Sources */,
-				EEF81CA4267FF440005DA8E5 /* CircularDoublyLinkedListInterface.swift in Sources */,
+				EEF60CAF2698EA97008FDE44 /* ProjectPreviewModel.swift in Sources */,
 				EE87C78B2640954B00B3C898 /* TabBarViewController.swift in Sources */,
 				EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */,
 				EEBB6C9926977D5700481A27 /* ProjectShelfView+Constants.swift in Sources */,
@@ -1267,6 +1320,7 @@
 				EEEE8ADC263E0CFD0051ECB9 /* TextViewTableViewCellDelegate.swift in Sources */,
 				EEEE8AB8263DCBE40051ECB9 /* CreateCommitScreenDelegate.swift in Sources */,
 				EE573253264B283800DCC961 /* WaveformInternalView.swift in Sources */,
+				EEF60CA92698E833008FDE44 /* HomeScreenDataSource.swift in Sources */,
 				EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */,
 				EEBB6CA426978D4A00481A27 /* ProjectShelfViewItemModel.swift in Sources */,
 				EEDBECA02659BECD006E8FE0 /* WaveformViewLayoutManager.swift in Sources */,
@@ -1281,6 +1335,8 @@
 				EE94D3FF250F847900BEAE00 /* WaveformInternalViewOld.swift in Sources */,
 				EE58E55126502C010033B438 /* SpecifyIntervalsContextMediator.swift in Sources */,
 				EEEE8AD9263E07440051ECB9 /* TextViewCellConfiguration.swift in Sources */,
+				EEF60CBA2698FBD6008FDE44 /* HomeScreenDelegate.swift in Sources */,
+				EEF60CB42698ED3D008FDE44 /* HomeProjectTableViewCell.swift in Sources */,
 				EEEE8AC5263DD0800051ECB9 /* ChooseProjectItemTestModel.swift in Sources */,
 				EEEE8A9C263DA1D30051ECB9 /* UIViewExtension.swift in Sources */,
 				EE94D410250FE80C00BEAE00 /* WaveformViewStateOld.swift in Sources */,
@@ -1291,11 +1347,11 @@
 				EEEE8A87263D93BC0051ECB9 /* ReusableBaseView.swift in Sources */,
 				EE71ED61264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift in Sources */,
 				EE71ED5D2644884B007ECF7F /* UnisonTimePickerView.swift in Sources */,
-				EEF81CA2267FEF4F005DA8E5 /* LinkedListInterface.swift in Sources */,
 				EE999C8B250E91BC001CFBB7 /* WaveformViewOld.swift in Sources */,
 				EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */,
 				EEEE8AC2263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift in Sources */,
 				EE170DEF250F82A2007341BE /* AppColor.swift in Sources */,
+				EEF60CA52698D8D4008FDE44 /* HomeScreenViewController.swift in Sources */,
 				EEEE8AD0263DFF740051ECB9 /* TextViewTableViewCell.swift in Sources */,
 				EEE5F37B264C2D8900288883 /* UIApplicationExtension.swift in Sources */,
 				EEEE8AB5263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift in Sources */,

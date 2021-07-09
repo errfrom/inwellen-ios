@@ -31,7 +31,7 @@ struct CircularDoublyLinkedList<T> {
 // MARK: -
 // MARK: - Interface
 
-extension CircularDoublyLinkedList: ICircularDoublyLinkedList {
+extension CircularDoublyLinkedList {
     
     /// O(1). Creates a circular doubly linked list containing one value.
     static func singleton(_ newValue: T) -> CircularDoublyLinkedList {

@@ -6,7 +6,7 @@
 //  Copyright © 2021 Inwellen. All rights reserved.
 //
 
-class UnisonTimePickerInputFormatter {
+enum UnisonTimePickerInputFormatter {
     
     static func formatInput(string: String) -> String {
         let digitsArray = Array(string)

@@ -22,9 +22,9 @@ class UnisonTimePickerViewLayoutManager: NSObject {
     
     private var contentViewShadowColor: UIColor {
         if inEditingMode {
-            return AppColor.accentOrangeColor.withAlphaComponent(0.2)
+            return AppColor.marigold.withAlphaComponent(0.2)
         } else {
-            return AppColor.darkBlueColor.withAlphaComponent(0.08)
+            return AppColor.richBlack.withAlphaComponent(0.08)
         }
     }
     
@@ -106,7 +106,7 @@ fileprivate extension UnisonTimePickerViewLayoutManager {
         UIView.transition(with: view.timeLabel, duration: 0.25, options: animationOptions, animations: { [weak self] in
             guard let strongSelf = self else { return }
             
-            let textColor = strongSelf.inEditingMode ? AppColor.accentOrangeColor : AppColor.accentBlueColor
+            let textColor = strongSelf.inEditingMode ? AppColor.marigold : AppColor.absoluteZero
             strongSelf.view.timeLabel.textColor = textColor
         })
     }

@@ -48,7 +48,7 @@ class WaveformInternalView: UIView {
             path.append(UIBezierPath(roundedRect: segmentRect, cornerRadius: Constant.segmentCornerRadius))
         }
         
-        AppColor.darkBlueColor.setFill()
+        AppColor.richBlack.setFill()
         path.fill()
     }
     

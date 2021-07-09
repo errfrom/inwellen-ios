@@ -9,7 +9,6 @@
 import UIKit
 
 enum AppFont: String {
-    
     case suisseIntlBook = "SuisseIntl-Book"
     case suisseIntlRegular = "SuisseIntl-Regular"
     case suisseIntlMedium = "SuisseIntl-Medium"

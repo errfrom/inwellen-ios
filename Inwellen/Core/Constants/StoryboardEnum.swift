@@ -9,12 +9,12 @@
 import UIKit
 
 enum Storyboard: String {
+    case home = "Home"
     
     // - Commit
     case createCommit = "CreateCommit"
     case chooseProject = "ChooseProject"
     case specifyIntervals = "SpecifyIntervals"
-    
 }
 
 extension Storyboard {

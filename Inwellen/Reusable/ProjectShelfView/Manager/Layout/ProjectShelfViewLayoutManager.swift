@@ -148,7 +148,7 @@ extension ProjectShelfViewLayoutManager {
                 strongSelf.shelfView.headItem?.constraints.leading?.update(offset: 0)
                 strongSelf.shelfView.layoutIfNeeded()
             }
-        } else{
+        } else {
             shelfView.headItem?.constraints.leading?.update(offset: 0)
         }
     }
@@ -186,8 +186,8 @@ extension ProjectShelfViewLayoutManager {
 
     private func updateNextItemAppearanceWhileDragging() {
         let headItemLeadingMargin = abs(shelfView.headItemLeadingMargin)
-        let deltaMultiplier = headItemLeadingMargin / constants.secondaryItemVisibleWidth
-        let newHeight = constants.shelfHeight - (1 - deltaMultiplier) * constants.secondaryItemTopMargin
+        let deltaMultiplier = 1 - headItemLeadingMargin / constants.secondaryItemVisibleWidth
+        let newHeight = constants.shelfHeight - deltaMultiplier * constants.secondaryItemTopMargin
         shelfView.nextItem?.constraints.height?.update(offset: newHeight)
     }
 

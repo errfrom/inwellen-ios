@@ -53,7 +53,7 @@ extension WaveformInternalViewOld {
         }
         
         backWaveformPlaceholderShapeLayer?.path = path.cgPath
-        backWaveformPlaceholderShapeLayer?.fillColor = AppColor.lightGray.cgColor
+        backWaveformPlaceholderShapeLayer?.fillColor = AppColor.darkerPlatinum.cgColor
 
         drawSamples(rect, numSegments: numSegments, horizontalMargin: horizontalMargin)
     }
@@ -71,7 +71,7 @@ extension WaveformInternalViewOld {
         }
         
         frontWaveformShapeLayer?.path = path.cgPath
-        frontWaveformShapeLayer?.fillColor = AppColor.darkGray.cgColor
+        frontWaveformShapeLayer?.fillColor = AppColor.richBlack.cgColor
     }
     
 }
