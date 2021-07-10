@@ -24,24 +24,24 @@ final class HomeScreenViewController: UIViewController {
 
         let models = [
             ProjectPreviewModel(
-                projectId: .init(.invalid),
+                projectId: .init(.int(value: 0)),
                 projectName: "Long Time Coming",
                 authorName: "eluvium",
                 coverImage: UIImage(named: "test-project")),
             ProjectPreviewModel(
-                projectId: .init(.invalid),
+                projectId: .init(.int(value: 1)),
                 projectName: "Talk Amongst the Trees",
                 authorName: "Hearts and Rockets",
                 coverImage: UIImage(named: "test-project-3")),
             ProjectPreviewModel(
-                projectId: .init(.invalid),
+                projectId: .init(.int(value: 2)),
                 projectName: "Workout / Dead As Disco",
                 authorName: "Myth",
                 coverImage: UIImage(named: "test-project-2"))
         ]
 
         dataSource.update(models: models)
-        projectShelfView.set(models: models)
+        projectShelfView.set(models: models.map(ProjectShelfViewItemModel.init), delegate: self)
     }
 
 }
@@ -64,6 +64,11 @@ extension HomeScreenViewController: HomeScreenDelegate {
 
     func didSelectProjectCell(projectPreview: ProjectPreviewModel) {
         log.debug("Home: Did select project cell with model: \(projectPreview)")
+    }
+
+    func projectShelf(didSelectProjectWithId id: ID<ProjectPreviewModel>?) {
+        guard let projectId = id else { return }
+        dataSource.update(scrollToProjectCellWithId: projectId)
     }
 
 }

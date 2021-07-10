@@ -56,7 +56,6 @@
 		EEB36C65264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */; };
 		EEBB6C9926977D5700481A27 /* ProjectShelfView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB6C9826977D5700481A27 /* ProjectShelfView+Constants.swift */; };
 		EEBB6CA2269781D500481A27 /* ProjectShelfViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB6CA1269781D500481A27 /* ProjectShelfViewInterface.swift */; };
-		EEBB6CA426978D4A00481A27 /* ProjectShelfViewItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB6CA326978D4A00481A27 /* ProjectShelfViewItemModel.swift */; };
 		EEBB6CA726979DA400481A27 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EEBB6CA626979DA400481A27 /* .swiftlint.yml */; };
 		EEDBECA02659BECD006E8FE0 /* WaveformViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDBEC9F2659BECD006E8FE0 /* WaveformViewLayoutManager.swift */; };
 		EEE424E5267FDA0000C2C298 /* CircularDoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE424E4267FDA0000C2C298 /* CircularDoublyLinkedList.swift */; };
@@ -103,6 +102,9 @@
 		EEF60CAF2698EA97008FDE44 /* ProjectPreviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CAE2698EA97008FDE44 /* ProjectPreviewModel.swift */; };
 		EEF60CB42698ED3D008FDE44 /* HomeProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CB32698ED3D008FDE44 /* HomeProjectTableViewCell.swift */; };
 		EEF60CBA2698FBD6008FDE44 /* HomeScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CB92698FBD6008FDE44 /* HomeScreenDelegate.swift */; };
+		EEF60CBD2699C8FD008FDE44 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CBC2699C8FD008FDE44 /* IntExtension.swift */; };
+		EEF60CC6269A1345008FDE44 /* ProjectShelfViewItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CC5269A1345008FDE44 /* ProjectShelfViewItemModel.swift */; };
+		EEF60CCA269A13F6008FDE44 /* ProjectShelfViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF60CC9269A13F6008FDE44 /* ProjectShelfViewDelegate.swift */; };
 		EEFC4F3526546914000FCD73 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC4F3426546914000FCD73 /* TimeInterval.swift */; };
 /* End PBXBuildFile section */
 
@@ -159,7 +161,6 @@
 		EEB36C64264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitSelectedIntervalViewLayoutManager.swift; sourceTree = "<group>"; };
 		EEBB6C9826977D5700481A27 /* ProjectShelfView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectShelfView+Constants.swift"; sourceTree = "<group>"; };
 		EEBB6CA1269781D500481A27 /* ProjectShelfViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectShelfViewInterface.swift; sourceTree = "<group>"; };
-		EEBB6CA326978D4A00481A27 /* ProjectShelfViewItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectShelfViewItemModel.swift; sourceTree = "<group>"; };
 		EEBB6CA626979DA400481A27 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; tabWidth = 2; };
 		EEDBEC9F2659BECD006E8FE0 /* WaveformViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManager.swift; sourceTree = "<group>"; };
 		EEE424E4267FDA0000C2C298 /* CircularDoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularDoublyLinkedList.swift; sourceTree = "<group>"; };
@@ -206,6 +207,9 @@
 		EEF60CAE2698EA97008FDE44 /* ProjectPreviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPreviewModel.swift; sourceTree = "<group>"; };
 		EEF60CB32698ED3D008FDE44 /* HomeProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProjectTableViewCell.swift; sourceTree = "<group>"; };
 		EEF60CB92698FBD6008FDE44 /* HomeScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenDelegate.swift; sourceTree = "<group>"; };
+		EEF60CBC2699C8FD008FDE44 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		EEF60CC5269A1345008FDE44 /* ProjectShelfViewItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectShelfViewItemModel.swift; sourceTree = "<group>"; };
+		EEF60CC9269A13F6008FDE44 /* ProjectShelfViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectShelfViewDelegate.swift; sourceTree = "<group>"; };
 		EEFC4F3426546914000FCD73 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -298,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				EEBB6CA0269781C800481A27 /* Protocol */,
+				EEF60CBF269A1319008FDE44 /* Model */,
 				EE6A53192690B95200D34483 /* Manager */,
 				EE6A53162690B86900D34483 /* View */,
 			);
@@ -644,6 +649,7 @@
 				EEEE8AD1263E037A0051ECB9 /* UIViewControllerExtension.swift */,
 				EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */,
 				EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */,
+				EEF60CBC2699C8FD008FDE44 /* IntExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -694,8 +700,8 @@
 		EEBB6CA0269781C800481A27 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				EEBB6CA326978D4A00481A27 /* ProjectShelfViewItemModel.swift */,
 				EEBB6CA1269781D500481A27 /* ProjectShelfViewInterface.swift */,
+				EEF60CC9269A13F6008FDE44 /* ProjectShelfViewDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -1127,6 +1133,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		EEF60CBF269A1319008FDE44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEF60CC5269A1345008FDE44 /* ProjectShelfViewItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1300,6 +1314,7 @@
 				EEEE8AD6263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift in Sources */,
 				EEEE8ABF263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift in Sources */,
 				EE71ED642644898B007ECF7F /* UnisonTimePickerViewDelegate.swift in Sources */,
+				EEF60CC6269A1345008FDE44 /* ProjectShelfViewItemModel.swift in Sources */,
 				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift in Sources */,
 				EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */,
 				EE30619426530E9400DF8C6E /* ID.swift in Sources */,
@@ -1308,6 +1323,7 @@
 				EE71ED78264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift in Sources */,
 				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
 				EE8048D1264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift in Sources */,
+				EEF60CBD2699C8FD008FDE44 /* IntExtension.swift in Sources */,
 				EEF60CAF2698EA97008FDE44 /* ProjectPreviewModel.swift in Sources */,
 				EE87C78B2640954B00B3C898 /* TabBarViewController.swift in Sources */,
 				EEEE8A83263D91B20051ECB9 /* CreateCommitScreenDataSource.swift in Sources */,
@@ -1322,7 +1338,6 @@
 				EE573253264B283800DCC961 /* WaveformInternalView.swift in Sources */,
 				EEF60CA92698E833008FDE44 /* HomeScreenDataSource.swift in Sources */,
 				EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */,
-				EEBB6CA426978D4A00481A27 /* ProjectShelfViewItemModel.swift in Sources */,
 				EEDBECA02659BECD006E8FE0 /* WaveformViewLayoutManager.swift in Sources */,
 				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
 				EEE5F381264C31ED00288883 /* SpecifyIntervalTableViewCell.swift in Sources */,
@@ -1367,6 +1382,7 @@
 				EE58E54F26502BE20033B438 /* SpecifyIntervalsContextComponentInterface.swift in Sources */,
 				EE573251264B23FA00DCC961 /* WaveformView.swift in Sources */,
 				EE58E55326502C2B0033B438 /* SpecifyIntervalsContextEvent.swift in Sources */,
+				EEF60CCA269A13F6008FDE44 /* ProjectShelfViewDelegate.swift in Sources */,
 				EEFC4F3526546914000FCD73 /* TimeInterval.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

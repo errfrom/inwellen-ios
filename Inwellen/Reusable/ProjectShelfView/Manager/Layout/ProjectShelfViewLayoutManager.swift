@@ -36,6 +36,7 @@ extension ProjectShelfViewLayoutManager {
     func buildShelfViewItem(model: ProjectShelfViewItemModel, _ previousItemView: UIView?) -> Item {
         let itemView = UIImageView()
         itemView.image = model.image
+        itemView.isUserInteractionEnabled = true
         shelfView.insertSubview(itemView, at: 0)
 
         let shelfHeight = constants.shelfHeight
@@ -59,7 +60,37 @@ extension ProjectShelfViewLayoutManager {
             }
         }
 
-        return .init(view: itemView, constraints: itemConstraints)
+        return .init(model: model, view: itemView, constraints: itemConstraints)
+    }
+
+}
+
+// MARK: -
+// MARK: - Layout: Scrolling
+
+extension ProjectShelfViewLayoutManager {
+
+    func scroll(toItem targetItem: Item,
+                withItemViewMinX itemViewMinX: CGFloat,
+                completion: @escaping () -> Void) {
+
+        let options: UIView.AnimationOptions = [.curveEaseIn]
+        UIView.animate(withDuration: 0.5, dampingRatio: 0.7, options: options, animations: {
+            [weak self] in guard let strongSelf = self else { return }
+            strongSelf._scroll(toItem: targetItem, withItemViewMinX: itemViewMinX)
+            strongSelf.shelfView.layoutIfNeeded()
+        }, completion: { _ in completion() })
+    }
+
+    private func _scroll(toItem targetItem: Item, withItemViewMinX itemViewMinX: CGFloat) {
+        targetItem.constraints.height?.update(offset: constants.shelfHeight)
+
+        let headItem = shelfView.headItem
+        let headItemLeadingMargin = shelfView.headItemLeadingMargin
+        headItem?.constraints.leading?.update(offset: headItemLeadingMargin - itemViewMinX)
+        headItem?.constraints.height?.update(offset: constants.secondaryItemHeight)
+
+        updateConstraintsBeforeMovingHead(candidateItem: targetItem, true)
     }
 
 }

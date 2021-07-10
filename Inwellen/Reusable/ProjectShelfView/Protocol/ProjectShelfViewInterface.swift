@@ -6,6 +6,8 @@
 //  Copyright © 2021 Inwellen. All rights reserved.
 //
 
+import class UIKit.UIImage
+
 protocol IProjectShelfView {
-    func set(models: [ProjectShelfViewItemModel])
+    func set(models: [ProjectShelfViewItemModel], delegate: ProjectShelfViewDelegate?)
 }

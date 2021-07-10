@@ -93,5 +93,22 @@ extension CircularDoublyLinkedList {
         tail = tail?.prev
         return tail?.value
     }
+
+    /// O(n). Moves the list head pointer n steps forward.
+    @discardableResult mutating func moveHeadForward(steps: Int) -> T? {
+        return steps.times { moveHeadForward() } ?? nil
+    }
+
+    /// O(n). Moves the list head pointer n steps backward.
+    @discardableResult mutating func moveHeadBackward(steps: Int) -> T? {
+        return steps.times { moveHeadBackward() } ?? nil
+    }
+
+    /// O(n). Get the value of the node at a distance of n steps from the head node.
+    func value(atDistance steps: Int) -> T? {
+        var currentPointer = head
+        steps.times { currentPointer = currentPointer?.next }
+        return currentPointer?.value
+    }
     
 }

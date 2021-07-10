@@ -19,8 +19,14 @@ enum IDBase: Equatable {
             case (.invalid, .invalid):
                 return false
             
+            case (.uuid(let lvalue), .uuid(let rvalue)):
+                return lvalue == rvalue
+
+            case (.int(let lvalue), .int(let rvalue)):
+                return lvalue == rvalue
+
             default:
-                return lhs == rhs
+                return false
         }
     }
     

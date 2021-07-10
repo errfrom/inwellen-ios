@@ -6,6 +6,6 @@
 //  Copyright © 2021 Inwellen. All rights reserved.
 //
 
-protocol HomeScreenDelegate: AnyObject {
+protocol HomeScreenDelegate: ProjectShelfViewDelegate {
     func didSelectProjectCell(projectPreview: ProjectPreviewModel)
 }

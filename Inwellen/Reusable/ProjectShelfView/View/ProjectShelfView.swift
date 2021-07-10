@@ -10,6 +10,9 @@ import UIKit
 
 final class ProjectShelfView: UIView {
 
+    // - Delegate
+    private weak var delegate: ProjectShelfViewDelegate?
+
     // - Manager
     private var layoutManager: ProjectShelfViewLayoutManager!
 
@@ -31,7 +34,9 @@ final class ProjectShelfView: UIView {
 
 extension ProjectShelfView: IProjectShelfView {
 
-    func set(models: [ProjectShelfViewItemModel]) {
+    func set(models: [ProjectShelfViewItemModel], delegate: ProjectShelfViewDelegate?) {
+        self.delegate = delegate
+
         var previousItemView: UIView?
         models.forEach { model in
             let item = layoutManager.buildShelfViewItem(model: model, previousItemView)
@@ -57,8 +62,7 @@ fileprivate extension ProjectShelfView {
 
     @objc private func didRecognizeShelfViewTapGesture(_ gesture: UITapGestureRecognizer) {
         if case .ended = gesture.state {
-            let location = gesture.location(in: self)
-            guard hitTest(location, with: nil) !== self else { return }
+            handleShelfViewTapGestureEndedState(gesture)
         }
     }
 
@@ -99,6 +103,7 @@ fileprivate extension ProjectShelfView {
             layoutIfNeeded()
         }
         layoutManager.normalizeItemsAppearance(animateHeadLeadingConstraint: true)
+        delegate?.projectShelf(didSelectProjectWithId: headItem?.modelId)
     }
 
     private func normalizeItemsAppearanceIfNeeded(_ headItemLeadingMargin: CGFloat) {
@@ -106,6 +111,39 @@ fileprivate extension ProjectShelfView {
             layoutManager.normalizeItemsAppearance()
             shouldNormalizeItemsAppearance = false
         }
+    }
+
+}
+
+// MARK: -
+// MARK: - Handle ShelfViewTapGesture
+
+fileprivate extension ProjectShelfView {
+
+    private func handleShelfViewTapGestureEndedState(_ gesture: UITapGestureRecognizer) {
+        let location = gesture.location(in: self)
+        guard hitTest(location, with: nil) !== self else { return }
+
+        let stepsToTargetItem = stepsToItemView(thatContainsPoint: location.x)
+        guard stepsToTargetItem > 0 else { return }
+        guard let targetItem = items.value(atDistance: stepsToTargetItem) else { return }
+
+        let itemViewMinX = constants.secondaryItemVisibleWidth * CGFloat(stepsToTargetItem)
+
+        layoutManager.scroll(toItem: targetItem, withItemViewMinX: itemViewMinX) { [weak self] in
+            guard let strongSelf = self else { return }
+
+            strongSelf.items.moveHeadForward(steps: stepsToTargetItem)
+            strongSelf.delegate?.projectShelf(didSelectProjectWithId: strongSelf.headItem?.modelId)
+        }
+    }
+
+    // x = sh + (vw - tm) + (n - 2)vw
+    private func stepsToItemView(thatContainsPoint x: CGFloat) -> Int {
+        let sh = constants.shelfHeight
+        let vw = constants.secondaryItemVisibleWidth
+        let tm = constants.secondaryItemTopMargin
+        return Int((x - sh + vw + tm) / vw)
     }
 
 }

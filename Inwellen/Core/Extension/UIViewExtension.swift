@@ -34,7 +34,8 @@ extension UIView {
 // MARK: - Shadow
 
 extension UIView {
-    
+
+    // swiftlint:disable:next line_length
     func applyShadow(color: UIColor, offset: CGSize = .zero, blur: CGFloat = 0, opacity: Float = 1) {
         self.layoutIfNeeded()
         
@@ -45,8 +46,36 @@ extension UIView {
         self.layer.shadowOpacity = opacity
         
         if self as? UILabel == nil {
-            self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.cornerRadius).cgPath
+            self.layer.shadowPath =
+                UIBezierPath(roundedRect: self.bounds, cornerRadius: self.cornerRadius).cgPath
         }
     }
     
+}
+
+// MARK: -
+// MARK: - Animate
+
+extension UIView {
+
+    class func animate(
+        withDuration duration: Double,
+        dampingRatio: CGFloat,
+        delay: Double = 0,
+        velocity: CGFloat = 0,
+        options: UIView.AnimationOptions = [],
+        animations: @escaping () -> Void,
+        completion: ((Bool) -> Void)? = nil) {
+
+        UIView.animate(
+            withDuration: duration,
+            delay: delay,
+            usingSpringWithDamping: dampingRatio,
+            initialSpringVelocity: velocity,
+            options: options,
+            animations: animations,
+            completion: completion
+        )
+    }
+
 }

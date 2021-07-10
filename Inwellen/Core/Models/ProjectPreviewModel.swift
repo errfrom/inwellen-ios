@@ -14,11 +14,3 @@ struct ProjectPreviewModel {
     let authorName: String
     let coverImage: UIImage?
 }
-
-extension ProjectPreviewModel: ProjectShelfViewItemModel {
-
-    var image: UIImage? {
-        return coverImage
-    }
-
-}

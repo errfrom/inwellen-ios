@@ -43,6 +43,13 @@ extension HomeScreenDataSource {
         tableView.reloadData()
     }
 
+    func update(scrollToProjectCellWithId projectId: ID<ProjectPreviewModel>) {
+        if let index = models.firstIndex(where: { $0.projectId == projectId }) {
+            let indexPath = IndexPath(item: index, section: 0)
+            tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        }
+    }
+
 }
 
 // MARK: -

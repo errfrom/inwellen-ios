@@ -12,6 +12,7 @@ import SnapKit
 extension ProjectShelfView {
 
     class Item {
+        let modelId: ID<ProjectPreviewModel>
         weak var view: UIView?
         var constraints: Constraints
 
@@ -20,7 +21,8 @@ extension ProjectShelfView {
             weak var height: Constraint?
         }
 
-        init(view: UIView?, constraints: Constraints) {
+        init(model: ProjectShelfViewItemModel, view: UIView?, constraints: Constraints) {
+            self.modelId = model.projectId
             self.view = view
             self.constraints = constraints
         }
