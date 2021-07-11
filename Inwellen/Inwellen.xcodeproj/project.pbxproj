@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		100B4C39D477DD6740CC4E45 /* Pods_Inwellen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9993384B2A60C9109A7DFFBD /* Pods_Inwellen.framework */; };
+		5F676A2B13F933F78215FB11 /* Pods_InwellenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2545265C2548FF2979897AA8 /* Pods_InwellenTests.framework */; };
 		EE170DEF250F82A2007341BE /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE170DEE250F82A2007341BE /* AppColor.swift */; };
 		EE30617326530C9500DF8C6E /* SortedArray in Frameworks */ = {isa = PBXBuildFile; productRef = EE30617226530C9500DF8C6E /* SortedArray */; };
 		EE30619426530E9400DF8C6E /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30619326530E9400DF8C6E /* ID.swift */; };
 		EE3061B52653141C00DF8C6E /* IntervalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3061B42653141C00DF8C6E /* IntervalModel.swift */; };
+		EE3540EB269B46FE00A1C542 /* CircularDoublyLinkedListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3540EA269B46FE00A1C542 /* CircularDoublyLinkedListSpec.swift */; };
 		EE57324E264B23B300DCC961 /* WaveformView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE57324D264B23B300DCC961 /* WaveformView.xib */; };
 		EE573251264B23FA00DCC961 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE573250264B23FA00DCC961 /* WaveformView.swift */; };
 		EE573253264B283800DCC961 /* WaveformInternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE573252264B283800DCC961 /* WaveformInternalView.swift */; };
@@ -108,13 +110,29 @@
 		EEFC4F3526546914000FCD73 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFC4F3426546914000FCD73 /* TimeInterval.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EE354090269B2EAE00A1C542 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE999C64250E8D6B001CFBB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE999C6B250E8D6B001CFBB7;
+			remoteInfo = Inwellen;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2545265C2548FF2979897AA8 /* Pods_InwellenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InwellenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4338FB2311027B066167EDA7 /* Pods-Inwellen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inwellen.release.xcconfig"; path = "Target Support Files/Pods-Inwellen/Pods-Inwellen.release.xcconfig"; sourceTree = "<group>"; };
+		483D5CE6E821A824FAB56ABF /* Pods-InwellenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InwellenTests.release.xcconfig"; path = "Target Support Files/Pods-InwellenTests/Pods-InwellenTests.release.xcconfig"; sourceTree = "<group>"; };
 		660A9483E96801BC531D301B /* Pods-Inwellen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inwellen.debug.xcconfig"; path = "Target Support Files/Pods-Inwellen/Pods-Inwellen.debug.xcconfig"; sourceTree = "<group>"; };
+		8D4B4CF3416076CF9B2BA804 /* Pods-InwellenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InwellenTests.debug.xcconfig"; path = "Target Support Files/Pods-InwellenTests/Pods-InwellenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9993384B2A60C9109A7DFFBD /* Pods_Inwellen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inwellen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE170DEE250F82A2007341BE /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		EE30619326530E9400DF8C6E /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
 		EE3061B42653141C00DF8C6E /* IntervalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalModel.swift; sourceTree = "<group>"; };
+		EE35408B269B2EAE00A1C542 /* InwellenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InwellenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE35408F269B2EAE00A1C542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE3540EA269B46FE00A1C542 /* CircularDoublyLinkedListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularDoublyLinkedListSpec.swift; sourceTree = "<group>"; };
 		EE57324D264B23B300DCC961 /* WaveformView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaveformView.xib; sourceTree = "<group>"; };
 		EE573250264B23FA00DCC961 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 		EE573252264B283800DCC961 /* WaveformInternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformInternalView.swift; sourceTree = "<group>"; };
@@ -214,6 +232,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EE354088269B2EAE00A1C542 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F676A2B13F933F78215FB11 /* Pods_InwellenTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE999C69250E8D6B001CFBB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				9993384B2A60C9109A7DFFBD /* Pods_Inwellen.framework */,
+				2545265C2548FF2979897AA8 /* Pods_InwellenTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -260,6 +287,15 @@
 				EEFC4F3426546914000FCD73 /* TimeInterval.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EE35408C269B2EAE00A1C542 /* InwellenTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE3540EA269B46FE00A1C542 /* CircularDoublyLinkedListSpec.swift */,
+				EE35408F269B2EAE00A1C542 /* Info.plist */,
+			);
+			path = InwellenTests;
 			sourceTree = "<group>";
 		};
 		EE57324B264B238600DCC961 /* WaveformView */ = {
@@ -534,6 +570,7 @@
 				EE999C83250E902F001CFBB7 /* Groups */,
 				EE999C90250EB0E6001CFBB7 /* Core */,
 				EE999C6E250E8D6B001CFBB7 /* Inwellen */,
+				EE35408C269B2EAE00A1C542 /* InwellenTests */,
 				EE999C6D250E8D6B001CFBB7 /* Products */,
 				FE46A0B7BB6EB8E8FD4DC2B3 /* Pods */,
 				B27810CDC24F42CED66E79EF /* Frameworks */,
@@ -544,6 +581,7 @@
 			isa = PBXGroup;
 			children = (
 				EE999C6C250E8D6B001CFBB7 /* Inwellen.app */,
+				EE35408B269B2EAE00A1C542 /* InwellenTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1146,6 +1184,8 @@
 			children = (
 				660A9483E96801BC531D301B /* Pods-Inwellen.debug.xcconfig */,
 				4338FB2311027B066167EDA7 /* Pods-Inwellen.release.xcconfig */,
+				8D4B4CF3416076CF9B2BA804 /* Pods-InwellenTests.debug.xcconfig */,
+				483D5CE6E821A824FAB56ABF /* Pods-InwellenTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1153,6 +1193,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EE35408A269B2EAE00A1C542 /* InwellenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE354094269B2EAE00A1C542 /* Build configuration list for PBXNativeTarget "InwellenTests" */;
+			buildPhases = (
+				604F7A4F2AE8103324B4C185 /* [CP] Check Pods Manifest.lock */,
+				EE354087269B2EAE00A1C542 /* Sources */,
+				EE354088269B2EAE00A1C542 /* Frameworks */,
+				EE354089269B2EAE00A1C542 /* Resources */,
+				AF845137B03337C78B0150C7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE354091269B2EAE00A1C542 /* PBXTargetDependency */,
+			);
+			name = InwellenTests;
+			productName = InwellenTests;
+			productReference = EE35408B269B2EAE00A1C542 /* InwellenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EE999C6B250E8D6B001CFBB7 /* Inwellen */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE999C80250E8D6F001CFBB7 /* Build configuration list for PBXNativeTarget "Inwellen" */;
@@ -1182,10 +1242,14 @@
 		EE999C64250E8D6B001CFBB7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Inwellen;
 				TargetAttributes = {
+					EE35408A269B2EAE00A1C542 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = EE999C6B250E8D6B001CFBB7;
+					};
 					EE999C6B250E8D6B001CFBB7 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -1208,11 +1272,19 @@
 			projectRoot = "";
 			targets = (
 				EE999C6B250E8D6B001CFBB7 /* Inwellen */,
+				EE35408A269B2EAE00A1C542 /* InwellenTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EE354089269B2EAE00A1C542 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE999C6A250E8D6B001CFBB7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1259,6 +1331,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Inwellen/Pods-Inwellen-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		604F7A4F2AE8103324B4C185 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InwellenTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7E868769E960B504EFA820C7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1279,6 +1373,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF845137B03337C78B0150C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InwellenTests/Pods-InwellenTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InwellenTests/Pods-InwellenTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InwellenTests/Pods-InwellenTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEBB6CA526979C8D00481A27 /* Run SwiftLint */ = {
@@ -1302,6 +1413,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EE354087269B2EAE00A1C542 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3540EB269B46FE00A1C542 /* CircularDoublyLinkedListSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EE999C68250E8D6B001CFBB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1389,6 +1508,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EE354091269B2EAE00A1C542 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE999C6B250E8D6B001CFBB7 /* Inwellen */;
+			targetProxy = EE354090269B2EAE00A1C542 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		EE999C75250E8D6B001CFBB7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1409,6 +1536,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EE354092269B2EAE00A1C542 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D4B4CF3416076CF9B2BA804 /* Pods-InwellenTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F3W944NGN;
+				INFOPLIST_FILE = InwellenTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inwellen.InwellenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inwellen.app/Inwellen";
+			};
+			name = Debug;
+		};
+		EE354093269B2EAE00A1C542 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 483D5CE6E821A824FAB56ABF /* Pods-InwellenTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = "$(inherited)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4F3W944NGN;
+				INFOPLIST_FILE = InwellenTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.inwellen.InwellenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Inwellen.app/Inwellen";
+			};
+			name = Release;
+		};
 		EE999C7E250E8D6F001CFBB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1532,7 +1705,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4F3W944NGN;
 				INFOPLIST_FILE = Inwellen/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1540,7 +1713,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.inwellen.Inwellen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1553,7 +1726,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4F3W944NGN;
 				INFOPLIST_FILE = Inwellen/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1561,13 +1734,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.inwellen.Inwellen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EE354094269B2EAE00A1C542 /* Build configuration list for PBXNativeTarget "InwellenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE354092269B2EAE00A1C542 /* Debug */,
+				EE354093269B2EAE00A1C542 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EE999C67250E8D6B001CFBB7 /* Build configuration list for PBXProject "Inwellen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -63,7 +63,7 @@ fileprivate extension HomeScreenViewController {
 extension HomeScreenViewController: HomeScreenDelegate {
 
     func didSelectProjectCell(projectPreview: ProjectPreviewModel) {
-        log.debug("Home: Did select project cell with model: \(projectPreview)")
+        log.debug("Home: Did select project with title: \(projectPreview.projectName)")
     }
 
     func projectShelf(didSelectProjectWithId id: ID<ProjectPreviewModel>?) {

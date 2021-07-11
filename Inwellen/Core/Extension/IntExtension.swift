@@ -8,7 +8,8 @@
 
 extension Int {
 
-    /// O(n). Performs an action n times, returning the result of the last one.
+    /// Performs an action *n* times, returning the result of the last one.
+    /// - Complexity: O(*n*)
     @discardableResult func times<T>(_ action: () -> T) -> T? {
         guard self > 0 else { return nil }
         for _ in 0..<(self-1) { _ = action() }

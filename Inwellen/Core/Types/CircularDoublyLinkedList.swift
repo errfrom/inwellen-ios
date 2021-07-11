@@ -33,7 +33,8 @@ struct CircularDoublyLinkedList<T> {
 
 extension CircularDoublyLinkedList {
     
-    /// O(1). Creates a circular doubly linked list containing one value.
+    /// Creates a circular doubly linked list containing one value.
+    /// - Complexity: O(1)
     static func singleton(_ newValue: T) -> CircularDoublyLinkedList {
         let newNode = Node(with: newValue)
         var linkedList = CircularDoublyLinkedList()
@@ -45,7 +46,8 @@ extension CircularDoublyLinkedList {
         return linkedList
     }
 
-    /// O(1). Appends a value to the end of the list.
+    /// Appends a value to the end of the list.
+    /// - Complexity: O(1)
     mutating func append(_ newValue: T) {
         guard head != nil else {
             return self = .singleton(newValue)
@@ -59,7 +61,8 @@ extension CircularDoublyLinkedList {
         tail = newNode
     }
     
-    /// O(1). Removes the first value from the list.
+    /// Removes the first value from the list.
+    /// - Complexity: O(1)
     @discardableResult mutating func removeFirst() -> T? {
         guard head != nil else { return nil }
         
@@ -76,7 +79,8 @@ extension CircularDoublyLinkedList {
         }
     }
     
-    /// O(1). Moves the list head pointer forward to point to the next node.
+    /// Moves the list head pointer forward to point to the next node.
+    /// - Complexity: O(1)
     @discardableResult mutating func moveHeadForward() -> T? {
         guard head !== tail else { return nil }
         
@@ -85,30 +89,51 @@ extension CircularDoublyLinkedList {
         return head?.value
     }
     
-    /// O(1). Moves the list head pointer backward to point to the previous node.
+    /// Moves the list head pointer backward to point to the previous node.
+    /// - Complexity: O(1)
     @discardableResult mutating func moveHeadBackward() -> T? {
         guard head !== tail else { return nil }
         
         head = tail
         tail = tail?.prev
-        return tail?.value
+        return head?.value
     }
 
-    /// O(n). Moves the list head pointer n steps forward.
+    /// Moves the list head pointer *n* steps forward.
+    /// - Complexity: O(*n*)
     @discardableResult mutating func moveHeadForward(steps: Int) -> T? {
         return steps.times { moveHeadForward() } ?? nil
     }
 
-    /// O(n). Moves the list head pointer n steps backward.
+    /// Moves the list head pointer *n* steps backward.
+    /// - Complexity: O(*n*)
     @discardableResult mutating func moveHeadBackward(steps: Int) -> T? {
         return steps.times { moveHeadBackward() } ?? nil
     }
 
-    /// O(n). Get the value of the node at a distance of n steps from the head node.
+    /// Get the value of the node at a distance of *n* steps from the head node.
+    /// - Complexity: O(*n*)
     func value(atDistance steps: Int) -> T? {
-        var currentPointer = head
-        steps.times { currentPointer = currentPointer?.next }
-        return currentPointer?.value
+        var ptr = head
+        steps.times { ptr = ptr?.next }
+        return ptr?.value
+    }
+
+    /// Returns the first value of the list that satisfies the given predicate.
+    /// - Complexity: O(*n*)
+    func first(where predicate: (T) throws -> Bool) rethrows -> T? {
+        guard var ptr = head else { return nil }
+
+        repeat {
+            if try predicate(ptr.value) {
+                return ptr.value
+            } else {
+                guard let next = ptr.next else { return nil }
+                ptr = next
+            }
+        } while ptr !== head
+
+        return nil
     }
     
 }

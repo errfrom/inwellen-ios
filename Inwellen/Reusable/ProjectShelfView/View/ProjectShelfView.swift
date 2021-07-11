@@ -125,7 +125,12 @@ fileprivate extension ProjectShelfView {
         guard hitTest(location, with: nil) !== self else { return }
 
         let stepsToTargetItem = stepsToItemView(thatContainsPoint: location.x)
-        guard stepsToTargetItem > 0 else { return }
+
+        guard stepsToTargetItem > 0 else {
+            delegate?.projectShelf(didSelectProjectWithId: headItem?.modelId)
+            return
+        }
+
         guard let targetItem = items.value(atDistance: stepsToTargetItem) else { return }
 
         let itemViewMinX = constants.secondaryItemVisibleWidth * CGFloat(stepsToTargetItem)
