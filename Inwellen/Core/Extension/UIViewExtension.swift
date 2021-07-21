@@ -78,4 +78,19 @@ extension UIView {
         )
     }
 
+    class func animate_(
+        withDuration duration: Double,
+        delay: Double = 0,
+        options: UIView.AnimationOptions = [],
+        animations: @escaping () -> Void,
+        completion: ((Bool) -> Void)? = nil) {
+
+        UIView.animate(
+            withDuration: duration,
+            delay: delay,
+            options: options,
+            animations: animations,
+            completion: completion)
+    }
+
 }

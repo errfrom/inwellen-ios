@@ -13,10 +13,15 @@ final class ProjectShelfViewLayoutManager {
 
     private unowned let shelfView: ProjectShelfView
 
+    // - UI
+    private weak var contentView: UIView! {
+        return shelfView.contentView
+    }
+
     // - Typealias
     typealias Item = ProjectShelfView.Item
 
-    // - Helpers
+    // - Data
     private var constants: ProjectShelfView.Constants {
         return shelfView.constants
     }
@@ -24,6 +29,7 @@ final class ProjectShelfViewLayoutManager {
     // - Init
     init(view: ProjectShelfView) {
         self.shelfView = view
+        configure()
     }
 
 }
@@ -37,7 +43,7 @@ extension ProjectShelfViewLayoutManager {
         let itemView = UIImageView()
         itemView.image = model.image
         itemView.isUserInteractionEnabled = true
-        shelfView.insertSubview(itemView, at: 0)
+        contentView.insertSubview(itemView, at: 0)
 
         let shelfHeight = constants.shelfHeight
         let secondaryItemHeight = constants.secondaryItemHeight
@@ -61,36 +67,6 @@ extension ProjectShelfViewLayoutManager {
         }
 
         return .init(model: model, view: itemView, constraints: itemConstraints)
-    }
-
-}
-
-// MARK: -
-// MARK: - Layout: Scrolling
-
-extension ProjectShelfViewLayoutManager {
-
-    func scroll(toItem targetItem: Item,
-                withItemViewMinX itemViewMinX: CGFloat,
-                completion: @escaping () -> Void) {
-
-        let options: UIView.AnimationOptions = [.curveEaseIn]
-        UIView.animate(withDuration: 0.5, dampingRatio: 0.7, options: options, animations: {
-            [weak self] in guard let strongSelf = self else { return }
-            strongSelf._scroll(toItem: targetItem, withItemViewMinX: itemViewMinX)
-            strongSelf.shelfView.layoutIfNeeded()
-        }, completion: { _ in completion() })
-    }
-
-    private func _scroll(toItem targetItem: Item, withItemViewMinX itemViewMinX: CGFloat) {
-        targetItem.constraints.height?.update(offset: constants.shelfHeight)
-
-        let headItem = shelfView.headItem
-        let headItemLeadingMargin = shelfView.headItemLeadingMargin
-        headItem?.constraints.leading?.update(offset: headItemLeadingMargin - itemViewMinX)
-        headItem?.constraints.height?.update(offset: constants.secondaryItemHeight)
-
-        updateConstraintsBeforeMovingHead(candidateItem: targetItem, true)
     }
 
 }
@@ -148,8 +124,8 @@ extension ProjectShelfViewLayoutManager {
               let candidateItemView = candidateItem?.view,
               let receiverItemView = shelfView.tailItem?.view else { return }
 
-        shelfView.bringSubviewToFront(candidateItemView)
-        shelfView.insertSubview(headItemView, belowSubview: receiverItemView)
+        contentView.bringSubviewToFront(candidateItemView)
+        contentView.insertSubview(headItemView, belowSubview: receiverItemView)
     }
 
 }
@@ -177,7 +153,7 @@ extension ProjectShelfViewLayoutManager {
 
                 guard let strongSelf = self else { return }
                 strongSelf.shelfView.headItem?.constraints.leading?.update(offset: 0)
-                strongSelf.shelfView.layoutIfNeeded()
+                strongSelf.contentView.layoutIfNeeded()
             }
         } else {
             shelfView.headItem?.constraints.leading?.update(offset: 0)
@@ -240,6 +216,41 @@ extension ProjectShelfViewLayoutManager {
     func animateTailItemAlpha() {
         UIView.animate(withDuration: 0.6, delay: 0, options: [.curveEaseOut]) { [weak self] in
             self?.shelfView.tailItem?.view?.alpha = 1
+        }
+    }
+
+}
+
+// MARK: -
+// MARK: - Configure
+
+fileprivate extension ProjectShelfViewLayoutManager {
+
+    private func configure() {
+        configureShelfView()
+        configureContentView()
+        configureContentViewConstraints()
+    }
+
+    private func configureShelfView() {
+        shelfView.backgroundColor = .clear
+    }
+
+    private func configureContentView() {
+        let contentView = UIView()
+        contentView.backgroundColor = .clear
+        contentView.clipsToBounds = true
+
+        shelfView.addSubview(contentView)
+        shelfView.contentView = contentView
+    }
+
+    private func configureContentViewConstraints() {
+        contentView.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.leading.equalToSuperview().offset(32)
+            make.trailing.lessThanOrEqualToSuperview().offset(-32)
+            make.width.equalTo(288)
         }
     }
 

@@ -13,17 +13,27 @@ final class ProjectShelfView: UIView {
     // - Delegate
     private weak var delegate: ProjectShelfViewDelegate?
 
+    // - UI
+    weak var contentView: UIView!
+
     // - Manager
     private var layoutManager: ProjectShelfViewLayoutManager!
 
     // - Data
-    private(set) var items: CircularDoublyLinkedList<Item> = .init()
+    var items: CircularDoublyLinkedList<Item> = .init()
     private(set) var constants: Constants!
+
+    // - Data: Appearance
     var shouldNormalizeItemsAppearance: Bool = false
 
     // - Init
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        configure()
+    }
+
+    init(height: CGFloat) {
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: height))
         configure()
     }
 
@@ -35,6 +45,7 @@ final class ProjectShelfView: UIView {
 extension ProjectShelfView: IProjectShelfView {
 
     func set(models: [ProjectShelfViewItemModel], delegate: ProjectShelfViewDelegate?) {
+        configure()
         self.delegate = delegate
 
         var previousItemView: UIView?
@@ -77,7 +88,7 @@ fileprivate extension ProjectShelfView {
         let translationX = gesture.translation(in: self).x
         gesture.setTranslation(.zero, in: self)
 
-        let headItemLeadingMargin = self.headItemLeadingMargin + translationX / 2
+        let headItemLeadingMargin = self.headItemLeadingMargin + min(40, translationX) / 2
         headItem?.constraints.leading?.update(offset: headItemLeadingMargin)
 
         normalizeItemsAppearanceIfNeeded(headItemLeadingMargin)
@@ -103,7 +114,7 @@ fileprivate extension ProjectShelfView {
             layoutIfNeeded()
         }
         layoutManager.normalizeItemsAppearance(animateHeadLeadingConstraint: true)
-        delegate?.projectShelf(didSelectProjectWithId: headItem?.modelId)
+        delegate?.projectShelf(didScrollToProjectWithId: headItem?.modelId)
     }
 
     private func normalizeItemsAppearanceIfNeeded(_ headItemLeadingMargin: CGFloat) {
@@ -125,30 +136,16 @@ fileprivate extension ProjectShelfView {
         guard hitTest(location, with: nil) !== self else { return }
 
         let stepsToTargetItem = stepsToItemView(thatContainsPoint: location.x)
-
-        guard stepsToTargetItem > 0 else {
-            delegate?.projectShelf(didSelectProjectWithId: headItem?.modelId)
-            return
-        }
-
-        guard let targetItem = items.value(atDistance: stepsToTargetItem) else { return }
-
-        let itemViewMinX = constants.secondaryItemVisibleWidth * CGFloat(stepsToTargetItem)
-
-        layoutManager.scroll(toItem: targetItem, withItemViewMinX: itemViewMinX) { [weak self] in
-            guard let strongSelf = self else { return }
-
-            strongSelf.items.moveHeadForward(steps: stepsToTargetItem)
-            strongSelf.delegate?.projectShelf(didSelectProjectWithId: strongSelf.headItem?.modelId)
-        }
+        let targetItem = items.value(atDistance: stepsToTargetItem)
+        delegate?.projectShelf(didSelectProjectWithId: targetItem?.modelId)
     }
 
     // x = sh + (vw - tm) + (n - 2)vw
     private func stepsToItemView(thatContainsPoint x: CGFloat) -> Int {
-        let sh = constants.shelfHeight
-        let vw = constants.secondaryItemVisibleWidth
-        let tm = constants.secondaryItemTopMargin
-        return Int((x - sh + vw + tm) / vw)
+        let shelfHeight = constants.shelfHeight
+        let visibleWidth = constants.secondaryItemVisibleWidth
+        let topMargin = constants.secondaryItemTopMargin
+        return Int((x - shelfHeight + visibleWidth + topMargin) / visibleWidth)
     }
 
 }

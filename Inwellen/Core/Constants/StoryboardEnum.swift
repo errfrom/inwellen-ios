@@ -10,6 +10,9 @@ import UIKit
 
 enum Storyboard: String {
     case home = "Home"
+
+    // - Projects
+    case projectCard = "ProjectCard"
     
     // - Commit
     case createCommit = "CreateCommit"

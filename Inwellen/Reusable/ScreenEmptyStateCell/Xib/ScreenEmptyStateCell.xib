@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ScreenEmptyStateCell" rowHeight="188" id="T7t-Mh-L2Q" customClass="ScreenEmptyStateCell" customModule="Inwellen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T7t-Mh-L2Q" id="GsQ-V1-wQZ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxH-US-zgw" customClass="ScreenEmptyStateView" customModule="Inwellen" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="6" width="375" height="159"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zxH-US-zgw" secondAttribute="bottom" id="AuI-js-mlh"/>
+                    <constraint firstItem="zxH-US-zgw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="GsQ-V1-wQZ" secondAttribute="top" id="GhN-5k-hWx"/>
+                    <constraint firstItem="zxH-US-zgw" firstAttribute="leading" secondItem="GsQ-V1-wQZ" secondAttribute="leading" id="SUU-Qp-PHc"/>
+                    <constraint firstAttribute="trailing" secondItem="zxH-US-zgw" secondAttribute="trailing" id="XpM-DV-ljN"/>
+                    <constraint firstItem="zxH-US-zgw" firstAttribute="centerY" secondItem="GsQ-V1-wQZ" secondAttribute="centerY" constant="3" id="ed4-3b-hka"/>
+                    <constraint firstItem="zxH-US-zgw" firstAttribute="top" secondItem="GsQ-V1-wQZ" secondAttribute="top" priority="1" id="fkq-JE-GvR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="underlyingView" destination="zxH-US-zgw" id="NoD-UJ-dvi"/>
+            </connections>
+            <point key="canvasLocation" x="46.376811594202906" y="109.82142857142857"/>
+        </tableViewCell>
+    </objects>
+</document>

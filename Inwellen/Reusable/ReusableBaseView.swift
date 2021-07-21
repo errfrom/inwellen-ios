@@ -33,6 +33,7 @@ fileprivate extension ReusableBaseView {
     
     private func commonInit() {
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: nil)
+        // swiftlint:disable:next line_length
         guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else { return }
         
         addSubview(view)

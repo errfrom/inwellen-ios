@@ -6,8 +6,8 @@
 //  Copyright © 2021 Inwellen. All rights reserved.
 //
 
-import class UIKit.UIImage
+import typealias UIKit.CGFloat
 
-protocol IProjectShelfView {
+protocol IProjectShelfView: AnyObject {
     func set(models: [ProjectShelfViewItemModel], delegate: ProjectShelfViewDelegate?)
 }

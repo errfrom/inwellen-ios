@@ -12,10 +12,19 @@ final class HomeScreenViewController: UIViewController {
 
     // - UI
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var projectShelfView: ProjectShelfView!
+    @IBOutlet weak var topSectionView: UIView!
+    @IBOutlet var noFavoriteProjectsBanner: UIView!
+    weak var projectShelfView: ProjectShelfView!
+
+    // - Constraints
+    @IBOutlet weak var topSectionViewTopConstraint: NSLayoutConstraint!
 
     // - DataSource
-    private var dataSource: HomeScreenDataSource!
+    private(set) var dataSource: HomeScreenDataSource!
+
+    // - Manager
+    private var layoutManager: HomeScreenLayoutManager!
+    private var coordinator: HomeScreenCoordinator!
 
     // - Lifecycle
     override func viewDidLoad() {
@@ -41,6 +50,7 @@ final class HomeScreenViewController: UIViewController {
         ]
 
         dataSource.update(models: models)
+        layoutManager.populateTopSectionView(shouldDisplayProjectShelf: true)
         projectShelfView.set(models: models.map(ProjectShelfViewItemModel.init), delegate: self)
     }
 
@@ -55,20 +65,39 @@ fileprivate extension HomeScreenViewController {
         log.debug("Home: Did tap 'add project' button")
     }
 
+    @IBAction private func didTapHideNoFavoriteProjectsBanner(_ sender: UIButton) {
+        layoutManager.removeNoFavoriteProjectsBanner()
+    }
+
+    @IBAction private func didTapCreateNewProjectButton(_ sender: UIButton) {
+        log.debug("Home: Did tap 'create new project' button")
+    }
+
 }
 
 // MARK: -
 // MARK: - Delegate
 
 extension HomeScreenViewController: HomeScreenDelegate {
-
+ 
     func didSelectProjectCell(projectPreview: ProjectPreviewModel) {
-        log.debug("Home: Did select project with title: \(projectPreview.projectName)")
+        coordinator.moveToProjectCardScreen()
     }
 
+    func layoutTopSectionView(isHidden: Bool) {
+        layoutManager.layoutTopSectionView(isHidden: isHidden)
+    }
+
+    // MARK: - ProjectShelfViewDelegate
+
     func projectShelf(didSelectProjectWithId id: ID<ProjectPreviewModel>?) {
-        guard let projectId = id else { return }
-        dataSource.update(scrollToProjectCellWithId: projectId)
+        coordinator.moveToProjectCardScreen()
+    }
+
+    func projectShelf(didScrollToProjectWithId id: ID<ProjectPreviewModel>?) {
+        if let projectId = id {
+            dataSource.update(scrollToProjectCellWithId: projectId)
+        }
     }
 
 }
@@ -80,10 +109,20 @@ fileprivate extension HomeScreenViewController {
 
     private func configure() {
         configureDataSource()
+        configureLayoutManager()
+        configureCoordinator()
     }
 
     private func configureDataSource() {
         dataSource = HomeScreenDataSource(tableView: tableView, delegate: self)
+    }
+
+    private func configureLayoutManager() {
+        layoutManager = HomeScreenLayoutManager(vc: self)
+    }
+
+    private func configureCoordinator() {
+        coordinator = HomeScreenCoordinator(vc: self)
     }
 
 }

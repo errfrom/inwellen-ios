@@ -8,4 +8,5 @@
 
 protocol ProjectShelfViewDelegate: AnyObject {
     func projectShelf(didSelectProjectWithId id: ID<ProjectPreviewModel>?)
+    func projectShelf(didScrollToProjectWithId id: ID<ProjectPreviewModel>?)
 }

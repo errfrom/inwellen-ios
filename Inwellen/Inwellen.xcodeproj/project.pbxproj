@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		100B4C39D477DD6740CC4E45 /* Pods_Inwellen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9993384B2A60C9109A7DFFBD /* Pods_Inwellen.framework */; };
 		5F676A2B13F933F78215FB11 /* Pods_InwellenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2545265C2548FF2979897AA8 /* Pods_InwellenTests.framework */; };
+		EE0FF7CB26A8836F00842E58 /* HomeActionButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0FF7CA26A8836F00842E58 /* HomeActionButtonCell.swift */; };
+		EE0FF7D826A887B100842E58 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0FF7D726A887B100842E58 /* UIButtonExtension.swift */; };
+		EE0FF7E826A8949900842E58 /* ScreenEmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE0FF7E726A8949900842E58 /* ScreenEmptyStateView.xib */; };
+		EE0FF7ED26A897D300842E58 /* ScreenEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0FF7EC26A897D300842E58 /* ScreenEmptyStateView.swift */; };
+		EE0FF7F226A8987E00842E58 /* ScreenEmptyStateEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0FF7F126A8987E00842E58 /* ScreenEmptyStateEnum.swift */; };
+		EE0FF7F926A8995000842E58 /* ScreenEmptyStateViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0FF7F826A8995000842E58 /* ScreenEmptyStateViewInterface.swift */; };
 		EE170DEF250F82A2007341BE /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE170DEE250F82A2007341BE /* AppColor.swift */; };
 		EE30617326530C9500DF8C6E /* SortedArray in Frameworks */ = {isa = PBXBuildFile; productRef = EE30617226530C9500DF8C6E /* SortedArray */; };
 		EE30619426530E9400DF8C6E /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30619326530E9400DF8C6E /* ID.swift */; };
@@ -34,6 +40,18 @@
 		EE71ED642644898B007ECF7F /* UnisonTimePickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED632644898B007ECF7F /* UnisonTimePickerViewDelegate.swift */; };
 		EE71ED78264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED77264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift */; };
 		EE71ED7D26460AB7007ECF7F /* UnisonTimePickerValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71ED7C26460AB7007ECF7F /* UnisonTimePickerValue.swift */; };
+		EE75F605269F7F860077AA16 /* SuisseIntl-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE75F604269F7F860077AA16 /* SuisseIntl-Regular.otf */; };
+		EE75F609269F7F900077AA16 /* SuisseIntl-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE75F608269F7F900077AA16 /* SuisseIntl-Book.otf */; };
+		EE75F60D269F7FA20077AA16 /* SuisseIntl-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE75F60C269F7FA20077AA16 /* SuisseIntl-Medium.otf */; };
+		EE75F619269F7FBC0077AA16 /* SuisseIntl-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE75F618269F7FBC0077AA16 /* SuisseIntl-SemiBold.otf */; };
+		EE75F61D269F7FD40077AA16 /* SimplonNorm-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE75F61C269F7FD40077AA16 /* SimplonNorm-Bold.otf */; };
+		EE765C1C26A89A790024206C /* ScreenEmptyStateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE765C1B26A89A790024206C /* ScreenEmptyStateCell.xib */; };
+		EE765C2326A89AB50024206C /* ScreenEmptyStateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE765C2226A89AB50024206C /* ScreenEmptyStateCell.swift */; };
+		EE7D0A1B269CD2F900EEB118 /* ProjectCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE7D0A1A269CD2F900EEB118 /* ProjectCard.storyboard */; };
+		EE7D0A20269CD30E00EEB118 /* ProjectCardScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7D0A1F269CD30E00EEB118 /* ProjectCardScreenViewController.swift */; };
+		EE7D0A28269CD35500EEB118 /* HomeScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7D0A27269CD35500EEB118 /* HomeScreenCoordinator.swift */; };
+		EE7D0A39269CDFF200EEB118 /* ProjectCardScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7D0A38269CDFF200EEB118 /* ProjectCardScreenCoordinator.swift */; };
+		EE7D0A42269CE15E00EEB118 /* ProjectCardScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7D0A41269CE15E00EEB118 /* ProjectCardScreenDataSource.swift */; };
 		EE8048D1264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8048D0264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift */; };
 		EE87C78726406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */; };
 		EE87C78B2640954B00B3C898 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87C78A2640954B00B3C898 /* TabBarViewController.swift */; };
@@ -59,6 +77,7 @@
 		EEBB6C9926977D5700481A27 /* ProjectShelfView+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB6C9826977D5700481A27 /* ProjectShelfView+Constants.swift */; };
 		EEBB6CA2269781D500481A27 /* ProjectShelfViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBB6CA1269781D500481A27 /* ProjectShelfViewInterface.swift */; };
 		EEBB6CA726979DA400481A27 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EEBB6CA626979DA400481A27 /* .swiftlint.yml */; };
+		EEC3095626A4845900F45E1D /* HomeScreenLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC3095526A4845900F45E1D /* HomeScreenLayoutManager.swift */; };
 		EEDBECA02659BECD006E8FE0 /* WaveformViewLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDBEC9F2659BECD006E8FE0 /* WaveformViewLayoutManager.swift */; };
 		EEE424E5267FDA0000C2C298 /* CircularDoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE424E4267FDA0000C2C298 /* CircularDoublyLinkedList.swift */; };
 		EEE5F37B264C2D8900288883 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE5F37A264C2D8900288883 /* UIApplicationExtension.swift */; };
@@ -72,13 +91,9 @@
 		EEEE8A87263D93BC0051ECB9 /* ReusableBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */; };
 		EEEE8A8A263D94150051ECB9 /* SectionSeparatorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A89263D94150051ECB9 /* SectionSeparatorTableViewCell.xib */; };
 		EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A8C263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift */; };
-		EEEE8A93263D94C60051ECB9 /* SimplonNorm-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */; };
 		EEEE8A95263D98270051ECB9 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */; };
-		EEEE8A96263D9C3A0051ECB9 /* SuisseIntl-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A8F263D94A50051ECB9 /* SuisseIntl-Regular.otf */; };
-		EEEE8A97263D9C3C0051ECB9 /* SuisseIntl-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */; };
 		EEEE8A9A263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */; };
 		EEEE8A9C263DA1D30051ECB9 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */; };
-		EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */; };
 		EEEE8AA4263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AA3263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift */; };
 		EEEE8AA7263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AA6263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift */; };
 		EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE8AAB263DB1A60051ECB9 /* CellConfiguration.swift */; };
@@ -127,6 +142,12 @@
 		660A9483E96801BC531D301B /* Pods-Inwellen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inwellen.debug.xcconfig"; path = "Target Support Files/Pods-Inwellen/Pods-Inwellen.debug.xcconfig"; sourceTree = "<group>"; };
 		8D4B4CF3416076CF9B2BA804 /* Pods-InwellenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InwellenTests.debug.xcconfig"; path = "Target Support Files/Pods-InwellenTests/Pods-InwellenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9993384B2A60C9109A7DFFBD /* Pods_Inwellen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inwellen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE0FF7CA26A8836F00842E58 /* HomeActionButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeActionButtonCell.swift; sourceTree = "<group>"; };
+		EE0FF7D726A887B100842E58 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		EE0FF7E726A8949900842E58 /* ScreenEmptyStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenEmptyStateView.xib; sourceTree = "<group>"; };
+		EE0FF7EC26A897D300842E58 /* ScreenEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenEmptyStateView.swift; sourceTree = "<group>"; };
+		EE0FF7F126A8987E00842E58 /* ScreenEmptyStateEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenEmptyStateEnum.swift; sourceTree = "<group>"; };
+		EE0FF7F826A8995000842E58 /* ScreenEmptyStateViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenEmptyStateViewInterface.swift; sourceTree = "<group>"; };
 		EE170DEE250F82A2007341BE /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		EE30619326530E9400DF8C6E /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
 		EE3061B42653141C00DF8C6E /* IntervalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalModel.swift; sourceTree = "<group>"; };
@@ -153,6 +174,18 @@
 		EE71ED632644898B007ECF7F /* UnisonTimePickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerViewDelegate.swift; sourceTree = "<group>"; };
 		EE71ED77264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerInputFormatter.swift; sourceTree = "<group>"; };
 		EE71ED7C26460AB7007ECF7F /* UnisonTimePickerValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnisonTimePickerValue.swift; sourceTree = "<group>"; };
+		EE75F604269F7F860077AA16 /* SuisseIntl-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Regular.otf"; sourceTree = "<group>"; };
+		EE75F608269F7F900077AA16 /* SuisseIntl-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Book.otf"; sourceTree = "<group>"; };
+		EE75F60C269F7FA20077AA16 /* SuisseIntl-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Medium.otf"; sourceTree = "<group>"; };
+		EE75F618269F7FBC0077AA16 /* SuisseIntl-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-SemiBold.otf"; sourceTree = "<group>"; };
+		EE75F61C269F7FD40077AA16 /* SimplonNorm-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SimplonNorm-Bold.otf"; sourceTree = "<group>"; };
+		EE765C1B26A89A790024206C /* ScreenEmptyStateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenEmptyStateCell.xib; sourceTree = "<group>"; };
+		EE765C2226A89AB50024206C /* ScreenEmptyStateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenEmptyStateCell.swift; sourceTree = "<group>"; };
+		EE7D0A1A269CD2F900EEB118 /* ProjectCard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProjectCard.storyboard; sourceTree = "<group>"; };
+		EE7D0A1F269CD30E00EEB118 /* ProjectCardScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardScreenViewController.swift; sourceTree = "<group>"; };
+		EE7D0A27269CD35500EEB118 /* HomeScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCoordinator.swift; sourceTree = "<group>"; };
+		EE7D0A38269CDFF200EEB118 /* ProjectCardScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardScreenCoordinator.swift; sourceTree = "<group>"; };
+		EE7D0A41269CE15E00EEB118 /* ProjectCardScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardScreenDataSource.swift; sourceTree = "<group>"; };
 		EE8048D0264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitSelectedIntervalViewInterface.swift; sourceTree = "<group>"; };
 		EE87C78626406B2C00B3C898 /* CreateCommitScreenKeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenKeyboardManager.swift; sourceTree = "<group>"; };
 		EE87C78A2640954B00B3C898 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +213,7 @@
 		EEBB6C9826977D5700481A27 /* ProjectShelfView+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectShelfView+Constants.swift"; sourceTree = "<group>"; };
 		EEBB6CA1269781D500481A27 /* ProjectShelfViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectShelfViewInterface.swift; sourceTree = "<group>"; };
 		EEBB6CA626979DA400481A27 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; tabWidth = 2; };
+		EEC3095526A4845900F45E1D /* HomeScreenLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenLayoutManager.swift; sourceTree = "<group>"; };
 		EEDBEC9F2659BECD006E8FE0 /* WaveformViewLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformViewLayoutManager.swift; sourceTree = "<group>"; };
 		EEE424E4267FDA0000C2C298 /* CircularDoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularDoublyLinkedList.swift; sourceTree = "<group>"; };
 		EEE5F37A264C2D8900288883 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
@@ -193,13 +227,9 @@
 		EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableBaseView.swift; sourceTree = "<group>"; };
 		EEEE8A89263D94150051ECB9 /* SectionSeparatorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionSeparatorTableViewCell.xib; sourceTree = "<group>"; };
 		EEEE8A8C263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionSeparatorTableViewCell.swift; sourceTree = "<group>"; };
-		EEEE8A8F263D94A50051ECB9 /* SuisseIntl-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Regular.otf"; sourceTree = "<group>"; };
-		EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Medium.otf"; sourceTree = "<group>"; };
-		EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SimplonNorm-Bold.otf"; path = "../../../../../../../Downloads/Simplon Norm/SimplonNorm-Bold.otf"; sourceTree = "<group>"; };
 		EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		EEEE8A99263D9DFC0051ECB9 /* CreateCommitChooseProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitChooseProjectTableViewCell.swift; sourceTree = "<group>"; };
 		EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SuisseIntl-Book.otf"; path = "../../../../../../../Downloads/Suisse - SwissTypeface/Suisse Int'l/SuisseIntl-Book.otf"; sourceTree = "<group>"; };
 		EEEE8AA3263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommitScreenCoordinator.swift; sourceTree = "<group>"; };
 		EEEE8AA6263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionSeparatorCellConfiguration.swift; sourceTree = "<group>"; };
 		EEEE8AAB263DB1A60051ECB9 /* CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfiguration.swift; sourceTree = "<group>"; };
@@ -259,6 +289,49 @@
 				2545265C2548FF2979897AA8 /* Pods_InwellenTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE0FF7E526A8948200842E58 /* ScreenEmptyStateView */ = {
+			isa = PBXGroup;
+			children = (
+				EE0FF7F726A8993D00842E58 /* Protocol */,
+				EE0FF7F026A8987000842E58 /* Types */,
+				EE0FF7EB26A8979900842E58 /* View */,
+				EE0FF7E626A8948A00842E58 /* Xib */,
+			);
+			path = ScreenEmptyStateView;
+			sourceTree = "<group>";
+		};
+		EE0FF7E626A8948A00842E58 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EE0FF7E726A8949900842E58 /* ScreenEmptyStateView.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EE0FF7EB26A8979900842E58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE0FF7EC26A897D300842E58 /* ScreenEmptyStateView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE0FF7F026A8987000842E58 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EE0FF7F126A8987E00842E58 /* ScreenEmptyStateEnum.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		EE0FF7F726A8993D00842E58 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EE0FF7F826A8995000842E58 /* ScreenEmptyStateViewInterface.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		EE170DED250F827F007341BE /* AppStyle */ = {
@@ -469,6 +542,107 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		EE765C1826A89A530024206C /* ScreenEmptyStateCell */ = {
+			isa = PBXGroup;
+			children = (
+				EE765C1F26A89AA80024206C /* Cell */,
+				EE765C1A26A89A6A0024206C /* Xib */,
+			);
+			path = ScreenEmptyStateCell;
+			sourceTree = "<group>";
+		};
+		EE765C1A26A89A6A0024206C /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				EE765C1B26A89A790024206C /* ScreenEmptyStateCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		EE765C1F26A89AA80024206C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EE765C2226A89AB50024206C /* ScreenEmptyStateCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EE7D0A0D269CD24500EEB118 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				EE7D0A17269CD29500EEB118 /* ProjectCard */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		EE7D0A17269CD29500EEB118 /* ProjectCard */ = {
+			isa = PBXGroup;
+			children = (
+				EE7D0A3E269CE15300EEB118 /* DataSource */,
+				EE7D0A36269CDFE100EEB118 /* Manager */,
+				EE7D0A1E269CD30100EEB118 /* ViewController */,
+				EE7D0A18269CD29D00EEB118 /* Storyboard */,
+			);
+			path = ProjectCard;
+			sourceTree = "<group>";
+		};
+		EE7D0A18269CD29D00EEB118 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EE7D0A1A269CD2F900EEB118 /* ProjectCard.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EE7D0A1E269CD30100EEB118 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE7D0A1F269CD30E00EEB118 /* ProjectCardScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EE7D0A25269CD34400EEB118 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EEC3095426A4844F00F45E1D /* Layout */,
+				EE7D0A26269CD34B00EEB118 /* Coordinator */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EE7D0A26269CD34B00EEB118 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EE7D0A27269CD35500EEB118 /* HomeScreenCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EE7D0A36269CDFE100EEB118 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EE7D0A37269CDFE800EEB118 /* Coordinator */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EE7D0A37269CDFE800EEB118 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				EE7D0A38269CDFF200EEB118 /* ProjectCardScreenCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EE7D0A3E269CE15300EEB118 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				EE7D0A41269CE15E00EEB118 /* ProjectCardScreenDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		EE8048CD264F3092000BE233 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,6 +777,7 @@
 			isa = PBXGroup;
 			children = (
 				EEF60C9E2698D8A0008FDE44 /* Home */,
+				EE7D0A0D269CD24500EEB118 /* Projects */,
 				EEEE8A6E263D86B30051ECB9 /* Commit */,
 				EE87C7882640950700B3C898 /* TabBar */,
 			);
@@ -686,6 +861,7 @@
 				EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */,
 				EEEE8AD1263E037A0051ECB9 /* UIViewControllerExtension.swift */,
 				EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */,
+				EE0FF7D726A887B100842E58 /* UIButtonExtension.swift */,
 				EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */,
 				EEF60CBC2699C8FD008FDE44 /* IntExtension.swift */,
 			);
@@ -742,6 +918,14 @@
 				EEF60CC9269A13F6008FDE44 /* ProjectShelfViewDelegate.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EEC3095426A4844F00F45E1D /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EEC3095526A4845900F45E1D /* HomeScreenLayoutManager.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		EEDBEC9D2659BEB8006E8FE0 /* Manager */ = {
@@ -836,6 +1020,8 @@
 			isa = PBXGroup;
 			children = (
 				EEEE8A86263D93BC0051ECB9 /* ReusableBaseView.swift */,
+				EE0FF7E526A8948200842E58 /* ScreenEmptyStateView */,
+				EE765C1826A89A530024206C /* ScreenEmptyStateCell */,
 				EEB36C5B264F188F00A91AB9 /* CommitSelectedIntervalView */,
 				EE57324B264B238600DCC961 /* WaveformView */,
 				EEEE8A85263D93860051ECB9 /* SectionSeparatorTableViewCell */,
@@ -875,9 +1061,10 @@
 		EEEE8A8E263D94A00051ECB9 /* SuisseIntl */ = {
 			isa = PBXGroup;
 			children = (
-				EEEE8A9F263DAB1D0051ECB9 /* SuisseIntl-Book.otf */,
-				EEEE8A8F263D94A50051ECB9 /* SuisseIntl-Regular.otf */,
-				EEEE8A90263D94A80051ECB9 /* SuisseIntl-Medium.otf */,
+				EE75F604269F7F860077AA16 /* SuisseIntl-Regular.otf */,
+				EE75F608269F7F900077AA16 /* SuisseIntl-Book.otf */,
+				EE75F60C269F7FA20077AA16 /* SuisseIntl-Medium.otf */,
+				EE75F618269F7FBC0077AA16 /* SuisseIntl-SemiBold.otf */,
 			);
 			path = SuisseIntl;
 			sourceTree = "<group>";
@@ -885,7 +1072,7 @@
 		EEEE8A91263D94B10051ECB9 /* SimplonNorm */ = {
 			isa = PBXGroup;
 			children = (
-				EEEE8A92263D94C60051ECB9 /* SimplonNorm-Bold.otf */,
+				EE75F61C269F7FD40077AA16 /* SimplonNorm-Bold.otf */,
 			);
 			path = SimplonNorm;
 			sourceTree = "<group>";
@@ -1117,6 +1304,7 @@
 				EEF60CB72698FBCB008FDE44 /* Protocol */,
 				EEF60CB22698ED30008FDE44 /* Cell */,
 				EEF60CA72698E827008FDE44 /* DataSource */,
+				EE7D0A25269CD34400EEB118 /* Manager */,
 				EEF60CA32698D8C9008FDE44 /* ViewController */,
 				EEF60C9F2698D8B6008FDE44 /* Storyboard */,
 			);
@@ -1159,6 +1347,7 @@
 			isa = PBXGroup;
 			children = (
 				EEF60CB32698ED3D008FDE44 /* HomeProjectTableViewCell.swift */,
+				EE0FF7CA26A8836F00842E58 /* HomeActionButtonCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1290,24 +1479,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEBB6CA726979DA400481A27 /* .swiftlint.yml in Resources */,
+				EE75F60D269F7FA20077AA16 /* SuisseIntl-Medium.otf in Resources */,
 				EE94D42225127BAD00BEAE00 /* WaveformSelectedIntervalView.xib in Resources */,
 				EE6A5626263EE7AB00AFAB80 /* SpecifyIntervals.storyboard in Resources */,
 				EE999C7C250E8D6F001CFBB7 /* LaunchScreen.storyboard in Resources */,
 				EE999C79250E8D6F001CFBB7 /* Assets.xcassets in Resources */,
 				EEEE8AB2263DCA460051ECB9 /* ChooseProject.storyboard in Resources */,
+				EE765C1C26A89A790024206C /* ScreenEmptyStateCell.xib in Resources */,
 				EEEE8ACD263DFF530051ECB9 /* TextViewTableViewCell.xib in Resources */,
+				EE0FF7E826A8949900842E58 /* ScreenEmptyStateView.xib in Resources */,
 				EEEE8A72263D86E60051ECB9 /* CreateCommit.storyboard in Resources */,
+				EE75F619269F7FBC0077AA16 /* SuisseIntl-SemiBold.otf in Resources */,
 				EE71ED5A264486CF007ECF7F /* UnisonTimePickerView.xib in Resources */,
 				EE999C77250E8D6B001CFBB7 /* Main.storyboard in Resources */,
 				EEB36C61264F192900A91AB9 /* CommitSelectedIntervalView.xib in Resources */,
-				EEEE8A96263D9C3A0051ECB9 /* SuisseIntl-Regular.otf in Resources */,
-				EEEE8AA0263DAB1E0051ECB9 /* SuisseIntl-Book.otf in Resources */,
 				EE999C88250E9109001CFBB7 /* WaveformViewOld.xib in Resources */,
+				EE7D0A1B269CD2F900EEB118 /* ProjectCard.storyboard in Resources */,
+				EE75F609269F7F900077AA16 /* SuisseIntl-Book.otf in Resources */,
 				EEEE8A8A263D94150051ECB9 /* SectionSeparatorTableViewCell.xib in Resources */,
+				EE75F61D269F7FD40077AA16 /* SimplonNorm-Bold.otf in Resources */,
+				EE75F605269F7F860077AA16 /* SuisseIntl-Regular.otf in Resources */,
 				EEF60CA12698D8BF008FDE44 /* Home.storyboard in Resources */,
-				EEEE8A93263D94C60051ECB9 /* SimplonNorm-Bold.otf in Resources */,
 				EE57324E264B23B300DCC961 /* WaveformView.xib in Resources */,
-				EEEE8A97263D9C3C0051ECB9 /* SuisseIntl-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1433,6 +1626,8 @@
 				EEEE8AD6263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift in Sources */,
 				EEEE8ABF263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift in Sources */,
 				EE71ED642644898B007ECF7F /* UnisonTimePickerViewDelegate.swift in Sources */,
+				EEC3095626A4845900F45E1D /* HomeScreenLayoutManager.swift in Sources */,
+				EE765C2326A89AB50024206C /* ScreenEmptyStateCell.swift in Sources */,
 				EEF60CC6269A1345008FDE44 /* ProjectShelfViewItemModel.swift in Sources */,
 				EE999C8F250E91CF001CFBB7 /* WaveformViewLayoutManagerOld.swift in Sources */,
 				EEEE8ABC263DCDCB0051ECB9 /* ChooseProjectScreenCoordinator.swift in Sources */,
@@ -1460,16 +1655,20 @@
 				EEDBECA02659BECD006E8FE0 /* WaveformViewLayoutManager.swift in Sources */,
 				EE999C70250E8D6B001CFBB7 /* AppDelegate.swift in Sources */,
 				EEE5F381264C31ED00288883 /* SpecifyIntervalTableViewCell.swift in Sources */,
+				EE7D0A28269CD35500EEB118 /* HomeScreenCoordinator.swift in Sources */,
 				EEBB6CA2269781D500481A27 /* ProjectShelfViewInterface.swift in Sources */,
 				EE58E54D26502BC60033B438 /* SpecifyIntervalsContextMediatorInterface.swift in Sources */,
 				EE87C796264097B900B3C898 /* TabBarItem.swift in Sources */,
 				EEEE8A8D263D942E0051ECB9 /* SectionSeparatorTableViewCell.swift in Sources */,
+				EE0FF7D826A887B100842E58 /* UIButtonExtension.swift in Sources */,
 				EEEE8AA4263DAE040051ECB9 /* CreateCommitScreenCoordinator.swift in Sources */,
 				EEEE8A75263D86F40051ECB9 /* CreateCommitScreenViewController.swift in Sources */,
 				EE94D3FF250F847900BEAE00 /* WaveformInternalViewOld.swift in Sources */,
 				EE58E55126502C010033B438 /* SpecifyIntervalsContextMediator.swift in Sources */,
+				EE0FF7F226A8987E00842E58 /* ScreenEmptyStateEnum.swift in Sources */,
 				EEEE8AD9263E07440051ECB9 /* TextViewCellConfiguration.swift in Sources */,
 				EEF60CBA2698FBD6008FDE44 /* HomeScreenDelegate.swift in Sources */,
+				EE7D0A42269CE15E00EEB118 /* ProjectCardScreenDataSource.swift in Sources */,
 				EEF60CB42698ED3D008FDE44 /* HomeProjectTableViewCell.swift in Sources */,
 				EEEE8AC5263DD0800051ECB9 /* ChooseProjectItemTestModel.swift in Sources */,
 				EEEE8A9C263DA1D30051ECB9 /* UIViewExtension.swift in Sources */,
@@ -1482,6 +1681,7 @@
 				EE71ED61264488C9007ECF7F /* UnisonTimePickerViewLayoutManager.swift in Sources */,
 				EE71ED5D2644884B007ECF7F /* UnisonTimePickerView.swift in Sources */,
 				EE999C8B250E91BC001CFBB7 /* WaveformViewOld.swift in Sources */,
+				EE0FF7CB26A8836F00842E58 /* HomeActionButtonCell.swift in Sources */,
 				EEEE8A77263D8A070051ECB9 /* Constant.swift in Sources */,
 				EEEE8AC2263DD0280051ECB9 /* ChooseProjectItemTableViewCell.swift in Sources */,
 				EE170DEF250F82A2007341BE /* AppColor.swift in Sources */,
@@ -1489,8 +1689,11 @@
 				EEEE8AD0263DFF740051ECB9 /* TextViewTableViewCell.swift in Sources */,
 				EEE5F37B264C2D8900288883 /* UIApplicationExtension.swift in Sources */,
 				EEEE8AB5263DCA9A0051ECB9 /* ChooseProjectScreenViewController.swift in Sources */,
+				EE7D0A39269CDFF200EEB118 /* ProjectCardScreenCoordinator.swift in Sources */,
+				EE0FF7ED26A897D300842E58 /* ScreenEmptyStateView.swift in Sources */,
 				EEEE8AA7263DB0480051ECB9 /* SectionSeparatorCellConfiguration.swift in Sources */,
 				EE94D42025126F9900BEAE00 /* WaveformViewIntervalModel.swift in Sources */,
+				EE0FF7F926A8995000842E58 /* ScreenEmptyStateViewInterface.swift in Sources */,
 				EE61F3E92690C58E00A04B89 /* ProjectShelfView+Item.swift in Sources */,
 				EEB36C5E264F18B500A91AB9 /* CommitSelectedIntervalView.swift in Sources */,
 				EEB36C65264F1E4600A91AB9 /* CommitSelectedIntervalViewLayoutManager.swift in Sources */,
@@ -1499,6 +1702,7 @@
 				EE94D41D25126E2000BEAE00 /* WaveformIntervalViewDelegate.swift in Sources */,
 				EEEE8AE4263ED7320051ECB9 /* CreateCommitAudioTableViewCellLayoutManager.swift in Sources */,
 				EE58E54F26502BE20033B438 /* SpecifyIntervalsContextComponentInterface.swift in Sources */,
+				EE7D0A20269CD30E00EEB118 /* ProjectCardScreenViewController.swift in Sources */,
 				EE573251264B23FA00DCC961 /* WaveformView.swift in Sources */,
 				EE58E55326502C2B0033B438 /* SpecifyIntervalsContextEvent.swift in Sources */,
 				EEF60CCA269A13F6008FDE44 /* ProjectShelfViewDelegate.swift in Sources */,

@@ -119,17 +119,20 @@ extension CircularDoublyLinkedList {
         return ptr?.value
     }
 
-    /// Returns the first value of the list that satisfies the given predicate.
+    /// Returns the first value of the list that satisfies the given predicate
+    /// and its distance from the head.
     /// - Complexity: O(*n*)
-    func first(where predicate: (T) throws -> Bool) rethrows -> T? {
+    func first(where predicate: (T) throws -> Bool) rethrows -> (result: T, steps: Int)? {
         guard var ptr = head else { return nil }
+        var distance = 0
 
         repeat {
             if try predicate(ptr.value) {
-                return ptr.value
+                return (result: ptr.value, steps: distance)
             } else {
                 guard let next = ptr.next else { return nil }
                 ptr = next
+                distance += 1
             }
         } while ptr !== head
 
