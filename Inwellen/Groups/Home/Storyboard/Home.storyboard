@@ -9,9 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="SuisseIntl-Book.otf">
-            <string>SuisseIntl-Book</string>
-        </array>
         <array key="SuisseIntl-Medium.otf">
             <string>SuisseIntl-Medium</string>
         </array>
@@ -164,7 +161,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="c0f-DY-JfO"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="SuisseIntl-Book" family="Suisse Int'l" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" name="SuisseIntl-Medium" family="Suisse Int'l" pointSize="16"/>
                                                     <state key="normal" title="Create new project">
                                                         <color key="titleColor" name="Baby Powder"/>
                                                     </state>

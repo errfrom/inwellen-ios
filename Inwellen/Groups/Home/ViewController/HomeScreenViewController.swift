@@ -88,6 +88,10 @@ extension HomeScreenViewController: HomeScreenDelegate {
         layoutManager.layoutTopSectionView(isHidden: isHidden)
     }
 
+    func didRequestContentRefreshing(_ completion: @escaping () -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: completion) // - TODO:
+    }
+
     // MARK: - ProjectShelfViewDelegate
 
     func projectShelf(didSelectProjectWithId id: ID<ProjectPreviewModel>?) {

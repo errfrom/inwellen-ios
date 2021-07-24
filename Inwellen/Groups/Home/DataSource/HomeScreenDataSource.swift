@@ -173,6 +173,33 @@ extension HomeScreenDataSource: UIScrollViewDelegate {
 }
 
 // MARK: -
+// MARK: - Refreshing
+
+fileprivate extension HomeScreenDataSource {
+
+    @objc private func handleRefreshControl() {
+        delegate?.didRequestContentRefreshing { [weak self] in
+            guard let strongSelf = self else { return }
+
+            DispatchQueue.main.async {
+                strongSelf.tableView.refreshControl?.endRefreshing()
+            }
+        }
+    }
+
+    private func configureRefreshControl() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = AppColor.richBlack.withAlphaComponent(0.4)
+
+        let handleAction = #selector(handleRefreshControl)
+        refreshControl.addTarget(self, action: handleAction, for: .valueChanged)
+
+        tableView.refreshControl = refreshControl
+    }
+
+}
+
+// MARK: -
 // MARK: - Cell
 
 fileprivate extension HomeScreenDataSource {
@@ -198,6 +225,7 @@ fileprivate extension HomeScreenDataSource {
     private func configure() {
         configureTableView()
         configureCells()
+        configureRefreshControl()
     }
 
     private func configureTableView() {

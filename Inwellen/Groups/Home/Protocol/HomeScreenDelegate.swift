@@ -9,4 +9,5 @@
 protocol HomeScreenDelegate: ProjectShelfViewDelegate {
     func didSelectProjectCell(projectPreview: ProjectPreviewModel)
     func layoutTopSectionView(isHidden: Bool)
+    func didRequestContentRefreshing(_ completion: @escaping () -> Void)
 }
