@@ -13,8 +13,14 @@ class TabBarViewController: UITabBarController {
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCustomTabBar()
         configure()
         delegate = self
+    }
+
+    private func setCustomTabBar() {
+        let customTabBar = CustomTabBar(frame: tabBar.frame)
+        setValue(customTabBar, forKey: "tabBar")
     }
     
 }

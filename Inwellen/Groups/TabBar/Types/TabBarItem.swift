@@ -16,19 +16,19 @@ enum TabBarItem: CaseIterable {
     case profileItem
     
     var viewController: UIViewController {
-        switch self {
-            case .homeItem:
-                let homeViewController = Storyboard.home.viewController
-                homeViewController.tabBarItem = item
-                return homeViewController
+        let _viewController = storyboard?.viewController ?? UIViewController()
+        _viewController.tabBarItem = item
+        return _viewController
+    }
 
-            default:
-                let createCommitViewController = Storyboard.createCommit.viewController
-                createCommitViewController.tabBarItem = item
-                return createCommitViewController
+    private var storyboard: Storyboard? {
+        switch self {
+            case .homeItem: return .home
+            case .createCommitItem: return .createCommit
+            default: return nil
         }
     }
-    
+
 }
 
 // MARK: -

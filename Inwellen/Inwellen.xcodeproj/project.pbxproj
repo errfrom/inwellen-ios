@@ -24,6 +24,8 @@
 		EE30619426530E9400DF8C6E /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE30619326530E9400DF8C6E /* ID.swift */; };
 		EE3061B52653141C00DF8C6E /* IntervalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3061B42653141C00DF8C6E /* IntervalModel.swift */; };
 		EE3540EB269B46FE00A1C542 /* CircularDoublyLinkedListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3540EA269B46FE00A1C542 /* CircularDoublyLinkedListSpec.swift */; };
+		EE35DB9B26B88ABE00EEE426 /* UITabBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE35DB9A26B88ABE00EEE426 /* UITabBarExtension.swift */; };
+		EE35DBA226B88B5700EEE426 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE35DBA126B88B5700EEE426 /* CustomTabBar.swift */; };
 		EE53AE0026AC5FDC00F2406C /* NewProject.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE53ADFF26AC5FDC00F2406C /* NewProject.storyboard */; };
 		EE53AE0526AC5FE900F2406C /* NewProjectScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE53AE0426AC5FE900F2406C /* NewProjectScreenViewController.swift */; };
 		EE53AE1626AC62E300F2406C /* NewProjectScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE53AE1526AC62E300F2406C /* NewProjectScreenCoordinator.swift */; };
@@ -179,6 +181,8 @@
 		EE35408B269B2EAE00A1C542 /* InwellenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InwellenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE35408F269B2EAE00A1C542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE3540EA269B46FE00A1C542 /* CircularDoublyLinkedListSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularDoublyLinkedListSpec.swift; sourceTree = "<group>"; };
+		EE35DB9A26B88ABE00EEE426 /* UITabBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarExtension.swift; sourceTree = "<group>"; };
+		EE35DBA126B88B5700EEE426 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		EE53ADFF26AC5FDC00F2406C /* NewProject.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewProject.storyboard; sourceTree = "<group>"; };
 		EE53AE0426AC5FE900F2406C /* NewProjectScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectScreenViewController.swift; sourceTree = "<group>"; };
 		EE53AE1526AC62E300F2406C /* NewProjectScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectScreenCoordinator.swift; sourceTree = "<group>"; };
@@ -437,6 +441,14 @@
 				EE35408F269B2EAE00A1C542 /* Info.plist */,
 			);
 			path = InwellenTests;
+			sourceTree = "<group>";
+		};
+		EE35DBA026B88B4C00EEE426 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				EE35DBA126B88B5700EEE426 /* CustomTabBar.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		EE53ADFD26AC5FCB00F2406C /* NewProject */ = {
@@ -1015,6 +1027,7 @@
 				EEF60CAB2698EA58008FDE44 /* Models */,
 				EEC21EDD26B2E7090015F118 /* RequestModels */,
 				EE0E0EF726ADF0380098F333 /* Managers */,
+				EE35DBA026B88B4C00EEE426 /* Custom */,
 				EE999C94250EB147001CFBB7 /* Extension */,
 				EE999C91250EB0FF001CFBB7 /* Constants */,
 				EE170DED250F827F007341BE /* AppStyle */,
@@ -1039,6 +1052,7 @@
 				EE999C95250EB157001CFBB7 /* UIStoryboardExtension.swift */,
 				EEEE8AD1263E037A0051ECB9 /* UIViewControllerExtension.swift */,
 				EEEE8A9B263DA1D30051ECB9 /* UIViewExtension.swift */,
+				EE35DB9A26B88ABE00EEE426 /* UITabBarExtension.swift */,
 				EE0E0EEE26ADE17D0098F333 /* UITableViewExtension.swift */,
 				EE0FF7D726A887B100842E58 /* UIButtonExtension.swift */,
 				EEEE8A94263D98270051ECB9 /* UILabelExtension.swift */,
@@ -1817,6 +1831,7 @@
 				EE94D415250FF05F00BEAE00 /* WaveformSelectedIntervalView.swift in Sources */,
 				EEE424E5267FDA0000C2C298 /* CircularDoublyLinkedList.swift in Sources */,
 				EE6A531C2690B95F00D34483 /* ProjectShelfViewLayoutManager.swift in Sources */,
+				EE35DBA226B88B5700EEE426 /* CustomTabBar.swift in Sources */,
 				EE71ED7D26460AB7007ECF7F /* UnisonTimePickerValue.swift in Sources */,
 				EEEE8AD6263E04720051ECB9 /* TextViewTableViewCellLayoutManager.swift in Sources */,
 				EEEE8ABF263DCF240051ECB9 /* ChooseProjectScreenDataSource.swift in Sources */,
@@ -1830,6 +1845,7 @@
 				EE30619426530E9400DF8C6E /* ID.swift in Sources */,
 				EEEE8AAC263DB1A60051ECB9 /* CellConfiguration.swift in Sources */,
 				EE3061B52653141C00DF8C6E /* IntervalModel.swift in Sources */,
+				EE35DB9B26B88ABE00EEE426 /* UITabBarExtension.swift in Sources */,
 				EE71ED78264608C0007ECF7F /* UnisonTimePickerInputFormatter.swift in Sources */,
 				EEEE8A7E263D8EE70051ECB9 /* AppFont.swift in Sources */,
 				EE8048D1264F30B1000BE233 /* CommitSelectedIntervalViewInterface.swift in Sources */,
