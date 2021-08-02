@@ -17,17 +17,8 @@ class CreateCommitScreenViewController: UIViewController {
     private var dataSource: CreateCommitScreenDataSource!
     
     // - Manager
-    private var keyboardManager: CreateCommitScreenKeyboardManager!
     private var coordinator: CreateCommitScreenCoordinator!
-    
-    // - Data
-    private var activeTextView: TextViewCellType?
-    
-    var activeTextViewCell: TextViewTableViewCell? {
-        guard let activeTextViewConfig = activeTextView else { return nil }
-        return dataSource.textViewCell(withConfig: activeTextViewConfig)
-    }
-    
+
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,16 +59,18 @@ extension CreateCommitScreenViewController: CreateCommitScreenDelegate {
         self.view.endEditing(true)
     }
     
-    // MARK: - TextViewTableViewCellDelegate
-    
-    func textViewDidUpdateHeight() {
-        tableView.beginUpdates()
-        tableView.endUpdates()
-        keyboardManager.adjustTableViewContentOffsetIfNeeded()
+    // MARK: - TextViewCellDelegate
+
+    func textViewDidChange(_ text: String?, configuration: TextViewCellConfiguration) {
+    }
+
+    func textViewWillBeginEditing(configuration: TextViewCellConfiguration) {
+        let concreteConfiguration = configuration as! CreateCommitTextViewCellConfiguration
+        dataSource.update(setActiveTextViewCell: concreteConfiguration)
     }
     
-    func textViewWillBeginEditing(textViewCellType: TextViewCellType) {
-        self.activeTextView = textViewCellType
+    func textViewDidUpdateHeight() {
+        dataSource.textViewDidUpdateHeight()
     }
     
 }
@@ -89,18 +82,13 @@ fileprivate extension CreateCommitScreenViewController {
     
     private func configure() {
         configureDataSource()
-        configureKeyboardManager()
         configureCoordinator()
     }
     
     private func configureDataSource() {
         dataSource = CreateCommitScreenDataSource(tableView: tableView, delegate: self)
     }
-    
-    private func configureKeyboardManager() {
-        keyboardManager = CreateCommitScreenKeyboardManager(vc: self)
-    }
-    
+
     private func configureCoordinator() {
         coordinator = CreateCommitScreenCoordinator(vc: self)
     }

@@ -8,23 +8,25 @@
 
 import UIKit
 
-class CreateCommitScreenDataSource: NSObject {
+class CreateCommitScreenDataSource: NSObject, BaseInputDataSource {
     
     // - Delegate
-    private weak var delegate: CreateCommitScreenDelegate?
+    weak var delegate: CreateCommitScreenViewController?
     
     // - UI
-    private unowned let tableView: UITableView
+    unowned let tableView: UITableView
     
     // - Data
-    private var cells: [(cell: Cell, config: CellConfiguration?)] = []
+    var cells: [(cell: Cell, config: CellConfiguration?)] = []
+    var activeTextViewCell: TextViewTableViewCell?
     private var commitAudioCellPage: CreateCommitAudioTableViewCell.Page = .uploadAudioFilePage
     
     // - Init
     init(tableView: UITableView, delegate: CreateCommitScreenDelegate) {
         self.tableView = tableView
-        self.delegate = delegate
+        self.delegate = delegate as? CreateCommitScreenViewController
         super.init()
+        subscribeToKeyboardNotifications()
         registerCells()
         configure()
     }
@@ -35,7 +37,14 @@ class CreateCommitScreenDataSource: NSObject {
 // MARK: - Update
 
 extension CreateCommitScreenDataSource {
-    
+
+    func update(setActiveTextViewCell targetConfig: CreateCommitTextViewCellConfiguration) {
+        let textViewCellIndex = cells.firstIndex { (_, config) in
+            targetConfig == (config as? CreateCommitTextViewCellConfiguration)
+        }
+        self.activeTextViewCell = textViewCell(atIndex: textViewCellIndex)
+    }
+
     func update(commitAudioCellPage: CreateCommitAudioTableViewCell.Page) {
         self.commitAudioCellPage = commitAudioCellPage
         
@@ -62,11 +71,11 @@ extension CreateCommitScreenDataSource {
 
 extension CreateCommitScreenDataSource {
     
-    private enum Cell: String {
+    enum Cell: String {
         case chooseProjectCell = "ChooseProjectCell"
-        case textViewCell = "TextViewCell"
+        case textViewCell = "textViewCell"
         case commitAudioCell = "CommitAudioCell"
-        case sectionSeparatorCell = "SectionSeparatorCell"
+        case sectionSeparatorCell = "sectionSeparatorCell"
     }
     
     private var commitAudioCellIndexPath: IndexPath? {
@@ -76,22 +85,7 @@ extension CreateCommitScreenDataSource {
             return nil
         }
     }
-    
-    func textViewCell(withConfig config: TextViewCellConfiguration) -> TextViewTableViewCell? {
-        let textViewCellIndex = cells.firstIndex(where: { (cell, config_) in
-            return cell == .textViewCell && config == (config_ as? TextViewCellConfiguration)
-        })
-        
-        if let item = textViewCellIndex {
-            let indexPath = IndexPath(item: item, section: 0)
 
-            if let textViewCell = tableView.cellForRow(at: indexPath) as? TextViewTableViewCell {
-                return textViewCell
-            }
-        }
-        return nil
-    }
-    
 }
 
 // MARK: -
@@ -122,15 +116,6 @@ extension CreateCommitScreenDataSource: UITableViewDataSource {
         return cell
     }
     
-    private func textViewCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.textViewCell.rawValue, for: indexPath) as! TextViewTableViewCell
-        cell.backgroundColor = .clear
-        if let config = cells[indexPath.item].config as? TextViewCellConfiguration {
-            cell.set(withConfig: config, delegate: delegate)
-        }
-        return cell
-    }
-    
     private func commitAudioCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cell.commitAudioCell.rawValue, for: indexPath) as! CreateCommitAudioTableViewCell
         cell.backgroundColor = .clear
@@ -138,36 +123,6 @@ extension CreateCommitScreenDataSource: UITableViewDataSource {
         return cell
     }
 
-    private func sectionSeparatorCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.sectionSeparatorCell.rawValue, for: indexPath) as! SectionSeparatorTableViewCell
-        if let config = cells[indexPath.item].config as? SectionSeparatorCellConfiguration {
-            cell.set(withConfig: config)
-        }
-        return cell
-    }
-    
-}
-
-// MARK: -
-// MARK: - Register Cells
-
-fileprivate extension CreateCommitScreenDataSource {
-    
-    private func registerCells() {
-        registerTextViewCell()
-        registerSectionSeparatorCell()
-    }
-    
-    private func registerTextViewCell() {
-        let nib = UINib(nibName: "\(TextViewTableViewCell.self)", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: Cell.textViewCell.rawValue)
-    }
-    
-    private func registerSectionSeparatorCell() {
-        let nib = UINib(nibName: "\(SectionSeparatorTableViewCell.self)", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: Cell.sectionSeparatorCell.rawValue)
-    }
-    
 }
 
 // MARK: -
@@ -179,16 +134,32 @@ extension CreateCommitScreenDataSource: UITableViewDelegate {
         switch cells[indexPath.item].cell {
             case .chooseProjectCell:
                 delegate?.didTapChooseProjectCell()
-            
-            case .textViewCell:
-                let cell = tableView.cellForRow(at: indexPath) as? TextViewTableViewCell
-                cell?.makeTextViewFirstResponder()
-            
+
             default:
                 delegate?.forceDismissKeyboard()
         }
     }
     
+}
+
+// MARK: -
+// MARK: - Keyboard
+
+fileprivate extension CreateCommitScreenDataSource {
+
+    @objc private func _keyboardWillShow(notification: NSNotification) {
+        keyboardWillShow(notification: notification)
+    }
+
+    private func subscribeToKeyboardNotifications() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(_keyboardWillShow(notification:)),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+    }
+
 }
 
 // MARK: -
@@ -212,8 +183,8 @@ fileprivate extension CreateCommitScreenDataSource {
         appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Choose project", showSeparatorLine: false))
         appendCell(.chooseProjectCell)
         appendCell(.sectionSeparatorCell, config: SectionSeparatorCellConfiguration("Name & description", bottomMargin: 8))
-        appendCell(.textViewCell, config: TextViewCellConfiguration.commitNameTextView)
-        appendCell(.textViewCell, config: TextViewCellConfiguration.commitDescriptionTextView)
+        appendCell(.textViewCell, config: CreateCommitTextViewCellConfiguration.commitNameTextView)
+        appendCell(.textViewCell, config: CreateCommitTextViewCellConfiguration.commitDescriptionTextView)
         appendCell(.commitAudioCell)
         tableView.reloadData()
     }

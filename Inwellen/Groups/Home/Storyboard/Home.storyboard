@@ -58,7 +58,7 @@
                                         <color key="tintColor" name="Rich Black"/>
                                         <state key="normal" image="e-add"/>
                                         <connections>
-                                            <action selector="didTapAddProjectButton:" destination="QhB-oL-tAT" eventType="touchUpInside" id="d3P-1L-d4b"/>
+                                            <action selector="didTapCreateNewProjectButton:" destination="QhB-oL-tAT" eventType="touchUpInside" id="IRN-pv-1wu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -142,6 +142,7 @@
                                                 <constraint firstItem="GXO-gA-vq7" firstAttribute="leading" secondItem="Tvs-9b-Frt" secondAttribute="leading" id="xgX-nX-6Cw"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="authorNameLabel" destination="GXO-gA-vq7" id="QFT-Q0-Jiw"/>
                                             <outlet property="coverImageView" destination="pbl-TE-7i0" id="uDg-kW-bJX"/>
@@ -177,6 +178,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="bXt-8v-x3o" secondAttribute="bottom" constant="48" id="v9k-dG-HZd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="underlyingButton" destination="bXt-8v-x3o" id="Ryr-hJ-End"/>
                                         </connections>

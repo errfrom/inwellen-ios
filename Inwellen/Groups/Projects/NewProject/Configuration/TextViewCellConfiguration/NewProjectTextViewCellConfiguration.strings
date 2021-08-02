@@ -1,0 +1,12 @@
+/* 
+  NewProjectTextViewCellConfiguration.strings
+  Inwellen
+
+  Created by Dzmitry Shuysky on 24.07.21.
+  Copyright © 2021 Inwellen. All rights reserved.
+*/
+
+"projectNameTextView" = "Project name...";
+"projectDescriptionTextView" = "Project description...";
+"projectAuthorTextView" = "Project author name...";
+"projectAuthorTextViewHint" = "You can also enter your pseudonym or collective name.";

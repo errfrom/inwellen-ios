@@ -9,7 +9,6 @@
 import UIKit
 
 struct SectionSeparatorCellConfiguration: CellConfiguration {
-
     let sectionTitle: String
     let shouldShowSeparatorLine: Bool
     let topMargin: CGFloat

@@ -12,6 +12,7 @@ enum Storyboard: String {
     case home = "Home"
 
     // - Projects
+    case newProject = "NewProject"
     case projectCard = "ProjectCard"
     
     // - Commit

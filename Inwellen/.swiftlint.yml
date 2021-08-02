@@ -23,6 +23,8 @@ disabled_rules:
   - identifier_name
   - type_name
   - nesting
+  - force_cast
+  - closure_parameter_position
 
 opt_in_rules:
   - weak_delegate

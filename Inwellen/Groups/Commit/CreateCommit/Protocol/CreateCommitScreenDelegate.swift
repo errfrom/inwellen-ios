@@ -6,7 +6,7 @@
 //  Copyright © 2021 Inwellen. All rights reserved.
 //
 
-protocol CreateCommitScreenDelegate: TextViewTableViewCellDelegate {
+protocol CreateCommitScreenDelegate: TextViewCellDelegate {
     func didTapChooseProjectCell()
     func didTapUploadAudioFileButton()
     func commitAudioCellDidPerformPageTransition()

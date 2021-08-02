@@ -14,6 +14,7 @@ enum AppColor {
     static let absoluteZero = UIColor(named: "Absolute Zero")!
     static let platinum = UIColor(named: "Platinum")!
     static let darkerPlatinum = UIColor(named: "Darker Platinum")!
+    static let silverChalice = UIColor(named: "Silver Chalice")!
     static let marigold = UIColor(named: "Marigold")!
     static let redSalsa = UIColor(named: "Red Salsa")!
 }

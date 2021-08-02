@@ -15,7 +15,13 @@ extension UIView {
     
     @IBInspectable var cornerRadius: CGFloat {
         get { return layer.cornerRadius }
-        set { layer.cornerRadius = newValue }
+        set {
+            layer.cornerRadius = newValue
+
+            if #available(iOS 13.0, *) {
+                layer.cornerCurve = .continuous
+            }
+        }
     }
 
     @IBInspectable var borderWidth: CGFloat {

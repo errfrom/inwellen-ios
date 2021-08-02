@@ -22,4 +22,9 @@ final class HomeScreenCoordinator {
         vc.navigationController?.pushViewController(projectCardScreen, animated: true)
     }
 
+    func moveToNewProjectScreen() {
+        let newProjectScreen = Storyboard.newProject.viewController
+        vc.navigationController?.pushViewController(newProjectScreen, animated: true)
+    }
+
 }

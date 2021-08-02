@@ -61,16 +61,12 @@ final class HomeScreenViewController: UIViewController {
 
 fileprivate extension HomeScreenViewController {
 
-    @IBAction private func didTapAddProjectButton(_ sender: UIButton) {
-        log.debug("Home: Did tap 'add project' button")
-    }
-
     @IBAction private func didTapHideNoFavoriteProjectsBanner(_ sender: UIButton) {
         layoutManager.removeNoFavoriteProjectsBanner()
     }
 
     @IBAction private func didTapCreateNewProjectButton(_ sender: UIButton) {
-        log.debug("Home: Did tap 'create new project' button")
+        coordinator.moveToNewProjectScreen()
     }
 
 }
@@ -81,7 +77,7 @@ fileprivate extension HomeScreenViewController {
 extension HomeScreenViewController: HomeScreenDelegate {
  
     func didSelectProjectCell(projectPreview: ProjectPreviewModel) {
-        coordinator.moveToProjectCardScreen()
+        // coordinator.moveToProjectCardScreen()
     }
 
     func layoutTopSectionView(isHidden: Bool) {

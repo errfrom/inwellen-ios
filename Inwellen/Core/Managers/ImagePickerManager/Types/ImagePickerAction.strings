@@ -1,0 +1,12 @@
+/* 
+  ImagePickerAction.strings
+  Inwellen
+
+  Created by Dzmitry Shuysky on 25.07.21.
+  Copyright © 2021 Inwellen. All rights reserved.
+*/
+
+"cameraAction" = "Take Photo";
+"chooseImageAction" = "Choose from Library";
+"removeImageAction" = "Remove Image";
+"cancelAction" = "Cancel";
